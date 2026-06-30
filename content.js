@@ -96,7 +96,7 @@ const pageDatabase = {
                 "گاتها، سرودهای اهورایی زرتشت؛ پژوهش دکتر خسرو خزاعی",
                 "الگوهای برتر برگرفته از حقوق اساسی پادشاهی مشروطه سوئد (قانون اساسی نمادین ۱۹۷۴ و نظام امبودزمان) و بریتانیا (پاسخگویی پارلمانی)."
             ],
-            images: ["farva.jpg", "pasar.jpg", "bg.jpg"],
+            images: ["farva.jpeg", "pasar.jpeg", "bg.jpeg"],
             video: "me1.mp4"
         },
         en: {
@@ -170,7 +170,7 @@ const pageDatabase = {
 
                 
             ],
-            images: ["farva.jpg", "pasar.jpg", "bg.jpg"],
+            images: ["farva.jpeg", "pasar.jpeg", "bg.jpeg"],
             video: "me1.mp4"
         }
     },
