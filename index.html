@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" id="htmlTag">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Language Website</title>
+    <link rel="icon" type="image/x-icon" href="farva.jpg">
+    <style>
+        body {
+            font-family: Tahoma, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: direction 0.3s ease; /* Smooth transition when flipping layout */
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* Pushes the image layer completely behind everything */
+            
+            /* Put your background image details here */
+            background-image: url('cyrus_tomb.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+            /* 1.0 is normal, 0.0 is completely gone. 
+            0.35 will fade it down beautifully so your text stands out! */
+            opacity: 0.45; 
+        }
+        img {
+            float: right;
+            opacity: 0.99;
+            margin-left: 15px;
+            width: 200px;
+            height: 200px;
+        }
+        .wrapped-sidebar-img {
+            float: right;
+            clear: right;
+            max-width: 25%;
+            height: auto;
+            margin-left: 20px;
+            margin-bottom: 10px; /* 👈 Controls the vertical distance between the images */
+            display: block;
+        }
+        .text-gap-spacer{
+            float: right;
+            clear: right;
+            width: 1px;
+            height: 150px;
+        }
+        /* Ensure the layout flips perfectly when changing to English (LTR) */
+        html[dir="ltr"] .wrapped-sidebar-img {
+            float: left;
+            clear: left;
+            margin-left: 0;
+            margin-right: 20px;
+        }
+        html[dir="ltr"] .text-gap-spacer {
+            float: left;
+            clear: left;
+        }
+
+        /* Main Navbar Container */
+        .navbar {
+            background-color: #1d2833;
+            display: flex;
+            align-items: center;
+            padding: 10px 15px;
+            position: relative;
+        }
+
+        /* Three lines menu button */
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 5px 10px;
+        }
+
+        .menu-toggle:hover {
+            background-color: #2b3947;
+        }
+
+        /* Language Selector Button */
+        .lang-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 12px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        /* Dynamic margin adjustments based on layout direction */
+        html[dir="rtl"] .menu-toggle { margin-left: 10px; }
+        html[dir="rtl"] .lang-btn { margin-left: 20px; }
+        
+        html[dir="ltr"] .menu-toggle { margin-right: 10px; }
+        html[dir="ltr"] .lang-btn { margin-right: 20px; }
+
+        .lang-btn:hover {
+            background-color: #45a049;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 5px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-weight: bold;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        .nav-links a.active {
+            background-color: #e7e7e7;
+            color: black;
+        }
+
+        .nav-links a:hover:not(.active) {
+            background-color: #2b3947;
+        }
+
+        /* Dropdown Menu Positioning */
+        .dropdown-menu {
+            display: none; 
+            position: absolute;
+            top: 100%;
+            background-color: #ffffff;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            width: 250px;
+            z-index: 1000;
+        }
+
+        /* Automatically sticks dropdown to correct side depending on language */
+        html[dir="rtl"] .dropdown-menu { right: 0; left: auto; }
+        html[dir="ltr"] .dropdown-menu { left: 0; right: auto; }
+
+        .dropdown-menu.show { display: block; }
+
+        .dropdown-menu a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid #f0f0f0;
+            cursor: pointer;
+        }
+
+        .dropdown-menu a:hover { background-color: #f1f1f1; }
+
+        /* Content Styles */
+        .content-area {
+            text-align: justify;
+            text-justify: inter-word;
+            
+            text-emphasis-color: black;
+            padding: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .content-area h1 {
+            color: #1d2833;
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .content-area p {
+            font-size: 18px;
+            color: #444;
+            line-height: 1.8;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <button class="menu-toggle" id="menuBtn">☰ منو</button>
+        
+        <button class="lang-btn" id="langBtn">EN</button>
+        
+        <div class="nav-links">
+            <a class="nav-item active" id="navMethods" data-target="Methods">آیین</a>
+            <a class="nav-item" id="navNews" data-target="News">خبر</a>
+            <a class="nav-item" id="navPrograms" data-target="Programs">برنامه ها</a>
+            <a class="nav-item" id="navHist" data-target="Hist"> تاریخ</a> <!-- // 👈 Path to your English video fil -->  
+        </div>
+
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a class="dropdown-item" id="drop1" data-target="tutorials">سر برگ  آموزش‌ها</a>
+            <a class="dropdown-item" id="drop2" data-target="References"> مراجع</a>
+            <a class="dropdown-item" id="drop3" data-target="Examples"> نمونه ها</a>
+            <!-- <a href="#link2" id="drop2">مراجع</a> -->
+            <!-- <a href="#link3" id="drop3">نمونه ها</a> -->
+            <a href="#link4" id="drop4">تمرین‌ها</a>
+            <a class="dropdown-item" id="drop5" data-target="contact"> پیوند با ما</a>
+        </div>
+    </nav>
+
+    <div class="content-area">
+        
+        <h1 id="contentTitle">صفحه آیین</h1>
+        <div id="contentImageContainer"></div>
+        <p id="contentText">به صفحه آیین خوش آمدید. این بخش ساختار اصلی صفحات وب را تشکیل می‌دهد.</p>
+        <div id="contentVideoContainer" style="margin-top: 30px; clear: both; text-align: center;">
+            <video id="contentVideo" controls width="80%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
+                <source id="videoSource" src="" type="video/mp4">
+                مرورگر شما از بارگذاری این ویدیو پشتیبانی نمی‌کند. / Your browser does not support the video tag.
+            </video>
+         </div>
+         
+        <!-- <div id="contentImageContainer"></div> -->
+
+        <!-- Main Content Sandbox Area -->
+        <h1 id="contentTitle"></h1>
+        <div id="contentText"></div>
+
+        <!-- 👇 Add this right here! The Contact Form Surface Interface -->
+        <div id="contactFormContainer" style="display: none; margin-top: 25px;">
+            <form id="offlineContactForm" onsubmit="handleOfflineSubmit(event)">
+                
+                <div style="margin-bottom: 15px;">
+                    <label id="lblEmail" style="display: block; margin-bottom: 5px; font-weight: bold;">Email:</label>
+                    <input type="email" required style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; box-sizing: border-box;">
+                </div>
+
+                <div style="margin-bottom: 15px;">
+                    <label id="lblMessage" style="display: block; margin-bottom: 5px; font-weight: bold;">Message:</label>
+                    <textarea required rows="5" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; box-sizing: border-box; resize: vertical;"></textarea>
+                </div>
+
+                <!-- File Upload Field -->
+                <div style="margin-bottom: 20px;">
+                    <label id="lblUpload" style="display: block; margin-bottom: 5px; font-weight: bold;">Upload File:</label>
+                    <input type="file" id="fileAttachment" style="width: 100%; padding: 8px; border: 1px dashed #888; border-radius: 6px; background: rgba(255,255,255,0.5); box-sizing: border-box;">
+                </div>
+
+                <button type="submit" id="btnSubmitForm" style="padding: 10px 25px; background-color: #4CAF50; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 16px;">
+                    Submit
+                </button>
+            </form>
+        </div>
+
+
+    </div>
+    
+<script src="content.js"></script>
+
+<script>
+    // Track the current language ("fa" or "en") and the active content tab
+    let currentLang = "fa";
+    let currentTab = "Methods";
+
+    // Centralized Translations Database ONLY for layout menus and labels
+    const translations = {
+        fa: {
+            menuBtn: "☰ منو",
+            langBtn: "EN",
+            navMethods: "آیین",
+            navNews: "خبر",
+            navPrograms: "برنامه ها",
+            navHist: "تاریخ",
+            drop1: " سر برگ آموزش‌ها",
+            drop2: "مراجع",
+            drop3: "نمونه ها",
+            drop4: "تمرین‌ها",
+            drop5: "پیوند با ما"
+
+        },
+        en: {
+            menuBtn: "☰ Menu",
+            langBtn: "FA",
+            navMethods: "Grand Charter",
+            navNews: "News",
+            navHist: "History",
+            navPrograms: "Programs",
+            drop1: "Tutorials Home",
+            drop2: "References",
+            drop3: "Examples",
+            drop4: "Exercises",
+            drop5: "Contact"
+        }
+    };
+
+    const htmlTag = document.getElementById('htmlTag');
+    const menuBtn = document.getElementById('menuBtn');
+    const langBtn = document.getElementById('langBtn');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    const contentTitle = document.getElementById('contentTitle');
+    const contentText = document.getElementById('contentText');
+    const navItems = document.querySelectorAll('.nav-item');
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
+
+    // --- Update UI Content Function ---
+function updateLanguageUI() {
+    // 1. Fetch data from database safely
+    const pageData = pageDatabase[currentTab] ? pageDatabase[currentTab][currentLang] : null;
+    
+    if (!pageData) {
+        console.error("Missing page data for tab:", currentTab);
+        return;
+    }
+
+    // Handle Language Direction
+    if (currentLang === "fa") {
+        htmlTag.setAttribute('dir', 'rtl');
+        htmlTag.setAttribute('lang', 'fa');
+    } else {
+        htmlTag.setAttribute('dir', 'ltr');
+        htmlTag.setAttribute('lang', 'en');
+    }
+
+    // 👇 ADD THIS: Translate Navigation Bar & Dropdown Menus Dynamically
+    if (document.getElementById('menuBtn')) document.getElementById('menuBtn').innerText = translations[currentLang].menuBtn;
+    if (document.getElementById('langBtn')) document.getElementById('langBtn').innerText = translations[currentLang].langBtn;
+    
+    if (document.getElementById('navMethods')) document.getElementById('navMethods').innerText = translations[currentLang].navMethods;
+    if (document.getElementById('navNews')) document.getElementById('navNews').innerText = translations[currentLang].navNews;
+    if (document.getElementById('navPrograms')) document.getElementById('navPrograms').innerText = translations[currentLang].navPrograms;
+    if (document.getElementById('navHist')) document.getElementById('navHist').innerText = translations[currentLang].navHist;
+    
+    if (document.getElementById('drop1')) document.getElementById('drop1').innerText = translations[currentLang].drop1;
+    if (document.getElementById('drop2')) document.getElementById('drop2').innerText = translations[currentLang].drop2;
+    if (document.getElementById('drop3')) document.getElementById('drop3').innerText = translations[currentLang].drop3;
+    if (document.getElementById('drop4')) document.getElementById('drop4').innerText = translations[currentLang].drop4;
+    
+    // Check for drop5 or dropContact depending on what you named your contact menu link ID
+    if (document.getElementById('drop5')) document.getElementById('drop5').innerText = translations[currentLang].navContact || translations[currentLang].drop5;
+    if (document.getElementById('dropContact')) document.getElementById('dropContact').innerText = translations[currentLang].navContact;
+
+    // Set the Title
+    document.getElementById('contentTitle').innerText = pageData.title;
+
+    // Grab Containers
+    const formContainer = document.getElementById('contactFormContainer');
+    const textContainer = document.getElementById('contentText');
+    const videoContainer = document.getElementById('contentVideoContainer');
+    const imgContainer = document.getElementById('contentImageContainer');
+
+    if (pageData.isContactPage) {
+        if (formContainer) formContainer.style.display = "block";
+        if (textContainer) textContainer.innerHTML = "";
+        if (videoContainer) videoContainer.style.display = "none";
+        if (imgContainer) imgContainer.innerHTML = "";
+
+        if (currentLang === "fa") {
+            document.getElementById('lblEmail').innerText = "ایمیل:";
+            document.getElementById('lblMessage').innerText = "پیام شما:";
+            document.getElementById('lblUpload').innerText = "بارگذاری فایل:";
+            document.getElementById('btnSubmitForm').innerText = "ارسال پیام";
+        } else {
+            document.getElementById('lblEmail').innerText = "Email:";
+            document.getElementById('lblMessage').innerText = "Your Message:";
+            document.getElementById('lblUpload').innerText = "Upload File:";
+            document.getElementById('btnSubmitForm').innerText = "Send Message";
+        }
+
+    } else {
+        if (formContainer) formContainer.style.display = "none";
+        
+        // Joined with a single <br> to respect your data arrays
+        if (Array.isArray(pageData.text)) {
+            textContainer.innerHTML = pageData.text.join("<br>");
+        } else {
+            textContainer.innerHTML = pageData.text || "";
+        }
+
+        // Handle Images
+        if (imgContainer) {
+            imgContainer.innerHTML = "";
+            if (pageData.images && Array.isArray(pageData.images)) {
+                pageData.images.forEach((imagePath, index) => {
+                    imgContainer.innerHTML += `<img src="${imagePath}" alt="page-image" class="wrapped-sidebar-img">`;
+                    if (index < pageData.images.length - 1) {
+                        imgContainer.innerHTML += `<div class="text-gap-spacer"></div>`;
+                    }
+                });
+            }
+        }
+
+        // Handle Videos
+        if (videoContainer) {
+            if (pageData.video) {
+                videoContainer.style.display = "block";
+                document.getElementById('videoSource').src = pageData.video;
+                document.getElementById('contentVideo').load();
+            } else {
+                videoContainer.style.display = "none";
+            }
+        }
+    }
+}    
+// Initialize layout on boot up
+    updateLanguageUI();
+
+    // --- Language Button Click Event ---
+    langBtn.addEventListener('click', function() {
+        currentLang = (currentLang === "fa") ? "en" : "fa";
+        updateLanguageUI();
+    });
+
+    // --- Tab Selection Click Event (Main Navbar) ---
+    navItems.forEach(item => {
+        item.addEventListener('click', function() {
+            navItems.forEach(i => i.classList.remove('active'));
+            this.classList.add('active');
+            
+            currentTab = this.getAttribute('data-target');
+            updateLanguageUI();
+        });
+    });
+
+    // --- Dropdown Items Click Event (Inside Three Lines Menu) ---
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', function() {
+            navItems.forEach(i => i.classList.remove('active'));
+            currentTab = this.getAttribute('data-target');
+            updateLanguageUI();
+            dropdownMenu.classList.remove('show');
+        });
+    });
+
+    // --- Dropdown Menu Open/Close Toggle Logic ---
+    menuBtn.addEventListener('click', function(event) {
+        dropdownMenu.classList.toggle('show');
+        event.stopPropagation(); 
+    });
+
+    window.addEventListener('click', function() {
+        if (dropdownMenu.classList.contains('show')) {
+            dropdownMenu.classList.remove('show');
+        }
+    });
+</script>
+    <button onclick="document.getElementById('demo'). innerHTML=Date()"> Time</button>
+    <p id="demo"></p>
+
+</body>
+</html>
