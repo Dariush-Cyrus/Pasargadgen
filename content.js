@@ -102,7 +102,7 @@ const pageDatabase = {
         en: {
             title: "The Grand Charter Page",
             text: [
-                "Welcome to the <b> HTML</b> page. Every web page should have a title to describe its meaning.",
+                "Every web page should have a title to describe its meaning.",
                 "The Root Constitution of the Democratic Constitutional Monarchy of Iran",
                 " Integration of Constitutionalism, Modern Democracy, and Indigenous Values (Asha, Vohuman, Khshathra)",
                 "",
