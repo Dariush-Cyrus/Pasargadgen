@@ -207,14 +207,14 @@ const pageDatabase = {
     Hist: {
         fa: {
             title: "تار برگ تاریخ",
-            text: "به تار برگ تاریخ خوش آمدید. این بخش به صفحات وب قابلیت‌های تعاملی اضافه می‌کند.",
+            text: "به تار برگ تاریخ خوش آمدید. این بخش به صفحات وب قابلیت‌های تعاملی اضافه می‌کند. هرگز از یاد نمیبریم.",
             images: [],
             video: "",
             vimeoUrl: "https://player.vimeo.com/video/1203474449"
         },
         en: {
             title: "History Page Title",
-            text: "Welcome to the History page. History makes you be aware of yourself and know about others.",
+            text: "Welcome to the History page. History makes you be aware of yourself and know about others. we never forget",
             images: [],
             video: "",
             vimeoUrl: "https://player.vimeo.com/video/1203474449"
