@@ -397,10 +397,34 @@ function updateLanguageUI() {
 
         // Handle Videos
         if (videoContainer) {
-            if (pageData.video) {
+            const videoElement = document.getElementById('contentVideo');
+            const videoSource = document.getElementById('videoSource');
+            const vimeoPlayer = document.getElementById('vimeoPlayer');
+
+            // Reset both players first
+            if (videoElement) {
+                videoElement.style.display = "none";
+                videoElement.pause();
+            }
+            if (vimeoPlayer) {
+                vimeoPlayer.style.display = "none";
+                vimeoPlayer.src = ""; // Clear src to kill playing audio
+            }
+
+            // Decide which player to show
+            if (pageData.vimeoUrl) {
                 videoContainer.style.display = "block";
-                document.getElementById('videoSource').src = pageData.video;
-                document.getElementById('contentVideo').load();
+                if (vimeoPlayer) {
+                    vimeoPlayer.style.display = "inline-block";
+                    vimeoPlayer.src = pageData.vimeoUrl; // Load the Vimeo embed link
+                }
+            } else if (pageData.video) {
+                videoContainer.style.display = "block";
+                if (videoElement && videoSource) {
+                    videoElement.style.display = "inline-block";
+                    videoSource.src = pageData.video;
+                    videoElement.load();
+                }
             } else {
                 videoContainer.style.display = "none";
             }
