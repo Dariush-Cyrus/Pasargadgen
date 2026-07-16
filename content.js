@@ -209,13 +209,15 @@ const pageDatabase = {
             title: "تار برگ تاریخ",
             text: "به تار برگ تاریخ خوش آمدید. این بخش به صفحات وب قابلیت‌های تعاملی اضافه می‌کند.",
             images: [],
-            video: ""
+            video: "",
+            vimeoUrl: "https://player.vimeo.com/video/1203474449"
         },
         en: {
             title: "History Page Title",
             text: "Welcome to the History page. History makes you be aware of yourself and know about others.",
             images: [],
-            video: ""
+            video: "",
+            vimeoUrl: "https://player.vimeo.com/video/1203474449"
         }
     },
     // Dropdown items can live here too!
