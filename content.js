@@ -231,8 +231,16 @@ const pageDatabase = {
             vimeoUrl: "https://player.vimeo.com/video/1203474449"
         },
         en: {
-            title: "Programs Page",
-            text: "Welcome to the Programs page. Programs makes web pages interactive and dynamic.",
+            title: " Programs for Awakening the Glorious Self",
+            text: ["Welcome to the Programs page.",
+                   "",
+                   "The Roadmap to Awakening: Reclaiming Your Glorious Self and Inner Splendor",
+                   "",
+                    "The divine glory (Farrah) and splendor of the Iranian spirit are not forgotten myths locked in ancient books; they are embers beneath the ashes of your soul. The time has come to unveil this hidden treasure.",
+                    "In an age where the frantic pace of the modern world has severed humanity from its roots, the Chic Generation Awakening Programs are crafted to guide you back to your, Glorious Self. Divine glory (Farrah) is that luminous inner force that brings clarity to your mind, steadfastness to your will, and majesty to your life.",
+                    "We do not explore history to linger in the past; we delve into our heritage to retrieve the blueprints of capability and self-worth, forging a triumphant future."
+                                      
+                  ],
             images: [],
             video: "",
             vimeoUrl: "https://player.vimeo.com/video/1203474449"
