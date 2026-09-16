@@ -1,9 +1,9 @@
 const pageDatabase = {
     Methods: {
         fa: {
-            title: "تار برگ آیین",
+            title: "  رویه نخست: تار برگ آیین",
             text: [
-                " به تار برگ آیین خوش آمدید. این بخش ساختار اصلی صفحات وب را تشکیل می‌دهد.",
+                " به تار برگ آیین خوش آمدید.",
                 "برای نزدیک‌تر کردن این پیش‌نویس به کشورهای پادشاهی مشروطه‌ی پیشرفته و مدرن (مانند سوئد، نروژ و بریتانیا)، چند ابزار حقوقی و عملی به متن افزوده شده است:",
                 "",
                 "۱. مدل پادشاهی سوئد (قانون اساسی ۱۹۷۴): در سوئد، پادشاه حتی دیگر نخست‌وزیر را رسماً معرفی نمی‌کند و این خویشکاری بر عهده سالار انجمن (رئیس پارلمان) است. این بالاترین سطح تفکیک قدرت برای جلوگیری از تمرکز قدرت در دست یک تن است.",
@@ -100,9 +100,9 @@ const pageDatabase = {
             video: "me1.mp4"
         },
         en: {
-            title: "The Grand Charter Page",
+            title: "The Grand Charter Page (Main Page) ",
             text: [
-                "Every web page should have a title to describe its meaning.",
+                "",
                 "The Root Constitution of the Democratic Constitutional Monarchy of Iran",
                 " Integration of Constitutionalism, Modern Democracy, and Indigenous Values (Asha, Vohuman, Khshathra)",
                 "",
