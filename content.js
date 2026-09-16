@@ -200,7 +200,27 @@ const pageDatabase = {
         },
         en: {
             title: "News Page Title",
-            text: "Welcome to the News page. News describes how HTML elements are to be displayed on screen.",
+            text: ["Welcome to the News page.",
+                   "",
+                  "1. The Encroaching Earth-Fissures Surrounding Pasargadae and Persepolis",
+                   "  * Date: September 13, 2026 (22 Shahrivar 1405)",
+                    " * Source: Radio Farda / Cultural Heritage Watch",
+                     "* The Dispatch: Driven by indiscriminate deep-well extraction and the systemic mismanagement of subterranean aquifers across the Marvdasht plain, severe land subsidence has advanced to a perilous proximity of the ancient stone foundations of Persepolis and the Pasargadae complex. Heritage experts warn that prolonged environmental neglect now threatens these millennia-old structures with irreparable structural ruin.",
+                     "* The Awakening Perspective: Our ancestors preserved this land for millennia through the sacred veneration of earth and water and the mastery of qanat engineering. Today, the stark conflict between ancient wisdom and ideological incompetence places both the history and the very geography of Iran in existential jeopardy.",
+                    "",
+                   "2. Widespread Power Grid Collapse and Industrial Blackouts in Midsummer",
+                     "* Date: August 9, 2026 (18 Mordad 1405)",
+                     "* Source: Iran International / BBC Persian",
+                     "* The Dispatch: Crippled by profound energy deficits and decaying power infrastructure, rolling blackouts lasting several hours daily have swept through industrial parks and residential districts during peak summer heat. The outages have halted manufacturing, inflicted crushing losses upon private enterprise, and fueled widespread public distress.",
+                     "* The Awakening Perspective: A realm endowed with one of the greatest natural energy reserves on earth is left unable to provide basic electricity to its own populace—the direct consequence of national wealth being diverted toward ideological agendas beyond its borders.",
+                    "",
+                   "3. Unprecedented Exodus of Healthcare Professionals and Young Scholars",
+                     "* Date: June 26, 2026 (5 Tir 1405)",
+                     "* Source: Voice of America (VOA) / Iran Migration Observatory",
+                     "* The Dispatch: Fresh records from professional medical and engineering associations document an unprecedented wave of emigration among specialized physicians, nurses, and young innovators. Pervasive economic collapse, political suppression, and a bleak outlook for the future are cited as the primary catalysts driving this departure.",
+                     "* The Awakening Perspective: The inherent potential and divine glory (Farrah) of Iran’s Chic Generation—assets meant to cultivate the motherland—are driven into exile by divisive policies. The path forward lies in reclaiming our collective dignity and rebuilding a nation worthy of its children."
+
+                  ],
             images: [],
             video: ""
         }
