@@ -98,6 +98,14 @@ const pageDatabase = {
                 "گاتها، سرودهای اهورایی زرتشت؛ پژوهش دکتر خسرو خزاعی",
                 "الگوهای برتر برگرفته از حقوق اساسی پادشاهی مشروطه سوئد (قانون اساسی نمادین ۱۹۷۴ و نظام امبودزمان) و بریتانیا (پاسخگویی پارلمانی)."
             ],
+             articles:[
+                {
+                id: "article1",
+                title: "مقاله نخست",
+                summary: "خلاصه کوتاه خبر اینجا قرار میگیرد...",
+                fullText:"اینجا قرار میگیرد متن کامل مقاله "
+                }
+            ],
             images: ["farva.jpeg", "pasar.jpeg", "bg.jpeg"],
             video: "me1.mp4"
         },
@@ -171,6 +179,14 @@ const pageDatabase = {
                "Best practices incorporated from the constitutional frameworks of advanced constitutional monarchies, namely Sweden (Instrument of Government 1974 and the Ombudsman system) and the United Kingdom (Parliamentary Accountability)."
 
                 
+            ],
+            articles:[
+                {
+                id: "article1",
+                title: "First article Title",
+                summary: "Short preview summary goes here",
+                fullText:"Full article text that appear after clicking apears here"
+                }
             ],
             images: ["farva.jpeg", "pasar.jpeg", "bg.jpeg"],
             video: "me1.mp4"

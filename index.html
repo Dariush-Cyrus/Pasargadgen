@@ -192,14 +192,14 @@
 
     <nav class="navbar">
         <button class="menu-toggle" id="menuBtn">☰ منو</button>
-        
+
         <button class="lang-btn" id="langBtn">EN</button>
-        
+
         <div class="nav-links">
             <a class="nav-item active" id="navMethods" data-target="Methods">آیین</a>
             <a class="nav-item" id="navNews" data-target="News">خبر</a>
             <a class="nav-item" id="navPrograms" data-target="Programs">برنامه ها</a>
-            <a class="nav-item" id="navHist" data-target="Hist"> تاریخ</a> <!-- // 👈 Path to your English video fil -->  
+            <a class="nav-item" id="navHist" data-target="Hist"> تاریخ</a> <!-- // 👈 Path to your English video fil -->
         </div>
 
         <div class="dropdown-menu" id="dropdownMenu">
@@ -214,20 +214,30 @@
     </nav>
 
     <div class="content-area">
-        
+
         <h1 id="contentTitle">صفحه آیین</h1>
         <div id="contentImageContainer"></div>
         <p id="contentText">به صفحه آیین خوش آمدید. این بخش ساختار اصلی صفحات وب را تشکیل می‌دهد.</p>
+        <!-- 👇 News Grid Container -->
+        <div id="newsGrid" style="display: flex; gap: 20px; flex-wrap: wrap; margin-top: 20px;"></div>
+
+        <!-- 👇 Full Article Sub-Page View Container -->
+        <div id="articleDetailView" style="display: none; margin-top: 20px;">
+            <button onclick="closeArticle()" style="margin-bottom: 15px; padding: 6px 12px; cursor: pointer;">← Return / بازگشت</button>
+            <h2 id="articleTitle"></h2>
+            <p id="articleBody"></p>
+        </div>
+
+
         <div id="contentVideoContainer" style="margin-top: 30px; clear: both; text-align: center;">
             <video id="contentVideo" controls width="80%" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.15);">
                 <source id="videoSource" src="" type="video/mp4">
                 مرورگر شما از بارگذاری این ویدیو پشتیبانی نمی‌کند. / Your browser does not support the video tag.
             </video>
             <iframe id="vimeoPlayer" src="" width="80%" height="450" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); display: none;"></iframe>
-         </div>
-         
-        <!-- <div id="contentImageContainer"></div> -->
+        </div>
 
+        <!-- <div id="contentImageContainer"></div> -->
         <!-- Main Content Sandbox Area -->
         <h1 id="contentTitle"></h1>
         <div id="contentText"></div>
@@ -235,7 +245,7 @@
         <!-- 👇 Add this right here! The Contact Form Surface Interface -->
         <div id="contactFormContainer" style="display: none; margin-top: 25px;">
             <form id="offlineContactForm" onsubmit="handleOfflineSubmit(event)">
-                
+
                 <div style="margin-bottom: 15px;">
                     <label id="lblEmail" style="display: block; margin-bottom: 5px; font-weight: bold;">Email:</label>
                     <input type="email" required style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; box-sizing: border-box;">
@@ -260,219 +270,297 @@
 
 
     </div>
-    
-<script src="content.js"></script>
 
-<script>
-    // Track the current language ("fa" or "en") and the active content tab
-    let currentLang = "fa";
-    let currentTab = "Methods";
+    <script src="content.js"></script>
 
-    // Centralized Translations Database ONLY for layout menus and labels
-    const translations = {
-        fa: {
-            menuBtn: "☰ منو",
-            langBtn: "EN",
-            navMethods: "آیین",
-            navNews: "خبر",
-            navPrograms: "برنامه ها",
-            navHist: "تاریخ",
-            drop1: " سر برگ آموزش‌ها",
-            drop2: "مراجع",
-            drop3: "نمونه ها",
-            drop4: "تمرین‌ها",
-            drop5: "پیوند با ما"
+    <script>
+            // Track the current language ("fa" or "en") and the active content tab
+            let currentLang = "fa";
+            let currentTab = "Methods";
 
-        },
-        en: {
-            menuBtn: "☰ Menu",
-            langBtn: "FA",
-            navMethods: "Grand Charter",
-            navNews: "News",
-            navHist: "History",
-            navPrograms: "Programs",
-            drop1: "Tutorials Home",
-            drop2: "References",
-            drop3: "Examples",
-            drop4: "Exercises",
-            drop5: "Contact"
-        }
-    };
+            // Centralized Translations Database ONLY for layout menus and labels
+            const translations = {
+                fa: {
+                    menuBtn: "☰ منو",
+                    langBtn: "EN",
+                    navMethods: "آیین",
+                    navNews: "خبر",
+                    navPrograms: "برنامه ها",
+                    navHist: "تاریخ",
+                    drop1: " سر برگ آموزش‌ها",
+                    drop2: "مراجع",
+                    drop3: "نمونه ها",
+                    drop4: "تمرین‌ها",
+                    drop5: "پیوند با ما"
+                },
+                en: {
+                    menuBtn: "☰ Menu",
+                    langBtn: "FA",
+                    navMethods: "Grand Charter",
+                    navNews: "News",
+                    navHist: "History",
+                    navPrograms: "Programs",
+                    drop1: "Tutorials Home",
+                    drop2: "References",
+                    drop3: "Examples",
+                    drop4: "Exercises",
+                    drop5: "Contact"
+                }
+            };
 
-    const htmlTag = document.getElementById('htmlTag');
-    const menuBtn = document.getElementById('menuBtn');
-    const langBtn = document.getElementById('langBtn');
-    const dropdownMenu = document.getElementById('dropdownMenu');
-    const contentTitle = document.getElementById('contentTitle');
-    const contentText = document.getElementById('contentText');
-    const navItems = document.querySelectorAll('.nav-item');
-    const dropdownItems = document.querySelectorAll('.dropdown-item');
+            const htmlTag = document.getElementById('htmlTag') || document.documentElement; // 👈 CHANGED: Fallback to document.documentElement if htmlTag ID is missing
+            const menuBtn = document.getElementById('menuBtn');
+            const langBtn = document.getElementById('langBtn');
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            const contentTitle = document.getElementById('contentTitle');
+            const contentText = document.getElementById('contentText');
+            const navItems = document.querySelectorAll('.nav-item');
+            const dropdownItems = document.querySelectorAll('.dropdown-item');
 
-    // --- Update UI Content Function ---
-function updateLanguageUI() {
-    // 1. Fetch data from database safely
-    const pageData = pageDatabase[currentTab] ? pageDatabase[currentTab][currentLang] : null;
-    
-    if (!pageData) {
-        console.error("Missing page data for tab:", currentTab);
-        return;
-    }
+            // --- Update UI Content Function ---
+            function updateLanguageUI() {
+                // 1. Fetch data from database safely (Check case-sensitivity of currentTab)
+                const pageData = typeof pageDatabase !== "undefined" && pageDatabase[currentTab] ? pageDatabase[currentTab][currentLang] : null; // 👈 CHANGED: Added guard check for pageDatabase existence
 
-    // Handle Language Direction
-    if (currentLang === "fa") {
-        htmlTag.setAttribute('dir', 'rtl');
-        htmlTag.setAttribute('lang', 'fa');
-    } else {
-        htmlTag.setAttribute('dir', 'ltr');
-        htmlTag.setAttribute('lang', 'en');
-    }
+                if (!pageData) {
+                    console.error("Missing page data for tab:", currentTab);
+                    return;
+                }
 
-    // 👇 ADD THIS: Translate Navigation Bar & Dropdown Menus Dynamically
-    if (document.getElementById('menuBtn')) document.getElementById('menuBtn').innerText = translations[currentLang].menuBtn;
-    if (document.getElementById('langBtn')) document.getElementById('langBtn').innerText = translations[currentLang].langBtn;
-    
-    if (document.getElementById('navMethods')) document.getElementById('navMethods').innerText = translations[currentLang].navMethods;
-    if (document.getElementById('navNews')) document.getElementById('navNews').innerText = translations[currentLang].navNews;
-    if (document.getElementById('navPrograms')) document.getElementById('navPrograms').innerText = translations[currentLang].navPrograms;
-    if (document.getElementById('navHist')) document.getElementById('navHist').innerText = translations[currentLang].navHist;
-    
-    if (document.getElementById('drop1')) document.getElementById('drop1').innerText = translations[currentLang].drop1;
-    if (document.getElementById('drop2')) document.getElementById('drop2').innerText = translations[currentLang].drop2;
-    if (document.getElementById('drop3')) document.getElementById('drop3').innerText = translations[currentLang].drop3;
-    if (document.getElementById('drop4')) document.getElementById('drop4').innerText = translations[currentLang].drop4;
-    
-    // Check for drop5 or dropContact depending on what you named your contact menu link ID
-    if (document.getElementById('drop5')) document.getElementById('drop5').innerText = translations[currentLang].navContact || translations[currentLang].drop5;
-    if (document.getElementById('dropContact')) document.getElementById('dropContact').innerText = translations[currentLang].navContact;
+                // Handle Language Direction
+                if (currentLang === "fa") {
+                    htmlTag.setAttribute('dir', 'rtl');
+                    htmlTag.setAttribute('lang', 'fa');
+                } else {
+                    htmlTag.setAttribute('dir', 'ltr');
+                    htmlTag.setAttribute('lang', 'en');
+                }
 
-    // Set the Title
-    document.getElementById('contentTitle').innerText = pageData.title;
+                // Translate Navigation Bar & Dropdown Menus Dynamically
+                if (document.getElementById('menuBtn')) document.getElementById('menuBtn').innerText = translations[currentLang].menuBtn;
+                if (document.getElementById('langBtn')) document.getElementById('langBtn').innerText = translations[currentLang].langBtn;
 
-    // Grab Containers
-    const formContainer = document.getElementById('contactFormContainer');
-    const textContainer = document.getElementById('contentText');
-    const videoContainer = document.getElementById('contentVideoContainer');
-    const imgContainer = document.getElementById('contentImageContainer');
+                if (document.getElementById('navMethods')) document.getElementById('navMethods').innerText = translations[currentLang].navMethods;
+                if (document.getElementById('navNews')) document.getElementById('navNews').innerText = translations[currentLang].navNews;
+                if (document.getElementById('navPrograms')) document.getElementById('navPrograms').innerText = translations[currentLang].navPrograms;
+                if (document.getElementById('navHist')) document.getElementById('navHist').innerText = translations[currentLang].navHist;
 
-    if (pageData.isContactPage) {
-        if (formContainer) formContainer.style.display = "block";
-        if (textContainer) textContainer.innerHTML = "";
-        if (videoContainer) videoContainer.style.display = "none";
-        if (imgContainer) imgContainer.innerHTML = "";
+                if (document.getElementById('drop1')) document.getElementById('drop1').innerText = translations[currentLang].drop1;
+                if (document.getElementById('drop2')) document.getElementById('drop2').innerText = translations[currentLang].drop2;
+                if (document.getElementById('drop3')) document.getElementById('drop3').innerText = translations[currentLang].drop3;
+                if (document.getElementById('drop4')) document.getElementById('drop4').innerText = translations[currentLang].drop4;
 
-        if (currentLang === "fa") {
-            document.getElementById('lblEmail').innerText = "ایمیل:";
-            document.getElementById('lblMessage').innerText = "پیام شما:";
-            document.getElementById('lblUpload').innerText = "بارگذاری فایل:";
-            document.getElementById('btnSubmitForm').innerText = "ارسال پیام";
-        } else {
-            document.getElementById('lblEmail').innerText = "Email:";
-            document.getElementById('lblMessage').innerText = "Your Message:";
-            document.getElementById('lblUpload').innerText = "Upload File:";
-            document.getElementById('btnSubmitForm').innerText = "Send Message";
-        }
+                if (document.getElementById('drop5')) document.getElementById('drop5').innerText = translations[currentLang].navContact || translations[currentLang].drop5;
+                if (document.getElementById('dropContact')) document.getElementById('dropContact').innerText = translations[currentLang].navContact;
 
-    } else {
-        if (formContainer) formContainer.style.display = "none";
-        
-        // Joined with a single <br> to respect your data arrays
-        if (Array.isArray(pageData.text)) {
-            textContainer.innerHTML = pageData.text.join("<br>");
-        } else {
-            textContainer.innerHTML = pageData.text || "";
-        }
+                // Set the Title
+                if (contentTitle) contentTitle.innerText = pageData.title;
 
-        // Handle Images
-        if (imgContainer) {
-            imgContainer.innerHTML = "";
-            if (pageData.images && Array.isArray(pageData.images)) {
-                pageData.images.forEach((imagePath, index) => {
-                    imgContainer.innerHTML += `<img src="${imagePath}" alt="page-image" class="wrapped-sidebar-img">`;
-                    if (index < pageData.images.length - 1) {
-                        imgContainer.innerHTML += `<div class="text-gap-spacer"></div>`;
+                // Grab Containers
+                const formContainer = document.getElementById('contactFormContainer');
+                const textContainer = document.getElementById('contentText');
+                const videoContainer = document.getElementById('contentVideoContainer');
+                const imgContainer = document.getElementById('contentImageContainer');
+                const newsGrid = document.getElementById('newsGrid');
+                const articleView = document.getElementById('articleDetailView');
+
+                // Reset detail view and restore text visibility on page/tab switch
+                if (articleView) articleView.style.display = "none"; // 👈 ADDED: Hides full article view when changing tabs
+                if (textContainer) textContainer.style.display = "block"; // 👈 ADDED: Ensures main text container is visible again
+
+                // Handle Articles Grid
+                if (pageData.articles && Array.isArray(pageData.articles)) {
+                    if (newsGrid) {
+                        newsGrid.style.display = "flex";
+                        newsGrid.innerHTML = "";
+                        pageData.articles.forEach(article => {
+                            newsGrid.innerHTML += `
+                                <div style="border: 1px solid #ccc; padding: 15px; border-radius: 8px; width: 280px; cursor: pointer;"
+                                     onclick="openArticle('${article.id}')">
+                                    <h3>${article.title}</h3>
+                                    <p>${article.summary}</p>
+                                    <small style="color: blue;">Read more / بیشتر بخوانید →</small>
+                                </div>
+                            `;
+                        });
                     }
+                } else {
+                    if (newsGrid) newsGrid.style.display = "none";
+                }
+
+                if (pageData.isContactPage) {
+                    if (formContainer) formContainer.style.display = "block";
+                    if (textContainer) textContainer.innerHTML = "";
+                    if (videoContainer) videoContainer.style.display = "none";
+                    if (imgContainer) imgContainer.innerHTML = "";
+
+                    if (currentLang === "fa") {
+                        if (document.getElementById('lblEmail')) document.getElementById('lblEmail').innerText = "ایمیل:";
+                        if (document.getElementById('lblMessage')) document.getElementById('lblMessage').innerText = "پیام شما:";
+                        if (document.getElementById('lblUpload')) document.getElementById('lblUpload').innerText = "بارگذاری فایل:";
+                        if (document.getElementById('btnSubmitForm')) document.getElementById('btnSubmitForm').innerText = "ارسال پیام";
+                    } else {
+                        if (document.getElementById('lblEmail')) document.getElementById('lblEmail').innerText = "Email:";
+                        if (document.getElementById('lblMessage')) document.getElementById('lblMessage').innerText = "Your Message:";
+                        if (document.getElementById('lblUpload')) document.getElementById('lblUpload').innerText = "Upload File:";
+                        if (document.getElementById('btnSubmitForm')) document.getElementById('btnSubmitForm').innerText = "Send Message";
+                    }
+
+                } else {
+                    if (formContainer) formContainer.style.display = "none";
+
+                    // Joined with a single <br> to respect array formatting
+                    if (textContainer) {
+                        if (Array.isArray(pageData.text)) {
+                            textContainer.innerHTML = pageData.text.join("<br>");
+                        } else {
+                            textContainer.innerHTML = pageData.text || "";
+                        }
+                    }
+
+                    // Handle Images Safely
+                    if (imgContainer) {
+                        imgContainer.innerHTML = "";
+                        if (pageData.images && Array.isArray(pageData.images)) {
+                            pageData.images.forEach((imagePath, index) => {
+                                imgContainer.innerHTML += `
+                                    <img src="${imagePath}"
+                                         alt="page-image"
+                                         class="wrapped-sidebar-img"
+                                         onerror="console.error('Failed to load image:', this.src);">
+                                `; // 👈 CHANGED: Logs exact path error to Console without breaking page structure
+
+                                if (index < pageData.images.length - 1) {
+                                    imgContainer.innerHTML += `<div class="text-gap-spacer"></div>`;
+                                }
+                            });
+                        }
+                    }
+
+                    // Handle Videos
+                    if (videoContainer) {
+                        const videoElement = document.getElementById('contentVideo');
+                        const videoSource = document.getElementById('videoSource');
+                        const vimeoPlayer = document.getElementById('vimeoPlayer');
+
+                        // Reset both players first
+                        if (videoElement) {
+                            videoElement.style.display = "none";
+                            videoElement.pause();
+                        }
+                        if (vimeoPlayer) {
+                            vimeoPlayer.style.display = "none";
+                            vimeoPlayer.src = "";
+                        }
+
+                        // Decide which player to show
+                        if (pageData.vimeoUrl) {
+                            videoContainer.style.display = "block";
+                            if (vimeoPlayer) {
+                                vimeoPlayer.style.display = "inline-block";
+                                vimeoPlayer.src = pageData.vimeoUrl;
+                            }
+                        } else if (pageData.video) {
+                            videoContainer.style.display = "block";
+                            if (videoElement && videoSource) {
+                                videoElement.style.display = "inline-block";
+                                videoSource.src = pageData.video;
+                                videoElement.load();
+                            }
+                        } else {
+                            videoContainer.style.display = "none";
+                        }
+                    }
+                }
+            }
+
+            // Initialize layout on boot up
+            updateLanguageUI();
+
+            // --- Language Button Click Event ---
+            if (langBtn) {
+                langBtn.addEventListener('click', function() {
+                    currentLang = (currentLang === "fa") ? "en" : "fa";
+                    updateLanguageUI();
                 });
             }
-        }
 
-        // Handle Videos
-        if (videoContainer) {
-            const videoElement = document.getElementById('contentVideo');
-            const videoSource = document.getElementById('videoSource');
-            const vimeoPlayer = document.getElementById('vimeoPlayer');
+            // --- Tab Selection Click Event (Main Navbar) ---
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    navItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
 
-            // Reset both players first
-            if (videoElement) {
-                videoElement.style.display = "none";
-                videoElement.pause();
+                    currentTab = this.getAttribute('data-target');
+                    updateLanguageUI();
+                });
+            });
+
+            // --- Dropdown Items Click Event (Inside Three Lines Menu) ---
+            dropdownItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    navItems.forEach(i => i.classList.remove('active'));
+                    currentTab = this.getAttribute('data-target');
+                    updateLanguageUI();
+                    if (dropdownMenu) dropdownMenu.classList.remove('show');
+                });
+            });
+
+            // --- Dropdown Menu Open/Close Toggle Logic ---
+            if (menuBtn) {
+                menuBtn.addEventListener('click', function(event) {
+                    if (dropdownMenu) dropdownMenu.classList.toggle('show');
+                    event.stopPropagation();
+                });
             }
-            if (vimeoPlayer) {
-                vimeoPlayer.style.display = "none";
-                vimeoPlayer.src = ""; // Clear src to kill playing audio
-            }
 
-            // Decide which player to show
-            if (pageData.vimeoUrl) {
-                videoContainer.style.display = "block";
-                if (vimeoPlayer) {
-                    vimeoPlayer.style.display = "inline-block";
-                    vimeoPlayer.src = pageData.vimeoUrl; // Load the Vimeo embed link
+            window.addEventListener('click', function() {
+                if (dropdownMenu && dropdownMenu.classList.contains('show')) {
+                    dropdownMenu.classList.remove('show');
                 }
-            } else if (pageData.video) {
-                videoContainer.style.display = "block";
-                if (videoElement && videoSource) {
-                    videoElement.style.display = "inline-block";
-                    videoSource.src = pageData.video;
-                    videoElement.load();
+            });
+
+            // --- Helper Functions for Articles ---
+            function openArticle(articleId) {
+                const pageData = typeof pageDatabase !== "undefined" && pageDatabase[currentTab] ? pageDatabase[currentTab][currentLang] : null;
+                if (!pageData || !pageData.articles) return;
+
+                const article = pageData.articles.find(a => a.id === articleId);
+
+                if (article) {
+                    window.location.hash = articleId;
+
+                    const newsGrid = document.getElementById('newsGrid');
+                    const textContainer = document.getElementById('contentText');
+                    const imgContainer = document.getElementById('contentImageContainer'); // 👈 Grab image container
+                    const articleView = document.getElementById('articleDetailView');
+
+                    if (newsGrid) newsGrid.style.display = "none";
+                    if (textContainer) textContainer.style.display = "none";
+                    if (imgContainer) imgContainer.style.display = "none"; // 👈 Hide images during article view
+                    if (articleView) articleView.style.display = "block";
+
+                    if (document.getElementById('articleTitle')) document.getElementById('articleTitle').innerText = article.title;
+                    if (document.getElementById('articleBody')) document.getElementById('articleBody').innerText = article.fullText;
                 }
-            } else {
-                videoContainer.style.display = "none";
             }
-        }
-    }
-}    
-// Initialize layout on boot up
-    updateLanguageUI();
 
-    // --- Language Button Click Event ---
-    langBtn.addEventListener('click', function() {
-        currentLang = (currentLang === "fa") ? "en" : "fa";
-        updateLanguageUI();
-    });
+            function closeArticle() {
+                window.location.hash = ""; 
+                const newsGrid = document.getElementById('newsGrid');
+                const textContainer = document.getElementById('contentText');
+                const imgContainer = document.getElementById('contentImageContainer'); // 👈 Grab image container
+                const articleView = document.getElementById('articleDetailView');
 
-    // --- Tab Selection Click Event (Main Navbar) ---
-    navItems.forEach(item => {
-        item.addEventListener('click', function() {
-            navItems.forEach(i => i.classList.remove('active'));
-            this.classList.add('active');
-            
-            currentTab = this.getAttribute('data-target');
-            updateLanguageUI();
-        });
-    });
+                if (articleView) articleView.style.display = "none";
+                if (textContainer) textContainer.style.display = "block";
+                if (imgContainer) imgContainer.style.display = "block"; // 👈 Show images again when returning
+                if (newsGrid) newsGrid.style.display = "flex";
+            }
+    </script>
 
-    // --- Dropdown Items Click Event (Inside Three Lines Menu) ---
-    dropdownItems.forEach(item => {
-        item.addEventListener('click', function() {
-            navItems.forEach(i => i.classList.remove('active'));
-            currentTab = this.getAttribute('data-target');
-            updateLanguageUI();
-            dropdownMenu.classList.remove('show');
-        });
-    });
 
-    // --- Dropdown Menu Open/Close Toggle Logic ---
-    menuBtn.addEventListener('click', function(event) {
-        dropdownMenu.classList.toggle('show');
-        event.stopPropagation(); 
-    });
 
-    window.addEventListener('click', function() {
-        if (dropdownMenu.classList.contains('show')) {
-            dropdownMenu.classList.remove('show');
-        }
-    });
-</script>
     <button onclick="document.getElementById('demo'). innerHTML=Date()"> Time</button>
     <p id="demo"></p>
 

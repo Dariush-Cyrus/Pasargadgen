@@ -1,9 +1,11 @@
 const pageDatabase = {
     Methods: {
         fa: {
-            title: "تار برگ آیین",
+            title: "  رویه نخست: تار برگ آیین",
             text: [
-                " به تار برگ آیین خوش آمدید. این بخش ساختار اصلی صفحات وب را تشکیل می‌دهد.",
+                "به تاربرگ «نسل شیک پاسارگاد هخامنشی» خوش آمدید؛ جایی که شکوهِ ریشه‌های دیرین با خرد و اندیشه‌ی امروز پیوند می‌خورد. این پایگاه، نه یک رسانه‌ی ساده، بلکه بستر بیداری بزرگ روان، اندیشه و خودباوری ایرانی است. آرمان ما تنها بازخوانیِ گذشته نیست، بلکه برون‌کشیدنِ بن‌مایه‌های توانمندی و فرّ درونیِ آدمیِ ایرانی است تا یادآور شویم که ما برای زیستن در سایه‌ی نومیدی، سستی و خوی گرفتن به چگونگی‌های ناخواسته ساخته نشده‌ایم؛ بلکه یادگاردارانِ خرد، سازندگی و ارجمندیِ آدمی هستیم.",
+                "گاهی در خستگی‌های هرروزه، ناخودآگاه، خوی‌ها و رفتارهایی چون گردن‌نهادن، ناامیدی و فراموشیِ شایستگی‌های خویشتن بر روان ما سایه می‌افکنند. اما بیداریِ راستین از دمی آغاز می‌شود که ارج‌های گوهرینِ درونی‌مان را دوباره به یاد آوریم. «تاربرگ آیین» نخستین گام در این راه است؛ تلاشی برای بازشناختِ شهرآینی، دادگری و آزادی بر پایه‌ی والاییِ سرشتِ آدمیِ ایرانی—سرمشق‌هایی که روزگاری کیستیِ ما را در جهان پرآوازه ساختند و امروز نیز چاره‌سازِ ساختنِ آینده‌ای سرافراز، آباد و شایسته برای فرزندان این سرزمین هستند.",
+                " به تار برگ آیین خوش آمدید.",
                 "برای نزدیک‌تر کردن این پیش‌نویس به کشورهای پادشاهی مشروطه‌ی پیشرفته و مدرن (مانند سوئد، نروژ و بریتانیا)، چند ابزار حقوقی و عملی به متن افزوده شده است:",
                 "",
                 "۱. مدل پادشاهی سوئد (قانون اساسی ۱۹۷۴): در سوئد، پادشاه حتی دیگر نخست‌وزیر را رسماً معرفی نمی‌کند و این خویشکاری بر عهده سالار انجمن (رئیس پارلمان) است. این بالاترین سطح تفکیک قدرت برای جلوگیری از تمرکز قدرت در دست یک تن است.",
@@ -96,13 +98,21 @@ const pageDatabase = {
                 "گاتها، سرودهای اهورایی زرتشت؛ پژوهش دکتر خسرو خزاعی",
                 "الگوهای برتر برگرفته از حقوق اساسی پادشاهی مشروطه سوئد (قانون اساسی نمادین ۱۹۷۴ و نظام امبودزمان) و بریتانیا (پاسخگویی پارلمانی)."
             ],
-            images: ["farva.jpg", "pasar.jpg", "bg.jpg"],
+             articles:[
+                {
+                id: "article1",
+                title: "مقاله نخست",
+                summary: "خلاصه کوتاه خبر اینجا قرار میگیرد...",
+                fullText:"اینجا قرار میگیرد متن کامل مقاله "
+                }
+            ],
+            images: ["farva.jpeg", "pasar.jpeg", "bg.jpeg"],
             video: "me1.mp4"
         },
         en: {
-            title: "The Grand Charter Page",
+            title: "The Grand Charter Page (Main Page) ",
             text: [
-                "Welcome to the <b> HTML</b> page. Every web page should have a title to describe its meaning.",
+                "",
                 "The Root Constitution of the Democratic Constitutional Monarchy of Iran",
                 " Integration of Constitutionalism, Modern Democracy, and Indigenous Values (Asha, Vohuman, Khshathra)",
                 "",
@@ -170,20 +180,65 @@ const pageDatabase = {
 
                 
             ],
-            images: ["farva.jpg", "pasar.jpg", "bg.jpg"],
+            articles:[
+                {
+                id: "article1",
+                title: "First article Title",
+                summary: "Short preview summary goes here",
+                fullText:"Full article text that appear after clicking apears here"
+                }
+            ],
+            images: ["farva.jpeg", "pasar.jpeg", "bg.jpeg"],
             video: "me1.mp4"
         }
     },
     News: {
         fa: {
             title: "تار برگ خبر",
-            text: "به تار برگ خبر خوش آمدید. این بخش برای زیباسازی، رنگ‌آمیزی و ظاهر سایت استفاده می‌شود.",
+            text: ["به تار برگ خبر خوش آمدید.",
+                   " ۱. هشدار تازه درباره پیشروی فرونشست زمین در حریم تخت‌جمشید و پاسارگاد",
+                   "  * تاریخ: ۲۲ شهریور ۱۴۰۵ (۱۳ سپتامبر ۲۰۲۶)",
+                   "  * منبع: رادیو فردا / گزارش تحلیلی دیده‌بان میراث فرهنگی",
+                    " * خلاصه خبر: با ادامه حفر بی‌رویه چاه‌های عمیق و برداشت غیرقانونی از سفره‌های آب زیرزمینی در دشت مرودشت، شکاف‌های عمیق ناشی از فرونشست زمین به فاصله خطرسازی از پایه‌های سنگی تخت‌جمشید و مجموعه پاسارگاد رسیده است. کارشناسان هشدار می‌دهند که سوءمدیریت منابع آب، این سازه‌های چند هزار ساله را در معرض آسیب ساختاری غیرقابل بازگشت قرار داده است.",
+                     "* تحلیل بیدارگر (نگاه هویت‌محور): نیاکان ما با دانش کاریز و نگاه مقدس به آب و خاک، هزاره‌ها این سرزمین را آباد نگه داشتند. امروز تضاد میان خرد باستانی و ناکارآمدی ایدئولوژیک، تاریخ و جغرافیای ایران را هم‌زمان به نابودی می‌کشاند.",
+                    "۲. قطعی گسترده برق صنایع و بحران انرژی در اوج گرمای تابستان",
+                     "* تاریخ: ۱۸ مرداد ۱۴۰۵ (۹ اوت ۲۰۲۶)",
+                     "* منبع: ایران اینترنشنال / بی‌بی‌سی فارسی",
+                     "* خلاصه خبر: به دلیل ناترازی شدید در شبکه توزیع و فرسودگی زیرساخت‌های نیروگاهی، برق شهرک‌های صنعتی و بخش خانگی در اکثر استان‌های کشور به صورت روزانه و چندساعته قطع شد. این مسئله موجب توقف خطوط تولید، خسارت‌های سنگین به بخش خصوصی و کلافگی عمومی شده است.",
+                     "* تحلیل بیدارگر (نگاه هویت‌محور): سرزمینی که بر روی یکی از بزرگ‌ترین ذخایر انرژی جهان قرار دارد، به دلیل صرف ثروت‌های ملی در مسیر اهداف ایدئولوژیک خارج از مرزها، از تامین اولیه انرژی برای مردم خود عاجز مانده است.",
+                    "۳. ثبت رکورد تازه در مهاجرت کادر درمان و نخبگان علمی",
+                     "* تاریخ: ۵ تیر ۱۴۰۵ (۲۶ ژوئن ۲۰۲۶)",
+                     "* منبع: صدای آمریکا", 
+                     "* خلاصه خبر: گزارش‌های جدید نهادهای صنفی و پزشکی از خروج بی‌سابقه پزشکان متخصص، پرستاران و مهندسان جوان خبر می‌دهند. نبود چشم‌انداز روشن اقتصادی، انسداد سیاسی و فشارهای اجتماعی به‌عنوان اصلی‌ترین دلایل این مهاجرت دسته‌جمعی عنوان شده است.",
+                    " * تحلیل بیدارگر (نگاه هویت‌محور): توانمندی و فرّ درونی «نسل شیک» ایران که باید سرمایه آبادانی میهن باشد، به دلیل سیاست‌های تفرقه‌افکنانه خانه خراب می‌شود. راه نجات، بازآفرینی عزت‌نفس و ساختن کشوری است که شایسته فرزندان خویش باشد."
+                  
+                  ],
             images: [],
             video: ""
         },
         en: {
             title: "News Page Title",
-            text: "Welcome to the News page. News describes how HTML elements are to be displayed on screen.",
+            text: ["Welcome to the News page.",
+                   "",
+                  "1. The Encroaching Earth-Fissures Surrounding Pasargadae and Persepolis",
+                   "  * Date: September 13, 2026 (22 Shahrivar 1405)",
+                    " * Source: Radio Farda / Cultural Heritage Watch",
+                     "* The Dispatch: Driven by indiscriminate deep-well extraction and the systemic mismanagement of subterranean aquifers across the Marvdasht plain, severe land subsidence has advanced to a perilous proximity of the ancient stone foundations of Persepolis and the Pasargadae complex. Heritage experts warn that prolonged environmental neglect now threatens these millennia-old structures with irreparable structural ruin.",
+                     "* The Awakening Perspective: Our ancestors preserved this land for millennia through the sacred veneration of earth and water and the mastery of qanat engineering. Today, the stark conflict between ancient wisdom and ideological incompetence places both the history and the very geography of Iran in existential jeopardy.",
+                    "",
+                   "2. Widespread Power Grid Collapse and Industrial Blackouts in Midsummer",
+                     "* Date: August 9, 2026 (18 Mordad 1405)",
+                     "* Source: Iran International / BBC Persian",
+                     "* The Dispatch: Crippled by profound energy deficits and decaying power infrastructure, rolling blackouts lasting several hours daily have swept through industrial parks and residential districts during peak summer heat. The outages have halted manufacturing, inflicted crushing losses upon private enterprise, and fueled widespread public distress.",
+                     "* The Awakening Perspective: A realm endowed with one of the greatest natural energy reserves on earth is left unable to provide basic electricity to its own populace—the direct consequence of national wealth being diverted toward ideological agendas beyond its borders.",
+                    "",
+                   "3. Unprecedented Exodus of Healthcare Professionals and Young Scholars",
+                     "* Date: June 26, 2026 (5 Tir 1405)",
+                     "* Source: Voice of America (VOA) / Iran Migration Observatory",
+                     "* The Dispatch: Fresh records from professional medical and engineering associations document an unprecedented wave of emigration among specialized physicians, nurses, and young innovators. Pervasive economic collapse, political suppression, and a bleak outlook for the future are cited as the primary catalysts driving this departure.",
+                     "* The Awakening Perspective: The inherent potential and divine glory (Farrah) of Iran’s Chic Generation—assets meant to cultivate the motherland—are driven into exile by divisive policies. The path forward lies in reclaiming our collective dignity and rebuilding a nation worthy of its children."
+
+                  ],
             images: [],
             video: ""
         }
@@ -191,29 +246,160 @@ const pageDatabase = {
     Programs: {
         fa: {
             title: "تار برگ برنامه ها",
-            text: "به تار برگ برنامه ها خوش آمدید. این بخش به صفحات وب قابلیت‌های تعاملی اضافه می‌کند.",
+            text: ["به تار برگ برنامه ها خوش آمدید. این بخش به صفحات وب قابلیت‌های تعاملی اضافه می‌کند.",
+                   "",
+                   "برنامه‌های بازگشت به خویشتن فرهمند",
+                   "",
+                   "نقشه راه بیداری: بازگشت به خویشتن فرهمند و روزگار شکوه درون",
+                   "",
+                   "فرّ و شکوهِ ایرانی، یک افسانه‌ی فراموش‌شده در کتاب‌ها نیست؛ آتشِ زیر خاکستری است در جان و روانِ تو. وقت آن رسیده است که این گنجِ نهان را آشکار کنی.",
+                   "",
+                    "در روزگاری که شتابِ جهانِ نو، آدمی را از ریشه‌های خویش جدا کرده است، «برنامه‌های بیداری نسل شیک» طراحی شده‌اند تا تو را به «خویشتنِ فرهمندت» بازگردانند. فرهمندی یعنی رسیدن به آن نیروی تابناک درونی که به اندیشه‌ات روشنایی، به اراده‌ات استواری و به زندگی‌ات شکوه می‌بخشد.",
+                    "ما تاریخ را نمی‌خوانیم که در گذشته بمانیم؛ تاریخ را می‌کاویم تا کدهای توانمندی و خودباوری را برای ساختنِ آینده‌ای سرافرازانه برداریم.",
+                    "",
+                    "برنامه‌های گام‌به‌گام برای شکوفایی توانمندی‌های نهان",
+                    "",
+                    "۱. کارگاه‌های بیداری فرّ درونی (دوره روان‌شناسی و خرد ایرانی)",
+                     "* هدف: پیوند دادن روان‌شناسی روز جهان با الگوهای خردمندانه ایران باستان.",
+                    " * آنچه به دست می‌آوری: رهایی از سردرگمی هویتی، دست‌یابی به آرامشِ استوار درونی، و یادگیریِ هنرِ «پادشاهی بر ذهن و رفتار خویشتن».",
+                    "",
+                    "۲. چالش‌های ۲۱ روزه خویش‌فرمانی (عادت‌سازی به سبک نیاکان)",
+                    " * هدف: تبدیل اندیشه و باور به رفتار و دستاوردهای واقعی در زندگی روزمره.",
+                     "* آنچه به دست می‌آوری: تمرین‌های روزانه برای تقویتِ انضباط فردی، پاک‌سازی روان از افکارِ ناتوان‌کننده، و تمرینِ گفتار، کردار و پندارِ نیک در دنیای مدرن.",
+                    "",
+                   " ۳. هم‌اندیشی‌های نسل شیک (نشست‌ها و گفتگوهای هم‌افزا)",
+                    " * هدف: گرد هم آمدنِ ایرانیانِ آگاه، هدفمند و پیشرو که به دنبال رشد فردی و اثرگذاری اجتماعی هستند.",
+                    " * آنچه به دست می‌آوری: حضور در شبکه‌ای از هم‌فکران، تبادل ایده‌های نوآورانه، و ساختن جامعه‌ای خویش‌باور و پویا.",
+                    "",
+                    "۴. مربی‌گری اختصاصی: «کشف جام جم درونی»",
+                     "* هدف: سنجش دقیق استعدادها و ترسیم نقشه راه اختصاصی زندگی و کسب‌وکار بر پایه توانمندی‌های واقعی تو.",
+                     "* آنچه به دست می‌آوری: شفافیت کامل در مسیر شغلی و شخصی، و تبدیل توانِ بالقوه به موفقیت‌های بالفعل و پایدار.",
+                     "",
+                    " پیمان با خویشتن",
+                    " تو تنها بیننده‌ی تاریخ نیستی؛ تو نویسنده‌ی فصلِ بعدیِ این شاهکاری.",
+                    " فرهمندی و شکوه، از همین لحظه و با نخستین گامی که برای شناختِ خود برمی‌داری آغاز می‌شود. خویشتنِ بزرگت در انتظارِ توست؛ او را بیدار کن!",
+                    ""
+                  
+                  ],
             images: [],
-            video: ""
+            video: "",
+            vimeoUrl: "https://player.vimeo.com/video/1203474449"
         },
         en: {
-            title: "Programs Page",
-            text: "Welcome to the Programs page. Programs makes web pages interactive and dynamic.",
+            title: " Programs for Awakening the Glorious Self",
+            text: ["Welcome to the Programs page.",
+                   "",
+                   "The Roadmap to Awakening: Reclaiming Your Glorious Self and Inner Splendor",
+                   "",
+                    "The divine glory (Farrah) and splendor of the Iranian spirit are not forgotten myths locked in ancient books; they are embers beneath the ashes of your soul. The time has come to unveil this hidden treasure.",
+                    "In an age where the frantic pace of the modern world has severed humanity from its roots, the Chic Generation Awakening Programs are crafted to guide you back to your, Glorious Self. Divine glory (Farrah) is that luminous inner force that brings clarity to your mind, steadfastness to your will, and majesty to your life.",
+                    "We do not explore history to linger in the past; we delve into our heritage to retrieve the blueprints of capability and self-worth, forging a triumphant future.",
+                    "",
+                    "Step-by-Step Paths to Unlocking Your Hidden Potential",
+                    "1. Workshops for Awakening the Inner Glory (Psychology & Ancient Wisdom)",
+                    " * Purpose: Blending modern global psychology with the timeless wisdom of ancient Iran.",
+                    " * What You Attain: Liberation from identity confusion, an unshakable inner peace, and mastery over the art of governing your own mind and conduct.",
+                    "",
+                   "2. 21-Day Self-Mastery Challenges (Habit-Building in the Spirit of the Ancestors)",
+                     "* Purpose: Translating noble thoughts and beliefs into tangible actions and real-world achievements.",
+                     "* What You Attain: Daily practices to strengthen personal discipline, cleanse the mind of limiting thoughts, and live out good thoughts, good words, and good deeds in the modern world.",
+                    "",
+                   "3. The Chic Generation Conclaves (Synergistic Gatherings & Dialogues)",
+                     "* Purpose: Uniting conscious, purpose-driven, and forward-thinking individuals striving for personal growth and social impact.",
+                     "* What You Attain: A place within a network of like-minded peers, the exchange of innovative ideas, and the building of a self-reliant, dynamic community.",
+                   "",
+                   "4. One-on-One Mentorship: Discovering the Cup of Jamshid Within",
+                     "* Purpose: Precise assessment of your talents and crafting a personalized roadmap for your life and career based on your true capabilities.",
+                    " * What You Attain: Absolute clarity in your professional and personal trajectory, converting potential energy into lasting, real-world success.",
+                   "",
+                   " A Covenant with Oneself",
+                    " You are not merely a spectator of history; you are the author of its next glorious chapter.",
+                    " Splendor and inner glory begin this very moment, with the first step you take toward self-awareness. Your greater self awaits—awaken it!"
+                  ],
             images: [],
-            video: ""
+            video: "",
+            vimeoUrl: "https://player.vimeo.com/video/1203474449"
         }
     },
     Hist: {
         fa: {
             title: "تار برگ تاریخ",
-            text: "به تار برگ تاریخ خوش آمدید. این بخش به صفحات وب قابلیت‌های تعاملی اضافه می‌کند.",
+            text: ["به تار برگ تاریخ خوش آمدید. این بخش به صفحات وب قابلیت‌های تعاملی اضافه می‌کند. هرگز از یاد نمیبریم.",
+                  "سرآغاز: سرگذشت پیشدادیان",
+                   "فرنام بنیادین:",
+                    "سرآغاز روشنایی و خرد؛ داستانی که از ریشه‌های تو می‌گوید",
+                    "سرگذشت ما با جنگ آغاز نشد؛ با «آگاهی»، «سازندگی» و «پادشاهی بر خویشتن» آغاز شد.",
+                    "بخش نخست: پیشدادیان؛ نخستین دادگستران و سازندگان جهان",
+                    "داستان ما از جایی آغاز می‌شود که تاریکی و نادانی جهان را فراگرفته بود. پیشدادیان (نخستین دادگستران) آمدند تا به آدمی یاد بدهند که چگونه از هیچ، همه‌چیز بسازد.",
+                    "آنان کسانی بودند که:",
+                     "* آتش را نه برای ویرانی، بلکه برای گرمی و روشنایی پیدا کردند (هووشنگ).",
+                     "* دبیره و نوشتن را برای رساندن دانش و خرد رام کردند (طهمورث دیوبند).",
+                    "تو از تباری هستی که نخستین بار جهان را ساخت. خواستِ پیشدادیان در خون توست؛ تو برای گردن‌نهادن در برابر تاریکی‌ها ساخته نشده‌ای، تو ساخته شده‌ای تا مانند نیاکانت، روشنایی را بیافرینی.",
+                    
+                    "بخش دوم: روزگار جمشید؛ بالندگی خرد و جام جم درون",
+                    "روزی که جمشید بر تخت نشست، روزگار زرین ایران آغاز شد. او نه با نیروی تیغ، بلکه با پزشکی، ساخت‌وساز، هنر، و جهانداری خردمندانه، بیماری، پیری و تهیدستی را از سرزمین راند. نوروز، یادگار آن جهش بزرگ اندیشه‌ای است.",
+                    "جام جمشید (جام جم) چیزی جز «روانِ آگاه و آینه‌ی خودشناسی» نبود؛ ابزاری که با آن می‌شد رازهای جهان را دید.",
+                    "اما جمشید یک آموزه بزرگ هم برای ما داشت: وقتی خودبینی بر خرد چیره شود، شکوه رخ برمی‌تابد.",
+                    " ",
+                    " جام جم در دست‌های توست. «جام جم» همان توان اندیشه و توانمندی‌های نهان توست که اگر با فروتنی و خودآگاهی همراه شود، می‌توانی روزگار زرین زندگی خودت را پی‌ریزی کنی.",
+                    "", 
+                    "بخش سوم: فریدون، ایرج و تور؛ نبرد بزرگ گزینش‌ها",
+                    "پس از تاریکی ضحاک، فریدون نشانِ دادگری و رهایی شد. اما بزرگ‌ترین آزمون سرگذشت در نژاد او شکل گرفت: بخش‌کردن جهان میان ۳ پسرش؛ سلم، تور و ایرج.",
+                     "* تور و سلم: نشانِ خشم، آز، زیاده‌خواهی و رشک‌ورزی بودند.",
+                     "* ایرج: نشانِ خرد، آشتی، بزرگواریِ آدمی و گوهر اصیل بود.",
+                    "ایرج جان‌باخته‌ی کینه شد، اما نام و نژادش تا جاوید نشانِ آبرو و گوهر اصیل ایرانی باقی ماند. از دل این رنج، پهلوانانی چون منوچهر و رستم زاده شدند تا نشان دهند راستی و داد هرگز خاموش نمی‌شود.",
+                     " ",
+                    " درون هر یک از ما نبردی میان «تور» (آز و خشم درونی) و «ایرج» (خرد و گوهر اصیل) در برپاست. سرگذشت ایران به تو یاد می‌دهد که گزینشِ «راه ایرج» یعنی گزینشِ سرترازی و آبرو، و این تنها راهی است که تو را به پهلوانِ داستانِ زندگی خودت دگرگون می‌سازد.",
+                    " ",
+                    "پایان‌سخن و فراخوان به کار:",
+                    " تو یادگاردار این شاهکاری!",
+                    " داستان پیشدادیان، افسانه‌های کهنه نیستند؛ این‌ها بن‌مایه‌هایِ باورداری و توانستن در جان و روانِ تو هستند.",
+                    " اکنون نوبت توست که در روزگار نو، پیشدادیِ درون خودت را بیدار کنی. خرد جمشید، آزاده‌گی ایرج و خواستِ فریدون را بردار و آینده‌ات را بساز.",
+                    " [ کلید: آشکارسازیِ توانمندی‌های درون / درآمدن به بخش خودشناسی ]",
+                    " ",
+                  ],
             images: [],
-            video: ""
+            video: "",
+            vimeoUrl: "https://player.vimeo.com/video/1203474449"
         },
         en: {
             title: "History Page Title",
-            text: "Welcome to the History page. History makes you be aware of yourself and know about others.",
+            text: ["Welcome to the History page. History makes you be aware of yourself and know about others. we never forget",
+                   "The Dawn of Light and Wisdom: A Tale of Your Roots",
+                    "Our history did not begin with conquest; it began with awareness, creation, and mastery over oneself.",
+                    "Part I: The Pishdadians — The First Lawgivers and Builders of the World",
+                    "Our story unfolds when darkness and ignorance enveloped the earth. The Pishdadians (the First Lawgivers) arose to teach humanity how to shape everything out of nothing.",
+                    "They were the ones who:",
+                     "* Discovered fire not for destruction, but for warmth and illumination (Houshang).",
+                     "* Mastered script and writing to pass on knowledge and wisdom (Tahmuras).",
+                    "",
+                    " You descend from a lineage that built the world for the first time. The resolve of the Pishdadians flows in your veins; you were not forged to yield to darkness—you were forged to create light, just as your ancestors did.",
+                    "",
+                    "Part II: The Age of Jamshid — The Flourishing of Wisdom and the Cup Within",
+                    "When Jamshid ascended the throne, the Golden Age of Iran dawned. Not through the blade of a sword, but through medicine, architecture, art, and wise governance, he banished sickness, aging, and hardship from the land. Nowruz stands as a lasting legacy of that great leap in human thought.",
+                    "The Cup of Jamshid (Jam-e Jam) was nothing less than the (conscious soul and the mirror of self-awareness—)a vessel through which one could perceive the mysteries of existence.",
+                    "Yet Jamshid left us a monumental lesson: When hubris triumphs over wisdom, glory slips away.",
+                    "",
+                    " The Cup of Jamshid is already in your hands. It represents your power of thought and your hidden potential. When paired with humility and self-awareness, you can build the Golden Age of your own life.",
+                    "", 
+                    "Part III: Fereydoun, Iraj, and Tur — The Great War of Choices",
+                    "Following the darkness of Zahhak, Fereydoun became the symbol of justice and liberation. Yet the greatest test in history emerged within his own bloodline: the dividing of the realm among his three sons—Salm, Tur, and Iraj.",
+                     "* Tur and Salm: Embodied wrath, greed, excess, and envy.",
+                     "* Iraj: Embodied wisdom, peace, human dignity, and pure nobility.",
+                    "Iraj fell victim to malice, yet his name and lineage remained an eternal beacon of honor and noble spirit. From the depths of this grief, heroes such as Manuchehr and Rostam were born, proving that truth and justice are never extinguished.",
+                    "",
+                    " Within each of us, a battle rages between Tur (inner greed and wrath) and Iraj (wisdom and noble character). History teaches you that choosing the Path of Iraj, means choosing dignity and honor—and that is the sole path that transforms you into the hero of your own life story.",
+                    "", 
+                    " Closing Word and Call to Action:",
+                    " You are the Guardian of This Masterpiece!",
+                    " The stories of the Pishdadians are not ancient myths; they are the fundamental blueprints of belief and capability within your spirit.",
+                    " Now it is your turn to awaken the Pishdadian within yourself in this modern era. Harness the wisdom of Jamshid, the noble freedom of Iraj, and the resolve of Fereydoun to forge your future.",
+                    " [ Button: Unlock Your Inner Potential / Enter the Journey of Self-Discovery ]",
+                    ""    
+                  ],
             images: [],
-            video: ""
+            video: "",
+            vimeoUrl: "https://player.vimeo.com/video/1203474449"
         }
     },
     // Dropdown items can live here too!
