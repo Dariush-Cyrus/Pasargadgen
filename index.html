@@ -243,23 +243,26 @@
         <div id="contentText"></div>
 
         <!-- 👇 Add this right here! The Contact Form Surface Interface -->
+        
+
         <div id="contactFormContainer" style="display: none; margin-top: 25px;">
-            <form id="offlineContactForm" onsubmit="handleOfflineSubmit(event)">
+            <!-- 👈 Place your Formspree ID URL in the action attribute below -->
+            <form action="https://formspree.io/f/meaogayj" method="POST" enctype="multipart/form-data">
 
                 <div style="margin-bottom: 15px;">
                     <label id="lblEmail" style="display: block; margin-bottom: 5px; font-weight: bold;">Email:</label>
-                    <input type="email" required style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; box-sizing: border-box;">
+                    <input type="email" name="email" required style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; box-sizing: border-box;">
                 </div>
 
                 <div style="margin-bottom: 15px;">
                     <label id="lblMessage" style="display: block; margin-bottom: 5px; font-weight: bold;">Message:</label>
-                    <textarea required rows="5" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; box-sizing: border-box; resize: vertical;"></textarea>
+                    <textarea name="message" required rows="5" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; box-sizing: border-box; resize: vertical;"></textarea>
                 </div>
 
                 <!-- File Upload Field -->
                 <div style="margin-bottom: 20px;">
                     <label id="lblUpload" style="display: block; margin-bottom: 5px; font-weight: bold;">Upload File:</label>
-                    <input type="file" id="fileAttachment" style="width: 100%; padding: 8px; border: 1px dashed #888; border-radius: 6px; background: rgba(255,255,255,0.5); box-sizing: border-box;">
+                    <input type="file" id="fileAttachment" name="attachment" style="width: 100%; padding: 8px; border: 1px dashed #888; border-radius: 6px; background: rgba(255,255,255,0.5); box-sizing: border-box;">
                 </div>
 
                 <button type="submit" id="btnSubmitForm" style="padding: 10px 25px; background-color: #4CAF50; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 16px;">
@@ -267,6 +270,8 @@
                 </button>
             </form>
         </div>
+
+
 
 
     </div>
