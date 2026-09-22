@@ -540,8 +540,86 @@ const pageDatabase = {
     },
     // Dropdown items can live here too!
     tutorials: {
-        fa: { title: "تار برگ اصلی آموزش‌ها", text: "به مرکز آموزش‌های ما خوش آمدید. در این بخش می‌توانید آموزش‌های مختلف را پیدا کنید." },
-        en: { title: "Tutorials Home", text: "Welcome to our Tutorials center. Here you can find various educational topics." }
+        fa: { title: "تار برگ اصلی آموزش‌ها", text: "به مرکز آموزش‌های ما خوش آمدید. در این بخش می‌توانید آموزش‌های مختلف را پیدا کنید.", 
+              articles:[
+                {
+                id: "article1",
+                title: "آموزش نخست",
+                summary: "خلاصه  آموزش اینجا قرار میگیرد...",
+                fullText:"اینجا قرار میگیرد متن کامل مقاله "
+                },
+                {
+                id: "article2",
+                title: "آموزش دوم",
+                summary: "خلاصه آموزش اینجا قرار میگیرد...",
+                fullText:"اینجا قرار میگیرد متن کامل مقاله "
+                },
+                {
+                id: "article3",
+                title: "آموزش سوم",
+                summary: "خلاصه آموزش اینجا قرار میگیرد...",
+                fullText:"اینجا قرار میگیرد متن کامل مقاله "
+                },
+                {
+                id: "article4",
+                title: "آموزش چهارم",
+                summary: "خلاصه آموزش اینجا قرار میگیرد...",
+                fullText:"اینجا قرار میگیرد متن کامل مقاله "
+                },
+                {
+                id: "article5",
+                title: "آموزش پنجم",
+                summary: "خلاصه آموزش اینجا قرار میگیرد...",
+                fullText:"اینجا قرار میگیرد متن کامل مقاله "
+                },
+                {
+                id: "article6",
+                title: "آموزش ششم",
+                summary: "خلاصه آموزش اینجا قرار میگیرد...",
+                fullText:"اینجا قرار میگیرد متن کامل مقاله "
+                }
+             ]
+            },
+        en: { title: "Tutorials Home", text: "Welcome to our Tutorials center. Here you can find various educational topics.",
+             articles:[
+                {
+                id: "article1",
+                title: "First lesson Title",
+                summary: "Short preview summary goes here",
+                fullText:"Full article text that appear after clicking apears here"
+                },
+                {
+                id: "article2",
+                title: "Second lesson Title",
+                summary: "Short preview summary goes here",
+                fullText:"Full article text that appear after clicking apears here"
+                },
+                {
+                id: "article3",
+                title: "Third lesson Title",
+                summary: "Short preview summary goes here",
+                fullText:"Full article text that appear after clicking apears here"
+                },
+                {
+                id: "article4",
+                title: "Forth lesson Title",
+                summary: "Short preview summary goes here",
+                fullText:"Full article text that appear after clicking apears here"
+                },
+                {
+                id: "article5",
+                title: "Fifth lesson Title",
+                summary: "Short preview summary goes here",
+                fullText:"Full article text that appear after clicking apears here"
+                },
+                {
+                id: "article6",
+                title: "Sixth lesson Title",
+                summary: "Short preview summary goes here",
+                fullText:"Full article text that appear after clicking apears here"
+                }
+               ]
+            }
     },
     References: {
         fa: { title: "مراجع", text: "به مرکز آموزش‌های ما خوش آمدید. در این بخش می‌توانید مراجع مختلف را پیدا کنید." },
