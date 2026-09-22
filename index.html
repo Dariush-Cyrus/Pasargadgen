@@ -245,32 +245,31 @@
         <!-- 👇 Add this right here! The Contact Form Surface Interface -->
 
         <div id="contactFormContainer" style="display: none; margin-top: 25px;">
-            <!-- 👈 Paste your actual deployed Google Web App URL inside action="" below -->
-            <form action="https://script.google.com/macros/s/AKfycbzuvr2eiJ5PGhN7CadtviA3_B9KpnP9Sg5-lvjOoFO8czQcR2kYn870OqNaPNIwVxRGww/exec" method="POST" enctype="multipart/form-data">
+            <form id="googleDriveForm" onsubmit="submitToGoogleDrive(event)">
 
                 <div style="margin-bottom: 15px;">
                     <label id="lblEmail" style="display: block; margin-bottom: 5px; font-weight: bold;">Email:</label>
-                    <input type="email" name="email" required style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; box-sizing: border-box;">
+                    <input type="email" id="userEmail" name="email" required style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; box-sizing: border-box;">
                 </div>
 
                 <div style="margin-bottom: 15px;">
                     <label id="lblMessage" style="display: block; margin-bottom: 5px; font-weight: bold;">Message:</label>
-                    <textarea name="message" required rows="5" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; box-sizing: border-box; resize: vertical;"></textarea>
+                    <textarea id="userMessage" name="message" required rows="5" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc; box-sizing: border-box; resize: vertical;"></textarea>
                 </div>
 
                 <!-- File Upload Field -->
                 <div style="margin-bottom: 20px;">
-                    <label id="lblUpload" style="display: block; margin-bottom: 5px; font-weight: bold;">Upload File:</label>
+                    <label id="lblUpload" style="display: block; margin-bottom: 5px; font-weight: bold;">Upload File (.jpg, .png, etc.):</label>
                     <input type="file" id="fileAttachment" name="attachment" style="width: 100%; padding: 8px; border: 1px dashed #888; border-radius: 6px; background: rgba(255,255,255,0.5); box-sizing: border-box;">
                 </div>
 
                 <button type="submit" id="btnSubmitForm" style="padding: 10px 25px; background-color: #4CAF50; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 16px;">
                     Submit
                 </button>
+
+                <p id="formStatus" style="margin-top: 10px; font-weight: bold;"></p>
             </form>
         </div>
-
-
 
 
     </div>
@@ -561,6 +560,68 @@
                 if (imgContainer) imgContainer.style.display = "block"; // 👈 Show images again when returning
                 if (newsGrid) newsGrid.style.display = "flex";
             }
+
+            function submitToGoogleDrive(event) {
+                event.preventDefault();
+    
+                // 👈 Paste your Web App URL here
+                const scriptURL = "https://script.google.com/macros/s/AKfycbzuvr2eiJ5PGhN7CadtviA3_B9KpnP9Sg5-lvjOoFO8czQcR2kYn870OqNaPNIwVxRGww/exec"; 
+    
+                const submitBtn = document.getElementById('btnSubmitForm');
+                const statusText = document.getElementById('formStatus');
+                const fileInput = document.getElementById('fileAttachment');
+    
+                submitBtn.disabled = true;
+                statusText.innerText = "Sending... / در حال ارسال...";
+
+                const payload = {
+                    email: document.getElementById('userEmail').value,
+                    message: document.getElementById('userMessage').value,
+                    fileData: null,
+                    fileName: null,
+                    fileType: null
+                };
+
+                const file = fileInput.files[0];
+
+                if (file) {
+                    const reader = new FileReader();
+                    reader.onload = function(e) {
+                        payload.fileData = e.target.result;
+                        payload.fileName = file.name;
+                        payload.fileType = file.type;
+                        sendData(scriptURL, payload);
+                    };
+                    reader.readAsDataURL(file);
+                } else {
+                    sendData(scriptURL, payload);
+                }
+            }
+
+            function sendData(url, payload) {
+                const statusText = document.getElementById('formStatus');
+                const submitBtn = document.getElementById('btnSubmitForm');
+
+                fetch(url, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                })
+                .then(() => {
+                    statusText.style.color = "green";
+                    statusText.innerText = "Sent successfully! / با موفقیت ارسال شد";
+                    document.getElementById('googleDriveForm').reset();
+                    submitBtn.disabled = false;
+                })
+                .catch(error => {
+                    statusText.style.color = "red";
+                    statusText.innerText = "Error sending message. / خطا در ارسال";
+                    console.error('Error:', error);
+                    submitBtn.disabled = false;
+                });
+            }
+            
     </script>
 
 
