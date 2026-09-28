@@ -242,7 +242,14 @@
         <h1 id="contentTitle"></h1>
         <div id="contentText"></div>
 
+        <!-- Breadcrumb for navigating back through parent sub-branches -->
+        <div id="breadcrumbsNav" style="margin-bottom: 20px; font-weight: bold;"></div>
+
+        <!-- Cards or article content will render inside this container -->
+        <div id="cardsContainer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;"></div>
+
         <!-- 👇 Add this right here! The Contact Form Surface Interface -->
+
 
         <div id="contactFormContainer" style="display: none; margin-top: 25px;">
             <form id="googleDriveForm" onsubmit="submitToGoogleDrive(event)">
@@ -311,19 +318,54 @@
                 }
             };
 
-            const htmlTag = document.getElementById('htmlTag') || document.documentElement; // 👈 CHANGED: Fallback to document.documentElement if htmlTag ID is missing
+            const htmlTag = document.getElementById('htmlTag') || document.documentElement;
             const menuBtn = document.getElementById('menuBtn');
             const langBtn = document.getElementById('langBtn');
             const dropdownMenu = document.getElementById('dropdownMenu');
             const contentTitle = document.getElementById('contentTitle');
-            const contentText = document.getElementById('contentText');
             const navItems = document.querySelectorAll('.nav-item');
             const dropdownItems = document.querySelectorAll('.dropdown-item');
 
+            // --- Helper Function: Find an Article Recursively (Supports Nested Sub-Articles) ---
+            function findArticleRecursive(articles, articleId) {
+                if (!articles || !Array.isArray(articles)) return null;
+
+                for (const article of articles) {
+                    if (article.id === articleId) return article;
+
+                    if (article.articles && Array.isArray(article.articles)) {
+                        const found = findArticleRecursive(article.articles, articleId);
+                        if (found) return found;
+                    }
+                }
+                return null;
+            }
+
+            // --- Helper Function: Render Article Cards into any Container ---
+            function renderArticleCards(articlesContainer, articlesList) {
+                if (!articlesContainer || !articlesList || !Array.isArray(articlesList)) return;
+
+                articlesList.forEach(article => {
+                    const hasSubArticles = article.articles && article.articles.length > 0;
+
+                    articlesContainer.innerHTML += `
+                        <div style="border: 1px solid #ccc; padding: 15px; border-radius: 8px; width: 280px; cursor: pointer; background: rgba(255, 255, 255, 0.35); backdrop-filter: blur(1px);"
+                             onclick="openArticle('${article.id}')">
+                            <h3>${article.title}</h3>
+                            <p>${article.summary}</p>
+                            <small style="color: blue;">
+                                ${hasSubArticles
+                                    ? (currentLang === 'fa' ? 'مشاهده زیر‌مقاله‌ها →' : 'View Sub-Articles →')
+                                    : (currentLang === 'fa' ? 'بیشتر بخوانید →' : 'Read more →')}
+                            </small>
+                        </div>
+                    `;
+                });
+            }
+
             // --- Update UI Content Function ---
             function updateLanguageUI() {
-                // 1. Fetch data from database safely (Check case-sensitivity of currentTab)
-                const pageData = typeof pageDatabase !== "undefined" && pageDatabase[currentTab] ? pageDatabase[currentTab][currentLang] : null; // 👈 CHANGED: Added guard check for pageDatabase existence
+                const pageData = typeof pageDatabase !== "undefined" && pageDatabase[currentTab] ? pageDatabase[currentTab][currentLang] : null;
 
                 if (!pageData) {
                     console.error("Missing page data for tab:", currentTab);
@@ -356,7 +398,7 @@
                 if (document.getElementById('drop5')) document.getElementById('drop5').innerText = translations[currentLang].navContact || translations[currentLang].drop5;
                 if (document.getElementById('dropContact')) document.getElementById('dropContact').innerText = translations[currentLang].navContact;
 
-                // Set the Title
+                // Set Title
                 if (contentTitle) contentTitle.innerText = pageData.title;
 
                 // Grab Containers
@@ -367,30 +409,23 @@
                 const newsGrid = document.getElementById('newsGrid');
                 const articleView = document.getElementById('articleDetailView');
 
-                // Reset detail view and restore text visibility on page/tab switch
-                if (articleView) articleView.style.display = "none"; // 👈 ADDED: Hides full article view when changing tabs
-                if (textContainer) textContainer.style.display = "block"; // 👈 ADDED: Ensures main text container is visible again
+                // Reset detail view and restore default visibility on tab switch
+                if (articleView) articleView.style.display = "none";
+                if (textContainer) textContainer.style.display = "block";
+                if (imgContainer) imgContainer.style.display = "block";
 
                 // Handle Articles Grid
                 if (pageData.articles && Array.isArray(pageData.articles)) {
                     if (newsGrid) {
                         newsGrid.style.display = "flex";
                         newsGrid.innerHTML = "";
-                        pageData.articles.forEach(article => {
-                            newsGrid.innerHTML += `
-                                <div style="border: 1px solid #ccc; padding: 15px; border-radius: 8px; width: 280px; cursor: pointer;"
-                                     onclick="openArticle('${article.id}')">
-                                    <h3>${article.title}</h3>
-                                    <p>${article.summary}</p>
-                                    <small style="color: blue;">Read more / بیشتر بخوانید →</small>
-                                </div>
-                            `;
-                        });
+                        renderArticleCards(newsGrid, pageData.articles);
                     }
                 } else {
                     if (newsGrid) newsGrid.style.display = "none";
                 }
 
+                // Contact Page View vs Content View
                 if (pageData.isContactPage) {
                     if (formContainer) formContainer.style.display = "block";
                     if (textContainer) textContainer.innerHTML = "";
@@ -412,7 +447,6 @@
                 } else {
                     if (formContainer) formContainer.style.display = "none";
 
-                    // Joined with a single <br> to respect array formatting
                     if (textContainer) {
                         if (Array.isArray(pageData.text)) {
                             textContainer.innerHTML = pageData.text.join("<br>");
@@ -431,7 +465,7 @@
                                          alt="page-image"
                                          class="wrapped-sidebar-img"
                                          onerror="console.error('Failed to load image:', this.src);">
-                                `; // 👈 CHANGED: Logs exact path error to Console without breaking page structure
+                                `;
 
                                 if (index < pageData.images.length - 1) {
                                     imgContainer.innerHTML += `<div class="text-gap-spacer"></div>`;
@@ -446,7 +480,6 @@
                         const videoSource = document.getElementById('videoSource');
                         const vimeoPlayer = document.getElementById('vimeoPlayer');
 
-                        // Reset both players first
                         if (videoElement) {
                             videoElement.style.display = "none";
                             videoElement.pause();
@@ -456,7 +489,6 @@
                             vimeoPlayer.src = "";
                         }
 
-                        // Decide which player to show
                         if (pageData.vimeoUrl) {
                             videoContainer.style.display = "block";
                             if (vimeoPlayer) {
@@ -499,7 +531,7 @@
                 });
             });
 
-            // --- Dropdown Items Click Event (Inside Three Lines Menu) ---
+            // --- Dropdown Items Click Event ---
             dropdownItems.forEach(item => {
                 item.addEventListener('click', function() {
                     navItems.forEach(i => i.classList.remove('active'));
@@ -509,7 +541,7 @@
                 });
             });
 
-            // --- Dropdown Menu Open/Close Toggle Logic ---
+            // --- Dropdown Menu Open/Close Toggle ---
             if (menuBtn) {
                 menuBtn.addEventListener('click', function(event) {
                     if (dropdownMenu) dropdownMenu.classList.toggle('show');
@@ -523,54 +555,72 @@
                 }
             });
 
-            // --- Helper Functions for Articles ---
+            // --- Open Article View (Handles Outer & Nested Sub-Articles) ---
             function openArticle(articleId) {
                 const pageData = typeof pageDatabase !== "undefined" && pageDatabase[currentTab] ? pageDatabase[currentTab][currentLang] : null;
                 if (!pageData || !pageData.articles) return;
 
-                const article = pageData.articles.find(a => a.id === articleId);
+                const article = findArticleRecursive(pageData.articles, articleId);
 
                 if (article) {
                     window.location.hash = articleId;
 
                     const newsGrid = document.getElementById('newsGrid');
                     const textContainer = document.getElementById('contentText');
-                    const imgContainer = document.getElementById('contentImageContainer'); // 👈 Grab image container
+                    const imgContainer = document.getElementById('contentImageContainer');
                     const articleView = document.getElementById('articleDetailView');
 
                     if (newsGrid) newsGrid.style.display = "none";
                     if (textContainer) textContainer.style.display = "none";
-                    if (imgContainer) imgContainer.style.display = "none"; // 👈 Hide images during article view
+                    if (imgContainer) imgContainer.style.display = "none";
                     if (articleView) articleView.style.display = "block";
 
                     if (document.getElementById('articleTitle')) document.getElementById('articleTitle').innerText = article.title;
-                    if (document.getElementById('articleBody')) document.getElementById('articleBody').innerText = article.fullText;
+                    if (document.getElementById('articleBody')) document.getElementById('articleBody').innerText = article.fullText || "";
+
+                    // Render sub-articles if they exist inside this article
+                    let subArticlesGrid = document.getElementById('subArticlesGrid');
+
+                    if (!subArticlesGrid && articleView) {
+                        subArticlesGrid = document.createElement('div');
+                        subArticlesGrid.id = 'subArticlesGrid';
+                        subArticlesGrid.style.cssText = "display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px;";
+                        articleView.appendChild(subArticlesGrid);
+                    }
+
+                    if (subArticlesGrid) {
+                        subArticlesGrid.innerHTML = "";
+                        if (article.articles && Array.isArray(article.articles) && article.articles.length > 0) {
+                            renderArticleCards(subArticlesGrid, article.articles);
+                        }
+                    }
                 }
             }
 
+            // --- Close Article View ---
             function closeArticle() {
-                window.location.hash = ""; 
+                window.location.hash = "";
                 const newsGrid = document.getElementById('newsGrid');
                 const textContainer = document.getElementById('contentText');
-                const imgContainer = document.getElementById('contentImageContainer'); // 👈 Grab image container
+                const imgContainer = document.getElementById('contentImageContainer');
                 const articleView = document.getElementById('articleDetailView');
 
                 if (articleView) articleView.style.display = "none";
                 if (textContainer) textContainer.style.display = "block";
-                if (imgContainer) imgContainer.style.display = "block"; // 👈 Show images again when returning
+                if (imgContainer) imgContainer.style.display = "block";
                 if (newsGrid) newsGrid.style.display = "flex";
             }
 
+            // --- Form Submission to Google Apps Script ---
             function submitToGoogleDrive(event) {
                 event.preventDefault();
-    
-                // 👈 Paste your Web App URL here
-                const scriptURL = "https://script.google.com/macros/s/AKfycbzuvr2eiJ5PGhN7CadtviA3_B9KpnP9Sg5-lvjOoFO8czQcR2kYn870OqNaPNIwVxRGww/exec"; 
-    
+
+                const scriptURL = "https://script.google.com/macros/s/AKfycbzuvr2eiJ5PGhN7CadtviA3_B9KpnP9Sg5-lvjOoFO8czQcR2kYn870OqNaPNIwVxRGww/exec";
+
                 const submitBtn = document.getElementById('btnSubmitForm');
                 const statusText = document.getElementById('formStatus');
                 const fileInput = document.getElementById('fileAttachment');
-    
+
                 submitBtn.disabled = true;
                 statusText.innerText = "Sending... / در حال ارسال...";
 
@@ -621,8 +671,9 @@
                     submitBtn.disabled = false;
                 });
             }
-            
     </script>
+
+
 
 
 
