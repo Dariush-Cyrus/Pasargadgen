@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pasargad Generation</title>
+    <title>Multi-Language Website</title>
     <link rel="icon" type="image/x-icon" href="farva.jpeg">
     <style>
         body {
@@ -556,60 +556,80 @@
             });
 
             // --- Open Article View (Handles Outer & Nested Sub-Articles) ---
-            function openArticle(articleId) {
-                const pageData = typeof pageDatabase !== "undefined" && pageDatabase[currentTab] ? pageDatabase[currentTab][currentLang] : null;
-                if (!pageData || !pageData.articles) return;
+function openArticle(articleId) {
+    const pageData = typeof pageDatabase !== "undefined" && pageDatabase[currentTab] ? pageDatabase[currentTab][currentLang] : null;
+    if (!pageData || !pageData.articles) return;
 
-                const article = findArticleRecursive(pageData.articles, articleId);
+    const article = findArticleRecursive(pageData.articles, articleId);
 
-                if (article) {
-                    window.location.hash = articleId;
+    if (article) {
+        window.location.hash = articleId;
 
-                    const newsGrid = document.getElementById('newsGrid');
-                    const textContainer = document.getElementById('contentText');
-                    const imgContainer = document.getElementById('contentImageContainer');
-                    const articleView = document.getElementById('articleDetailView');
+        const newsGrid = document.getElementById('newsGrid');
+        const textContainer = document.getElementById('contentText');
+        const imgContainer = document.getElementById('contentImageContainer');
+        const articleView = document.getElementById('articleDetailView');
 
-                    if (newsGrid) newsGrid.style.display = "none";
-                    if (textContainer) textContainer.style.display = "none";
-                    if (imgContainer) imgContainer.style.display = "none";
-                    if (articleView) articleView.style.display = "block";
+        if (newsGrid) newsGrid.style.display = "none";
+        if (textContainer) textContainer.style.display = "none";
+        if (imgContainer) imgContainer.style.display = "none";
+        if (articleView) articleView.style.display = "block";
 
-                    if (document.getElementById('articleTitle')) document.getElementById('articleTitle').innerText = article.title;
-                    if (document.getElementById('articleBody')) document.getElementById('articleBody').innerText = article.fullText || "";
+        // Set Title
+        if (document.getElementById('articleTitle')) {
+            document.getElementById('articleTitle').innerText = article.title || "";
+        }
 
-                    // Render sub-articles if they exist inside this article
-                    let subArticlesGrid = document.getElementById('subArticlesGrid');
+        // Set Body Content (Formats Arrays and HTML Tags Correctly)
+        const articleBody = document.getElementById('articleBody');
+        if (articleBody) {
+            let contentData = article.fullText || article.text || "";
 
-                    if (!subArticlesGrid && articleView) {
-                        subArticlesGrid = document.createElement('div');
-                        subArticlesGrid.id = 'subArticlesGrid';
-                        subArticlesGrid.style.cssText = "display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px;";
-                        articleView.appendChild(subArticlesGrid);
-                    }
-
-                    if (subArticlesGrid) {
-                        subArticlesGrid.innerHTML = "";
-                        if (article.articles && Array.isArray(article.articles) && article.articles.length > 0) {
-                            renderArticleCards(subArticlesGrid, article.articles);
-                        }
-                    }
-                }
+            if (Array.isArray(contentData)) {
+                // If it's an array of strings, wrap each item in a styled <p> tag
+                articleBody.innerHTML = contentData
+                    .map(paragraph => `<p style="margin-bottom: 16px; line-height: 1.8;">${paragraph}</p>`)
+                    .join('');
+            } else {
+                // If it's a single string, parse it directly as innerHTML
+                articleBody.innerHTML = `<p style="line-height: 1.8;">${contentData}</p>`;
             }
+        }
 
-            // --- Close Article View ---
-            function closeArticle() {
-                window.location.hash = "";
-                const newsGrid = document.getElementById('newsGrid');
-                const textContainer = document.getElementById('contentText');
-                const imgContainer = document.getElementById('contentImageContainer');
-                const articleView = document.getElementById('articleDetailView');
+        // Render sub-articles if they exist inside this article
+        let subArticlesGrid = document.getElementById('subArticlesGrid');
 
-                if (articleView) articleView.style.display = "none";
-                if (textContainer) textContainer.style.display = "block";
-                if (imgContainer) imgContainer.style.display = "block";
-                if (newsGrid) newsGrid.style.display = "flex";
+        if (!subArticlesGrid && articleView) {
+            subArticlesGrid = document.createElement('div');
+            subArticlesGrid.id = 'subArticlesGrid';
+            subArticlesGrid.style.cssText = "display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px;";
+            articleView.appendChild(subArticlesGrid);
+        }
+
+        if (subArticlesGrid) {
+            subArticlesGrid.innerHTML = "";
+            if (article.articles && Array.isArray(article.articles) && article.articles.length > 0) {
+                renderArticleCards(subArticlesGrid, article.articles);
             }
+        }
+    }
+}
+
+// --- Close Article View ---
+function closeArticle() {
+    window.location.hash = "";
+    const newsGrid = document.getElementById('newsGrid');
+    const textContainer = document.getElementById('contentText');
+    const imgContainer = document.getElementById('contentImageContainer');
+    const articleView = document.getElementById('articleDetailView');
+
+    if (articleView) articleView.style.display = "none";
+    if (textContainer) textContainer.style.display = "block";
+    if (imgContainer) imgContainer.style.display = "block";
+    if (newsGrid) newsGrid.style.display = "flex";
+}
+
+
 
             // --- Form Submission to Google Apps Script ---
             function submitToGoogleDrive(event) {

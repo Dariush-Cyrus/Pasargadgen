@@ -1,11 +1,34 @@
 const pageDatabase = {
     Methods: {
         fa: {
-            title: "  رویه نخست: تار برگ نسل شیک پاسارگاد",
+            title: "  رویه نخست: تار برگ نسل شیک پاسارگادی",
             text: [
-                "به تاربرگ «نسل شیک پاسارگاد هخامنشی» خوش آمدید؛ جایی که شکوهِ ریشه‌های دیرین با خرد و اندیشه‌ی امروز پیوند می‌خورد. این پایگاه، نه یک رسانه‌ی ساده، بلکه بستر بیداری بزرگ روان، اندیشه و خودباوری ایرانی است. آرمان ما تنها بازخوانیِ گذشته نیست، بلکه برون‌کشیدنِ بن‌مایه‌های توانمندی و فرّ درونیِ آدمیِ ایرانی است تا یادآور شویم که ما برای زیستن در سایه‌ی نومیدی، سستی و خوی گرفتن به چگونگی‌های ناخواسته ساخته نشده‌ایم؛ بلکه یادگاردارانِ خرد، سازندگی و ارجمندیِ آدمی هستیم.",
-                "گاهی در خستگی‌های هرروزه، ناخودآگاه، خوی‌ها و رفتارهایی چون گردن‌نهادن، ناامیدی و فراموشیِ شایستگی‌های خویشتن بر روان ما سایه می‌افکنند. اما بیداریِ راستین از دمی آغاز می‌شود که ارج‌های گوهرینِ درونی‌مان را دوباره به یاد آوریم. «تاربرگ آیین» نخستین گام در این راه است؛ تلاشی برای بازشناختِ شهرآینی، دادگری و آزادی بر پایه‌ی والاییِ سرشتِ آدمیِ ایرانی—سرمشق‌هایی که روزگاری کیستیِ ما را در جهان پرآوازه ساختند و امروز نیز چاره‌سازِ ساختنِ آینده‌ای سرافراز، آباد و شایسته برای فرزندان این سرزمین هستند.",
-                " به تار برگ آیین خوش آمدید.",
+            "به تاربرگِ «نسلِ شیکِ پاسارگادی» خوش آمدید؛ جایی که شکوه و شکوهمندیِ ریشه‌های دیرین و کهن‌دیارِ ما با خرد، دانش و اندیشه‌ی بیدارِ امروز پیوند می‌خورد.",
+            "این پایگاه، نه تنها یک رسانه‌ی ساده، بلکه بستری برای بیداریِ بزرگِ روان، اندیشه، و خودباوریِ هر ایرانیِ سرافراز است.",
+            "آرمانِ بنیادینِ ما تنها بازخوانیِ گذشته و نگریستن به دیروز نیست، بلکه برون‌کشیدنِ بن‌مایه‌های توانمندی، منشِ والایی و فرّ درونیِ آدمیِ ایرانی است؛",
+            "تا دوباره به یاد آوریم که ما هرگز برای زیستن در سایه‌ی نومیدی، خستگی، سستی و خوی گرفتن به چگونگی‌های ناخواسته ساخته نشده‌ایم،",
+            "بلکه یادگاردارانِ راستینِ خرد، فرزانگی، سازندگی و ارجمندیِ آدمی بر روی زمین هستیم.",
+            "گاهی در خستگی‌ها و گرفتاری‌های هرروزه، ناخودآگاه، خوی‌ها و رفتارهایی چون گردن‌نهادن، ناامیدی و فراموشیِ شایستگی‌های خویشتن بر روانِ ما سایه می‌افکنند و توانِ پویایی را می‌گیرند.",
+            "اما بیداریِ راستین از همان دمی آغاز می‌شود که ارج‌ها و گوهرهای درونی‌مان را دوباره به یاد آوریم و خویشتنِ خویش را بازیابیم.",
+            "«تاربرگِ آیین» نخستین گام در این راهِ پرفروغ است؛",
+            "تلاشی خستگی‌ناپذیر برای بازشناختِ شهرآینی، دادگری، راستی و آزادی بر پایه‌ی والاییِ سرشتِ آدمیِ ایرانی—",
+            "سرمشق‌هایی گران‌سنگ که روزگاری کیستی و تبارِ ما را در سراسرِ جهان پرآوازه و والاتبار ساختند",
+            "و امروز نیز یگانه چاره‌ساز و راهگشا برای ساختنِ آینده‌ای سرافراز، آباد، آزاد و شایسته برای فرزندان و نسل‌های فردای این مرزوبوم هستند.",
+            "ما در این راه، دستِ همکاری و همبستگی به سوی هر ایرانیِ بیدار و خردمند دراز می‌کنیم تا با هم، فرّ دیرین را به زندگیِ امروز بازگردانیم.",
+            "این بیداریِ فرخنده، نه یک آرزوی دوردست، بلکه برنامه‌ای روزانه برای پرورشِ منش، منشوری برای توانمندسازیِ اندیشه و رفتاری شایسته است.",
+            "ما بر آنیم تا با تکیه بر دانشِ امروزی و هوشمندی، ابزارهای نوینی برای رشدِ فردی و اجتماعیِ نسلِ جوانِ ایران‌زمین فراهم آوریم.",
+            "زیرا باور داریم که بازسازیِ میهن، از بازسازیِ روان و خودباوریِ تک‌تکِ فرزندانِ این سرزمین آغاز می‌شود.",
+            "هر گامِ کوچک در راهِ خودآگاهی و افراشتنِ پرچمِ خردورزی، روزنه‌ای روشن به سوی رهایی از تاریکی و رسیدن به بامِ دادگری است.",
+            "شما با پیوستن به این جنبشِ فرهنگی و اندیشه‌ای، سهمی بزرگ در نگارشِ فصلِ تازه‌ی تاریخِ پرشکوهِ این دیار خواهید داشت.",
+            "پیمان می‌بندیم که تا رسیدن به فرداهای روشن و روزگارِ شایسته‌ی ایران، استوار و خستگی‌ناپذیر در کنارِ هم گام برداریم."    
+            
+            ],
+             articles:[
+                {
+                id: "article1",
+                title: " به تار برگ آیین خوش آمدید.",
+                summary: "این پیش‌نویسِ آیینِ ریشه‌ای، برای برپاییِ شهریاریِ پیمان‌بنیاد و مردم‌سالاریِ ناب در ایران، با الگوبرداری از کشورهای پیشرفته و آمیزشِ آن با ارزش‌های بومی، شاه را نهادی یکسره نمادین می‌سازد و توانِ فرمانروایی را یکسر به انجمنِ نمایندگانِ ملت، دولتِ پاسخگو، دادگستریِ مستقل و استان‌های خودگردان می‌سپارد.",
+                fullText:[
                 "برای نزدیک‌تر کردن این پیش‌نویس به کشورهای پادشاهی مشروطه‌ی پیشرفته و مدرن (مانند سوئد، نروژ و بریتانیا)، چند ابزار حقوقی و عملی به متن افزوده شده است:",
                 "",
                 "۱. مدل پادشاهی سوئد (قانون اساسی ۱۹۷۴): در سوئد، پادشاه حتی دیگر نخست‌وزیر را رسماً معرفی نمی‌کند و این خویشکاری بر عهده سالار انجمن (رئیس پارلمان) است. این بالاترین سطح تفکیک قدرت برای جلوگیری از تمرکز قدرت در دست یک تن است.",
@@ -97,13 +120,7 @@ const pageDatabase = {
                 "آیین ریشه‌ای - پیش‌نویس قانون اساسی پادشاهی مشروطه ایران",
                 "گاتها، سرودهای اهورایی زرتشت؛ پژوهش دکتر خسرو خزاعی",
                 "الگوهای برتر برگرفته از حقوق اساسی پادشاهی مشروطه سوئد (قانون اساسی نمادین ۱۹۷۴ و نظام امبودزمان) و بریتانیا (پاسخگویی پارلمانی)."
-            ],
-             articles:[
-                {
-                id: "article1",
-                title: "مقاله نخست",
-                summary: "خلاصه کوتاه خبر اینجا قرار میگیرد...",
-                fullText:"اینجا قرار میگیرد متن کامل مقاله ",
+                ],
                 articles:[
                     {
                         id: "article1-1",
@@ -160,9 +177,38 @@ const pageDatabase = {
             video: "me1.mp4"
         },
         en: {
-            title: "The Grand Charter Page (Main Page) ",
+            title: "Page One: The Chic Pasargadae Generation Portal ",
             text: [
-                "",
+
+                
+"Welcome to the 'Chic Pasargadae Generation' portal, where the grandeur of our ancient roots meets the enlightened wisdom of today.",
+"This platform is more than just a media outlet; it is a launchpad for a grand awakening of the spirit, mind, and self-belief within every Iranian.",
+"Our core purpose is not merely to gaze into the past, but to awaken the innate power, noble character, and inner glory of the Iranian soul;",
+"To remind ourselves that we were never created to live in the shadows of despair, fatigue, or passive surrender,",
+"But rather as the true guardians of wisdom, nobility, creation, and human dignity on Earth.",
+"amid the strain of daily life, habits of submission, hopelessness, and forgetfulness of our worth can cloud our spirit.",
+"Yet true awakening begins the very moment we reclaim our inner values and rediscover our true selves.",
+"The 'Principles Portal' marks the vital first step on this luminous path;",
+"An unyielding effort to rediscover civilization, justice, truth, and freedom based on the supreme dignity of the human spirit—",
+"Timeless ideals that once made our heritage legendary throughout the world,",
+"And today remain our only clear blueprint to forge a proud, prosperous, and free future for coming generations.",
+"In this pursuit, we extend our hands in unity to every awake and thoughtful Iranian to restore our ancient brilliance into modern life.",
+"This glorious awakening is no distant dream, but a daily practice to cultivate character and empower the mind.",
+"We are devoted to harnessing modern knowledge to build new avenues for the personal and collective growth of our youth.",
+"For we firmly believe that rebuilding our homeland begins with rebuilding the spirit and self-worth of every single child of this land.",
+"Every small step toward self-awareness and wisdom opens a bright window away from darkness and toward true justice.",
+"By joining this cultural movement, you play a vital role in writing the next magnificent chapter of our nation's history.",
+"We pledge to walk side by side, steadfast and tireless, until we reach the glorious future our land truly deserves.",
+                ""
+                
+                
+            ],
+            articles:[
+                {
+                id: "article1",
+                title: "The Grand Charter Page",
+                summary: "To establish covenant-bound monarchy and pure democracy in Iran, this draft foundational constitution draws upon advanced nations while fusing them with native values; it renders the Crown entirely symbolic, entrusting sovereign authority wholly to the Nation's Assembly of Representatives, an accountable government, an independent judiciary, and self-governing provinces.",
+                fullText:[
                 "The Root Constitution of the Democratic Constitutional Monarchy of Iran",
                 " Integration of Constitutionalism, Modern Democracy, and Indigenous Values (Asha, Vohuman, Khshathra)",
                 "",
@@ -228,14 +274,7 @@ const pageDatabase = {
                "The Gathas, the Sublime Songs of Zarathustra; Research by Dr. Khosro Khazai",
                "Best practices incorporated from the constitutional frameworks of advanced constitutional monarchies, namely Sweden (Instrument of Government 1974 and the Ombudsman system) and the United Kingdom (Parliamentary Accountability)."
 
-                
-            ],
-            articles:[
-                {
-                id: "article1",
-                title: "First article Title",
-                summary: "Short preview summary goes here",
-                fullText:"Full article text that appear after clicking apears here"
+                ]
                 },
                 {
                 id: "article2",
