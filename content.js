@@ -140,37 +140,44 @@ const pageDatabase = {
                         summary: "خلاصه کوتاه خبر اینجا قرار میگیرد...",
                         fullText:"اینجا قرار میگیرد متن کامل مقاله "
                     }
-                ]
+                ],
+                image: "pahlavi.jpg"
                 },
                 {
                 id: "article2",
                 title: "مقاله دوم",
                 summary: "خلاصه کوتاه خبر اینجا قرار میگیرد...",
-                fullText:"اینجا قرار میگیرد متن کامل مقاله "
+                fullText:"اینجا قرار میگیرد متن کامل مقاله ",
+                image: "bg.jpeg"
+               
                 },
                 {
                 id: "article3",
                 title: "مقاله سوم",
                 summary: "خلاصه کوتاه خبر اینجا قرار میگیرد...",
-                fullText:"اینجا قرار میگیرد متن کامل مقاله "
+                fullText:"اینجا قرار میگیرد متن کامل مقاله ",
+                image: "kourosh.jpg"
                 },
                 {
                 id: "article4",
                 title: "مقاله چهارم",
                 summary: "خلاصه کوتاه خبر اینجا قرار میگیرد...",
-                fullText:"اینجا قرار میگیرد متن کامل مقاله "
+                fullText:"اینجا قرار میگیرد متن کامل مقاله ",
+                image: "gard.jpg"
                 },
                 {
                 id: "article5",
                 title: "مقاله پنجم",
                 summary: "خلاصه کوتاه خبر اینجا قرار میگیرد...",
-                fullText:"اینجا قرار میگیرد متن کامل مقاله "
+                fullText:"اینجا قرار میگیرد متن کامل مقاله ",
+                image: "Darius.jpg"
                 },
                 {
                 id: "article6",
                 title: "مقاله ششم",
                 summary: "خلاصه کوتاه خبر اینجا قرار میگیرد...",
-                fullText:"اینجا قرار میگیرد متن کامل مقاله "
+                fullText:"اینجا قرار میگیرد متن کامل مقاله ",
+                image: "darius-egypt.jpg"
                 }
             ],
             images: ["farva.jpeg", "pasar.jpeg", "bg.jpeg"],
