@@ -387,6 +387,59 @@
                 return null;
             }
 
+function buildInterleavedHTML(rawText, images) {
+    if (!rawText) return '';
+
+    let paragraphs = [];
+    if (Array.isArray(rawText)) {
+        paragraphs = rawText;
+    } else if (typeof rawText === 'string') {
+        if (rawText.includes('<p>')) {
+            paragraphs = rawText.split('</p>').filter(p => p.trim() !== '').map(p => p + '</p>');
+        } else if (rawText.includes('\n')) {
+            paragraphs = rawText.split('\n').filter(p => p.trim() !== '');
+        } else {
+            paragraphs = [rawText];
+        }
+    }
+
+    const imgList = (images && Array.isArray(images)) ? [...images] : [];
+    let html = '<div class="interleaved-wrapper">';
+
+    const interval = imgList.length > 1 ? Math.max(2, Math.floor(paragraphs.length / imgList.length)) : 1;
+    let imageCounter = 0;
+
+    paragraphs.forEach((pText, index) => {
+        const cleanText = pText.replace(/^<p>/i, '').replace(/<\/p>$/i, '');
+
+        let imgTag = '';
+        if (imageCounter < imgList.length && (index === 0 || index === imageCounter * interval)) {
+            // Add your text-gap-spacer before the 2nd image onward to guarantee vertical clearance
+            if (imageCounter > 0) {
+                imgTag += `<div class="text-gap-spacer"></div>`;
+            }
+            imgTag += `<img src="${imgList[imageCounter]}" alt="subarticle-image" class="wrapped-sidebar-img">`;
+            imageCounter++;
+        }
+
+        html += `${imgTag}<p style="line-height: 1.8; margin-bottom: 1.2em;">${cleanText}</p>`;
+    });
+
+    while (imageCounter < imgList.length) {
+        if (imageCounter > 0) {
+            html += `<div class="text-gap-spacer"></div>`;
+        }
+        html += `<img src="${imgList[imageCounter]}" alt="subarticle-image" class="wrapped-sidebar-img">`;
+        imageCounter++;
+    }
+
+    html += '</div>';
+    return html;
+}
+
+
+
+
             // --- Helper Function: Render Article Cards into any Container ---
             function renderArticleCards(articlesContainer, articlesList) {
                 if (!articlesContainer || !articlesList || !Array.isArray(articlesList)) return;
@@ -394,12 +447,17 @@
                 articlesList.forEach(article => {
                     const hasSubArticles = article.articles && article.articles.length > 0;
         
-                    // Use the article's image, or fallback to the first image if it's an array
-                    const cardImage = Array.isArray(article.images) ? article.images[0] : (article.image || '');
+                    // Grab the first image in the array for the hover effect
+                    let hoverImgSrc = '';
+                    if (Array.isArray(article.images) && article.images.length > 0) {
+                        hoverImgSrc = article.images[0];
+                    } else if (typeof article.image === 'string') {
+                        hoverImgSrc = article.image;
+                    }
 
                     articlesContainer.innerHTML += `
                         <div class="article-card" onclick="openArticle('${article.id}')">
-                            ${cardImage ? `<img src="${cardImage}" alt="${article.title}" class="card-hover-img">` : ''}
+                            ${hoverImgSrc ? `<img src="${hoverImgSrc}" alt="${article.title}" class="card-hover-img">` : ''}
                             <div class="card-content">
                                 <h3>${article.title}</h3>
                                 <p>${article.summary}</p>
@@ -413,6 +471,7 @@
                     `;
                 });
             }
+
 
 
             // --- Update UI Content Function ---
@@ -632,19 +691,29 @@ function openArticle(articleId) {
             document.getElementById('articleTitle').innerText = article.title || "";
         }
 
-        // Set Body Content (Formats Arrays and HTML Tags Correctly)
+        // --- Render Body Content with Interleaved Images ---
         const articleBody = document.getElementById('articleBody');
         if (articleBody) {
             let contentData = article.fullText || article.text || "";
 
-            if (Array.isArray(contentData)) {
-                // If it's an array of strings, wrap each item in a styled <p> tag
-                articleBody.innerHTML = contentData
-                    .map(paragraph => `<p style="margin-bottom: 16px; line-height: 1.8;">${paragraph}</p>`)
-                    .join('');
+            // Extract images array safely
+            const articleImages = Array.isArray(article.images) ? article.images : (article.image ? [article.image] : []);
+
+            // If more than 1 image exists, skip image[0] (which is used for the card hover background)
+            const bodyImages = articleImages.length > 1 ? articleImages.slice(1) : articleImages;
+
+            // Render interleaved body HTML
+            if (typeof buildInterleavedHTML === "function") {
+                articleBody.innerHTML = buildInterleavedHTML(contentData, bodyImages);
             } else {
-                // If it's a single string, parse it directly as innerHTML
-                articleBody.innerHTML = `<p style="line-height: 1.8;">${contentData}</p>`;
+                // Fallback in case buildInterleavedHTML is missing
+                if (Array.isArray(contentData)) {
+                    articleBody.innerHTML = contentData
+                        .map(paragraph => `<p style="margin-bottom: 16px; line-height: 1.8;">${paragraph}</p>`)
+                        .join('');
+                } else {
+                    articleBody.innerHTML = `<p style="line-height: 1.8;">${contentData}</p>`;
+                }
             }
         }
 
@@ -666,6 +735,7 @@ function openArticle(articleId) {
         }
     }
 }
+
 
 // --- Close Article View ---
 function closeArticle() {
