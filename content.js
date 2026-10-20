@@ -312,7 +312,50 @@ const pageDatabase = {
                 id: "article2",
                 title: "Second article Title",
                 summary: "Short preview summary goes here",
-                fullText:"Full article text that appear after clicking apears here",
+                images: ["bg.jpeg", "pahlavi.jpg","Darius.jpg" ],
+                fullText:[
+
+                    "Article the Second" ,
+
+                    "<b>The Vision of a Prosperous Persia</b>: The Renaissance of Wisdom and Foresight among the Descendants of Pasargadae" ,
+
+                    "Time, at critical junctures of history, occasionally entrusteth the key unto the awakening of a realm to a noble company—one that lingereth not in the shadows of the past, nor loseth sight of the dawning future." ,
+
+                     "Today we stand upon the threshold of such an epoch: a time wherein ancient wisdom and modern science converge to illuminate the horizons of tomorrow." ,
+
+                    "The vision of a prosperous Persia is no longer a distant dream, but rather a gradual transformation and a testament to the intellect and endeavor of her enlightened sons and daughters." ,
+
+                    "These noble newcomers of Pasargadae represent far more than a venerable name or a remembrance of ancient inscriptions; they are the emblem of a new resolve." ,
+
+                    "This noble fellowship doth revive and adorn the ancient virtues of good thoughts, good words, and good deeds, embodying them not merely as spoken ideals, but within the very fabric of modern governance, justice, and culture." ,
+
+                    "The hidden majesty within the name of these progeny resideth in a humble yet learned return unto the true essence of the Persian spirit;" ,
+
+                    "A refined and world-experienced folk who, whilst standing firm upon their ancient roots, are armed with the tools of modern knowledge and technology, beholding the world with a fresh gaze aligned with human progress." ,
+
+                    "At the heart of this new path lies the absolute reign of wisdom and critical discernment." ,
+
+                    "The prosperous Persia of tomorrow shall be a land wherein hasty decrees, blind wrath, and empty rhetoric shall no longer dictate the course." ,
+
+                    "A people assembled upon the axes of justice and knowledge endeavor to weigh every word with care, fear not the unknown, and establish constructive criticism as the foundation for perpetual flourishing." ,
+
+                    "Wisdom within this order rendereth attainable a true harmony between the stewardship of nature, economic prosperity, universal welfare, and the honor of human dignity." ,
+
+                    "Through the efficiency and enlightenment of these progeny, the Persia of tomorrow shall be a realm of vibrant institutions of learning, liberated from superstition," ,
+
+                    "A free and innovative economy founded upon artificial intelligence and clean technologies, and cities governed by the most advanced ecological principles." ,
+
+                    "In this vision, the diaspora of scholars converteth into a bridge of intellect, wherein Persians across the globe unite their knowledge and treasure for the flourishing of their ancestral cradle." ,
+
+                    "True prosperity findeth its meaning not merely in grand palaces and modern highways, but in the vibrant spirit, the free mind, and the tranquil heart of every inhabitant of this realm." ,
+
+                    "The newcomers of Pasargadae remind us that the future is something to be forged, not awaited in passivity." ,
+
+                    "Armed with the shield of reason, endowed with a character worthy of Persia's name, and with eyes fixed clearly upon the horizon, this fellowship standeth as the builders who shall wipe the dust of ages from the face of this soil," ,
+
+                    "And cause the name of Persia to resound once more throughout the earth as the cradle of thought, tolerance, and progress." 
+                
+                ],
                 image: "bg.jpeg"
                 },
                 {
