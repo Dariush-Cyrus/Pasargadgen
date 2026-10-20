@@ -146,7 +146,7 @@ const pageDatabase = {
                 {
                 id: "article2",
                 title: "نبشتار دوم",
-                summary: "خلاصه کوتاه خبر اینجا قرار میگیرد...",
+                summary: ["این چشم‌انداز، نوآمدگانِ آگاهِ ایران را می‌خواند تا فرّهِ دیرین را با دانش و فناوریِ نو پیوند زنند. آنان می‌کوشند تا با جایگزین کردنِ خرد و دادگری به جایِ شتاب‌زدگی، میهنِ خویش را بارِ دیگر به پایگاهِ پیشرفت و آبادانی بدل سازند."],
                 images: ["bg.jpeg", "pahlavi.jpg","Darius.jpg" ],
                 fullText:[
                     
@@ -311,7 +311,7 @@ const pageDatabase = {
                 {
                 id: "article2",
                 title: "Second article Title",
-                summary: "Short preview summary goes here",
+                summary: ["This vision calls on a new generation of forward-thinking Iranians to unite ancient heritage with modern technology and wisdom. By replacing impulse with justice, science, and intellect, they aim to rebuild their homeland into a thriving beacon of progress and tolerance."],
                 images: ["bg.jpeg", "pahlavi.jpg","Darius.jpg" ],
                 fullText:[
 
