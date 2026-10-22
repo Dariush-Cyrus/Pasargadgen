@@ -210,29 +210,26 @@ const pageDatabase = {
         en: {
             title: "Page One: The Chic Pasargadae Generation Portal ",
             text: [
-
-                
-"Welcome to the 'Chic Pasargadae Generation' portal, where the grandeur of our ancient roots meets the enlightened wisdom of today.",
-"This platform is more than just a media outlet; it is a launchpad for a grand awakening of the spirit, mind, and self-belief within every Iranian.",
-"Our core purpose is not merely to gaze into the past, but to awaken the innate power, noble character, and inner glory of the Iranian soul;",
-"To remind ourselves that we were never created to live in the shadows of despair, fatigue, or passive surrender,",
-"But rather as the true guardians of wisdom, nobility, creation, and human dignity on Earth.",
-"amid the strain of daily life, habits of submission, hopelessness, and forgetfulness of our worth can cloud our spirit.",
-"Yet true awakening begins the very moment we reclaim our inner values and rediscover our true selves.",
-"The 'Principles Portal' marks the vital first step on this luminous path;",
-"An unyielding effort to rediscover civilization, justice, truth, and freedom based on the supreme dignity of the human spirit—",
-"Timeless ideals that once made our heritage legendary throughout the world,",
-"And today remain our only clear blueprint to forge a proud, prosperous, and free future for coming generations.",
-"In this pursuit, we extend our hands in unity to every awake and thoughtful Iranian to restore our ancient brilliance into modern life.",
-"This glorious awakening is no distant dream, but a daily practice to cultivate character and empower the mind.",
-"We are devoted to harnessing modern knowledge to build new avenues for the personal and collective growth of our youth.",
-"For we firmly believe that rebuilding our homeland begins with rebuilding the spirit and self-worth of every single child of this land.",
-"Every small step toward self-awareness and wisdom opens a bright window away from darkness and toward true justice.",
-"By joining this cultural movement, you play a vital role in writing the next magnificent chapter of our nation's history.",
-"We pledge to walk side by side, steadfast and tireless, until we reach the glorious future our land truly deserves.",
+                    "Welcome to the 'Chic Pasargadae Generation' portal, where the grandeur of our ancient roots meets the enlightened wisdom of today.",
+                    "This platform is more than just a media outlet; it is a launchpad for a grand awakening of the spirit, mind, and self-belief within every Iranian.",
+                    "Our core purpose is not merely to gaze into the past, but to awaken the innate power, noble character, and inner glory of the Iranian soul;",
+                    "To remind ourselves that we were never created to live in the shadows of despair, fatigue, or passive surrender,",
+                    "But rather as the true guardians of wisdom, nobility, creation, and human dignity on Earth.",
+                    "amid the strain of daily life, habits of submission, hopelessness, and forgetfulness of our worth can cloud our spirit.",
+                    "Yet true awakening begins the very moment we reclaim our inner values and rediscover our true selves.",
+                    "The 'Principles Portal' marks the vital first step on this luminous path;",
+                    "An unyielding effort to rediscover civilization, justice, truth, and freedom based on the supreme dignity of the human spirit—",
+                    "Timeless ideals that once made our heritage legendary throughout the world,",
+                    "And today remain our only clear blueprint to forge a proud, prosperous, and free future for coming generations.",
+                    "In this pursuit, we extend our hands in unity to every awake and thoughtful Iranian to restore our ancient brilliance into modern life.",
+                    "This glorious awakening is no distant dream, but a daily practice to cultivate character and empower the mind.",
+                    "We are devoted to harnessing modern knowledge to build new avenues for the personal and collective growth of our youth.",
+                    "For we firmly believe that rebuilding our homeland begins with rebuilding the spirit and self-worth of every single child of this land.",
+                    "Every small step toward self-awareness and wisdom opens a bright window away from darkness and toward true justice.",
+                    "By joining this cultural movement, you play a vital role in writing the next magnificent chapter of our nation's history.",
+                    "We pledge to walk side by side, steadfast and tireless, until we reach the glorious future our land truly deserves.",
                 ""
-                
-                
+    
             ],
             articles:[
                 {
@@ -396,38 +393,6 @@ const pageDatabase = {
             title: "تار برگ خبر",
             text: ["<b>به تار برگ خبر خوش آمدید.</b>",
 
-        "",
-        "",
-         " <b>ایران در میان تنش‌های سیاسی، گفت‌وگوها با ایالات متحده را طولانی‌تر می‌کند.  </b> رویترز در ۲۰ اکتبر ۲۰۲۶ گزارش داد که مقام‌های ارشد ایرانی گفته‌اند تهران عمداً بن‌بست گفت‌وگوها را طولانی می‌کند تا پیش از انتخابات میان‌دوره‌ای نوامبر، فشار سیاسی بر دونالد ترامپ، رئیس‌جمهور آمریکا، افزایش یابد. این گزارش همچنین به خواسته‌های ایران دربارهٔ محاصرهٔ دریایی آمریکا، تحریم‌ها و درگیری‌های منطقه‌ای پرداخت. تاریخ: ۲۰ اکتبر ۲۰۲۶. سرچشمه: رویترز. پیوند:   https://www.reuters.com/world/us/iran-prolongs-talks-stalemate-influence-us-midterms-officials-say-2026-10-20/",
-         "",
-        "",
-        "<b>ایران تا برآورده‌شدن خواسته‌هایش، گفت‌وگو با واشنگتن را نمی‌پذیرد. </b> مقام‌های ایرانی به عاصم منیر، فرمانده ارتش پاکستان، گفتند که تهران تا زمانی که خواسته‌هایش برآورده نشود، گفت‌وگو با ایالات متحده را از سر نخواهد گرفت. این خواسته‌ها شامل برداشتن محدودیت‌ها بر صادرات نفت ایران، پایان دادن به محاصرهٔ بندرهای ایران و توقف درگیری‌ها در منطقه است. تاریخ: ۲۰ اکتبر ۲۰۲۶. سرچشمه: رویترز. پیوند: https://www.reuters.com/world/asia-pacific/irans-pezeshkian-discusses-mediation-efforts-meeting-with-pakistans-army-chief-2026-10-20/",
-        "",
-        "",
-        "  <b>فرمانده ارتش پاکستان برای کاهش تنش‌های منطقه‌ای به تهران می‌رود.</b>عاصم منیر، فرمانده ارتش پاکستان، با رهبران ایران دیدار کرد؛ این دیدار در چارچوب کوشش‌های پاکستان برای میانجی‌گری میان ایران و ایالات متحده انجام شد. گفت‌وگوها دربارهٔ جنگ، کاهش تنش‌های منطقه‌ای و تنگهٔ هرمز بود؛ گذرگاهی راهبردی برای جابه‌جایی جهانی انرژی. تاریخ: ۱۹ تا ۲۰ اکتبر ۲۰۲۶. سرچشمه: رویترز. پیوند: https://www.reuters.com/world/asia-pacific/irans-pezeshkian-discusses-mediation-efforts-meeting-with-pakistans-army-chief-2026-10-20/",
-        "",
-        "",
-        " <b>مسعود پزشکیان، رئیس‌جمهور ایران، از روسیه برای پشتیبانی‌اش در دوران جنگ سپاسگزاری می‌کند.</b> پزشکیان در دیدار با سرگئی لاوروف، وزیر امور خارجهٔ روسیه، در تهران از پشتیبانی روسیه سپاسگزاری کرد و خواهان همکاری نزدیک‌تر در زمینه‌های انرژی، ترابری، بازرگانی و دیپلماسی شد. لاوروف نیز بر پایبندی مسکو به همکاری با تهران تأکید کرد. تاریخ: ۲۰ اکتبر ۲۰۲۶. سرچشمه: خبرگزاری تسنیم. پیوند: https://www.tasnimnews.ir/en/news/2026/10/20/3727443/pezeshkian-calls-for-closer-iran-russia-cooperation",
-        "",
-        "",
-         "<b>پیت هگست، وزیر جنگ ایالات متحده، با بنیامین نتانیاهو، نخست‌وزیر اسرائیل، دیدار می‌کند.</b> هگست در سفری اعلام‌نشده به اسرائیل رفت و در آنجا با نتانیاهو دربارهٔ تهدیدهای منطقه‌ای و همکاری میان ایالات متحده و اسرائیل گفت‌وگو کرد. این دیدار در شرایط افزایش تنش‌ها پیرامون ایران و اندکی پیش از انتخابات پارلمانی اسرائیل انجام شد. تاریخ: ۱۹ اکتبر ۲۰۲۶. سرچشمه: رویترز. پیوند: https://www.reuters.com/world/middle-east/hegseth-meets-netanyahu-unannounced-visit-israel-reports-axios-2026-10-19/",
-        "",
-        "",
-         "<b>دونالد ترامپ ادعا می‌کند که ایران دست‌کم ۷۵ هزار تن از معترضان را کشته است.</b> رئیس‌جمهور ایالات متحده در گردهمایی انتخاباتی خود در کانزاس ادعا کرد که مقام‌های ایرانی در مدت هشت ماه دست‌کم ۷۵ هزار معترض را کشته‌اند. این رقم به‌طور مستقل تأیید نشده است و باید آن را ادعای ترامپ دانست، نه آماری که شمار درست کشته‌شدگان را نشان می‌دهد. تاریخ: ۲۰ اکتبر ۲۰۲۶. سرچشمه: جی‌اِن‌اِس. پیوند: https://www.jns.org/news/u-s-news/trump-iran-killed-at-least-75-000-protesters-in-eight-months",
-         "",
-        "",
-        "<b>مقام‌های ایرانی از بازداشت ۳۹ تن در پیوند با اعتراض‌های دی‌ماه خبر می‌دهند.</b> ادارهٔ اطلاعات قزوین ادعا کرد که بازداشت‌شدگان در آتش‌سوزی‌ها و حمله‌های هنگام اعتراض‌ها دست داشته‌اند. مقام‌ها نام بازداشت‌شدگان را به‌طور عمومی اعلام نکردند و برای جدی‌ترین اتهام‌های خود نیز شواهدی ارائه ندادند. تاریخ: ۱۹ اکتبر ۲۰۲۶. سرچشمه: ایران‌وایر. پیوند: https://iranwire.com/en/news/159070-intelligence-department-announces-arrest-of-39-protesters-in-qazvin/",
-        "",
-        "",
-         "<b>بهای نفت در میان تنش‌های مربوط به ایران و تهدیدهای کشتیرانی در خلیج فارس دگرگون می‌شود.</b> رویترز گزارش داد که بازارهای نفت به کوشش‌های دیپلماتیک میان ایران و ایالات متحده و نیز گزارش‌های مربوط به حمله به کشتی‌ها و زیرساخت‌های منطقه واکنش نشان می‌دهند. ادامهٔ اختلال در رفت‌وآمد کشتی‌ها در تنگهٔ هرمز همچنان نگرانی بزرگی برای تأمین جهانی انرژی است. تاریخ: ۲۰ اکتبر ۲۰۲۶. سرچشمه: رویترز. پیوند: https://www.reuters.com/business/energy/oil-eases-markets-assess-potential-waiver-russian-energy-middle-east-supply-2026-10-20/",
-         "",
-        "",
-          "<b>روسیه در حالی پشتیبانی سیاسی خود از ایران را دوباره اعلام می‌کند که پرسش‌ها دربارهٔ کمک‌های جنگی مسکو افزایش یافته‌اند.</b> سرگئی لاوروف، وزیر امور خارجهٔ روسیه، در سفر خود به تهران آشکارا از ایران پشتیبانی کرد و موضع آن را برحق خواند. با این همه، میزان کمک نظامی و اطلاعاتی روسیه به ایران موضوع جداگانه‌ای است که برای اثبات آن، فراتر از گفته‌های علنی مقام‌ها، به شواهد نیاز است. تاریخ: ۱۹ اکتبر ۲۰۲۶. سرچشمه: رادیو اروپای آزاد/رادیو آزادی. پیوند: https://www.rferl.org/a/lavrov-in-tehran-amid-questions-over-whether-moscow-is-helping-iran-in-war-with-us/33879493/",
-          "",
-        "",
-          "<b>سازمان امنیت سوئد هشدار می‌دهد که ایران از شبکه‌های بزهکاری به‌عنوان نیروهای نیابتی بهره گرفته است.</b> ساپو اعلام کرد که فعالیت‌های امنیتی وابسته به حکومت ایران در سوئد، شبکه‌های بزهکاری را برای انجام اقدامات خشونت‌آمیز علیه افراد و گروه‌هایی به کار گرفته‌اند که از دید حکومت ایران تهدید به‌شمار می‌روند. این گزارش مربوط به پیشینهٔ موضوع است و خبر تازه‌ای از هفتهٔ گذشته نیست. تاریخ: ۳۰ مه ۲۰۲۴. سرچشمه: سازمان امنیت سوئد (ساپو). پیوند: https://sakerhetspolisen.se/ovriga-sidor/other-languages/english-engelska/press-room/news/news/2024-05-30-iran-is-using-criminal-networks-in-sweden.html",
-        "",
-        "",
                    " ۱. هشدار تازه درباره پیشروی فرونشست زمین در حریم تخت‌جمشید و پاسارگاد",
                    "  * تاریخ: ۲۲ شهریور ۱۴۰۵ (۱۳ سپتامبر ۲۰۲۶)",
                    "  * منبع: رادیو فردا / گزارش تحلیلی دیده‌بان میراث فرهنگی",
@@ -449,41 +414,84 @@ const pageDatabase = {
                 {
                 id: "article1",
                 title: "نبشتار نخست",
-                summary: "خلاصه کوتاه خبر اینجا قرار میگیرد...",
-                fullText:"اینجا قرار میگیرد متن کامل نبشتار "
+                summary: "ایران در میان تنش‌های سیاسی، گفت‌وگوها با ایالات متحده را طولانی‌تر می‌کند",
+                images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25651.jpg"],
+                fullText:"  <b>ایران در میان تنش‌های سیاسی، گفت‌وگوها با ایالات متحده را طولانی‌تر می‌کند.  </b> رویترز در ۲۰ اکتبر ۲۰۲۶ گزارش داد که مقام‌های ارشد ایرانی گفته‌اند تهران عمداً بن‌بست گفت‌وگوها را طولانی می‌کند تا پیش از انتخابات میان‌دوره‌ای نوامبر، فشار سیاسی بر دونالد ترامپ، رئیس‌جمهور آمریکا، افزایش یابد. این گزارش همچنین به خواسته‌های ایران دربارهٔ محاصرهٔ دریایی آمریکا، تحریم‌ها و درگیری‌های منطقه‌ای پرداخت. تاریخ: ۲۰ اکتبر ۲۰۲۶. سرچشمه: رویترز. پیوند:   https://www.reuters.com/world/us/iran-prolongs-talks-stalemate-influence-us-midterms-officials-say-2026-10-20/"
                 },
                 {
                 id: "article2",
                 title: "نبشتار دوم",
-                summary: "خلاصه کوتاه خبر اینجا قرار میگیرد...",
-                fullText:"اینجا قرار میگیرد متن کامل نبشتار "
+                summary: "ایران تا برآورده‌شدن خواسته‌هایش، گفت‌وگو با واشنگتن را نمی‌پذیرد.",
+                images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25664.jpg"],
+                fullText:"<b>ایران تا برآورده‌شدن خواسته‌هایش، گفت‌وگو با واشنگتن را نمی‌پذیرد. </b> مقام‌های ایرانی به عاصم منیر، فرمانده ارتش پاکستان، گفتند که تهران تا زمانی که خواسته‌هایش برآورده نشود، گفت‌وگو با ایالات متحده را از سر نخواهد گرفت. این خواسته‌ها شامل برداشتن محدودیت‌ها بر صادرات نفت ایران، پایان دادن به محاصرهٔ بندرهای ایران و توقف درگیری‌ها در منطقه است. تاریخ: ۲۰ اکتبر ۲۰۲۶. سرچشمه: رویترز. پیوند: https://www.reuters.com/world/asia-pacific/irans-pezeshkian-discusses-mediation-efforts-meeting-with-pakistans-army-chief-2026-10-20/"
+       
                 },
                 {
                 id: "article3",
                 title: "نبشتار سوم",
-                summary: "خلاصه کوتاه خبر اینجا قرار میگیرد...",
-                fullText:"اینجا قرار میگیرد متن کامل نبشتار "
+                summary: "فرمانده ارتش پاکستان برای کاهش تنش‌های منطقه‌ای به تهران می‌رود",
+                images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675096/25652.jpg"],
+                fullText:"  <b>فرمانده ارتش پاکستان برای کاهش تنش‌های منطقه‌ای به تهران می‌رود.</b>عاصم منیر، فرمانده ارتش پاکستان، با رهبران ایران دیدار کرد؛ این دیدار در چارچوب کوشش‌های پاکستان برای میانجی‌گری میان ایران و ایالات متحده انجام شد. گفت‌وگوها دربارهٔ جنگ، کاهش تنش‌های منطقه‌ای و تنگهٔ هرمز بود؛ گذرگاهی راهبردی برای جابه‌جایی جهانی انرژی. تاریخ: ۱۹ تا ۲۰ اکتبر ۲۰۲۶. سرچشمه: رویترز. پیوند: https://www.reuters.com/world/asia-pacific/irans-pezeshkian-discusses-mediation-efforts-meeting-with-pakistans-army-chief-2026-10-20/"
+
                 },
                 {
                 id: "article4",
                 title: "نبشتار چهارم",
-                summary: "خلاصه کوتاه خبر اینجا قرار میگیرد...",
-                fullText:"اینجا قرار میگیرد متن کامل نبشتار "
+                summary: "مسعود پزشکیان، رئیس‌جمهور ایران، از روسیه برای پشتیبانی‌اش در دوران جنگ سپاسگزاری می‌کند",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25668.jpg"],
+                fullText:" <b>مسعود پزشکیان، رئیس‌جمهور ایران، از روسیه برای پشتیبانی‌اش در دوران جنگ سپاسگزاری می‌کند.</b> پزشکیان در دیدار با سرگئی لاوروف، وزیر امور خارجهٔ روسیه، در تهران از پشتیبانی روسیه سپاسگزاری کرد و خواهان همکاری نزدیک‌تر در زمینه‌های انرژی، ترابری، بازرگانی و دیپلماسی شد. لاوروف نیز بر پایبندی مسکو به همکاری با تهران تأکید کرد. تاریخ: ۲۰ اکتبر ۲۰۲۶. سرچشمه: خبرگزاری تسنیم. پیوند: https://www.tasnimnews.ir/en/news/2026/10/20/3727443/pezeshkian-calls-for-closer-iran-russia-cooperation"
+
                 },
                 {
                 id: "article5",
                 title: "نبشتار پنجم",
-                summary: "خلاصه کوتاه خبر اینجا قرار میگیرد...",
-                fullText:"اینجا قرار میگیرد متن کامل نبشتار "
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25654.jpg"],
+                summary: "پیت هگست، وزیر جنگ ایالات متحده، با بنیامین نتانیاهو، نخست‌وزیر اسرائیل، دیدار می‌کند",
+                fullText: "<b>پیت هگست، وزیر جنگ ایالات متحده، با بنیامین نتانیاهو، نخست‌وزیر اسرائیل، دیدار می‌کند.</b> هگست در سفری اعلام‌نشده به اسرائیل رفت و در آنجا با نتانیاهو دربارهٔ تهدیدهای منطقه‌ای و همکاری میان ایالات متحده و اسرائیل گفت‌وگو کرد. این دیدار در شرایط افزایش تنش‌ها پیرامون ایران و اندکی پیش از انتخابات پارلمانی اسرائیل انجام شد. تاریخ: ۱۹ اکتبر ۲۰۲۶. سرچشمه: رویترز. پیوند: https://www.reuters.com/world/middle-east/hegseth-meets-netanyahu-unannounced-visit-israel-reports-axios-2026-10-19/"
+
                 },
                 {
                 id: "article6",
                 title: "نبشتار ششم",
-                summary: "خلاصه کوتاه خبر اینجا قرار میگیرد...",
-                fullText:"اینجا قرار میگیرد متن کامل نبشتار "
+                summary: "دونالد ترامپ ادعا می‌کند که ایران دست‌کم ۷۵ هزار تن از معترضان را کشته است.",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675096/25660.jpg"],
+                fullText:"<b>دونالد ترامپ ادعا می‌کند که ایران دست‌کم ۷۵ هزار تن از معترضان را کشته است.</b> رئیس‌جمهور ایالات متحده در گردهمایی انتخاباتی خود در کانزاس ادعا کرد که مقام‌های ایرانی در مدت هشت ماه دست‌کم ۷۵ هزار معترض را کشته‌اند. این رقم به‌طور مستقل تأیید نشده است و باید آن را ادعای ترامپ دانست، نه آماری که شمار درست کشته‌شدگان را نشان می‌دهد. تاریخ: ۲۰ اکتبر ۲۰۲۶. سرچشمه: جی‌اِن‌اِس. پیوند: https://www.jns.org/news/u-s-news/trump-iran-killed-at-least-75-000-protesters-in-eight-months"
+
+                },
+                {
+                id: "article7",
+                title: "نبشتار هفتم",
+                summary: "مقام‌های ایرانی از بازداشت ۳۹ تن در پیوند با اعتراض‌های دی‌ماه خبر می‌دهند.",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25658.jpg"],
+                fullText:"<b>مقام‌های ایرانی از بازداشت ۳۹ تن در پیوند با اعتراض‌های دی‌ماه خبر می‌دهند.</b> ادارهٔ اطلاعات قزوین ادعا کرد که بازداشت‌شدگان در آتش‌سوزی‌ها و حمله‌های هنگام اعتراض‌ها دست داشته‌اند. مقام‌ها نام بازداشت‌شدگان را به‌طور عمومی اعلام نکردند و برای جدی‌ترین اتهام‌های خود نیز شواهدی ارائه ندادند. تاریخ: ۱۹ اکتبر ۲۰۲۶. سرچشمه: ایران‌وایر. پیوند: https://iranwire.com/en/news/159070-intelligence-department-announces-arrest-of-39-protesters-in-qazvin/"
+
+                },
+                {
+                id: "article8",
+                title: "نبشتار هشتم",
+                summary: "بهای نفت در میان تنش‌های مربوط به ایران و تهدیدهای کشتیرانی در خلیج فارس دگرگون می‌شود.",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675096/25652.jpg"],
+                fullText:"<b>بهای نفت در میان تنش‌های مربوط به ایران و تهدیدهای کشتیرانی در خلیج فارس دگرگون می‌شود.</b> رویترز گزارش داد که بازارهای نفت به کوشش‌های دیپلماتیک میان ایران و ایالات متحده و نیز گزارش‌های مربوط به حمله به کشتی‌ها و زیرساخت‌های منطقه واکنش نشان می‌دهند. ادامهٔ اختلال در رفت‌وآمد کشتی‌ها در تنگهٔ هرمز همچنان نگرانی بزرگی برای تأمین جهانی انرژی است. تاریخ: ۲۰ اکتبر ۲۰۲۶. سرچشمه: رویترز. پیوند: https://www.reuters.com/business/energy/oil-eases-markets-assess-potential-waiver-russian-energy-middle-east-supply-2026-10-20/",
+
+                },
+                {
+                id: "article9",
+                title: "نبشتار نهم",
+                summary: "روسیه در حالی پشتیبانی سیاسی خود از ایران را دوباره اعلام می‌کند که پرسش‌ها دربارهٔ کمک‌های جنگی مسکو افزایش یافته‌اند.",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25656.jpg"],
+                fullText:"<b>روسیه در حالی پشتیبانی سیاسی خود از ایران را دوباره اعلام می‌کند که پرسش‌ها دربارهٔ کمک‌های جنگی مسکو افزایش یافته‌اند.</b> سرگئی لاوروف، وزیر امور خارجهٔ روسیه، در سفر خود به تهران آشکارا از ایران پشتیبانی کرد و موضع آن را برحق خواند. با این همه، میزان کمک نظامی و اطلاعاتی روسیه به ایران موضوع جداگانه‌ای است که برای اثبات آن، فراتر از گفته‌های علنی مقام‌ها، به شواهد نیاز است. تاریخ: ۱۹ اکتبر ۲۰۲۶. سرچشمه: رادیو اروپای آزاد/رادیو آزادی. پیوند: https://www.rferl.org/a/lavrov-in-tehran-amid-questions-over-whether-moscow-is-helping-iran-in-war-with-us/33879493/",
+
+                },
+                {
+                id: "article10",
+                title: "نبشتار دهم",
+                summary: "سازمان امنیت سوئد هشدار می‌دهد که ایران از شبکه‌های بزهکاری به‌عنوان نیروهای نیابتی بهره گرفته است.",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25662.jpg"],
+                fullText:"<b>سازمان امنیت سوئد هشدار می‌دهد که ایران از شبکه‌های بزهکاری به‌عنوان نیروهای نیابتی بهره گرفته است.</b> ساپو اعلام کرد که فعالیت‌های امنیتی وابسته به حکومت ایران در سوئد، شبکه‌های بزهکاری را برای انجام اقدامات خشونت‌آمیز علیه افراد و گروه‌هایی به کار گرفته‌اند که از دید حکومت ایران تهدید به‌شمار می‌روند. این گزارش مربوط به پیشینهٔ موضوع است و خبر تازه‌ای از هفتهٔ گذشته نیست. تاریخ: ۳۰ مه ۲۰۲۴. سرچشمه: سازمان امنیت سوئد (ساپو). پیوند: https://sakerhetspolisen.se/ovriga-sidor/other-languages/english-engelska/press-room/news/news/2024-05-30-iran-is-using-criminal-networks-in-sweden.html",
+
                 }
-            ],
-            images: [],
+            ],         
+            
             video: ""
         },
         en: {
