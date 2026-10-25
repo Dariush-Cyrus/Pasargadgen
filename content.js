@@ -414,14 +414,14 @@ const pageDatabase = {
                 {
                 id: "article1",
                 title: "نبشتار نخست",
-                summary: "<b>ایران در میان تنش‌های سیاسی، گفت‌وگوها با ایالات متحده را طولانی‌تر می‌کند</b>",
+                summary: "<b>ایران در میان تنش‌های سیاسی، گفت‌وگوها با ایالات متحده را طولانی‌تر می‌کند.  </b>",
                 images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25651.jpg"],
                 fullText:"  <b>ایران در میان تنش‌های سیاسی، گفت‌وگوها با ایالات متحده را طولانی‌تر می‌کند.  </b> رویترز در ۲۰ اکتبر ۲۰۲۶ گزارش داد که مقام‌های ارشد ایرانی گفته‌اند تهران عمداً بن‌بست گفت‌وگوها را طولانی می‌کند تا پیش از انتخابات میان‌دوره‌ای نوامبر، فشار سیاسی بر دونالد ترامپ، رئیس‌جمهور آمریکا، افزایش یابد. این گزارش همچنین به خواسته‌های ایران دربارهٔ محاصرهٔ دریایی آمریکا، تحریم‌ها و درگیری‌های منطقه‌ای پرداخت. تاریخ: ۲۰ اکتبر ۲۰۲۶. سرچشمه: رویترز. پیوند:   https://www.reuters.com/world/us/iran-prolongs-talks-stalemate-influence-us-midterms-officials-say-2026-10-20/"
                 },
                 {
                 id: "article2",
                 title: "نبشتار دوم",
-                summary: "<b>ایران تا برآورده‌شدن خواسته‌هایش، گفت‌وگو با واشنگتن را نمی‌پذیرد.</b>",
+                summary: "<b>ایران تا برآورده‌شدن خواسته‌هایش، گفت‌وگو با واشنگتن را نمی‌پذیرد. </b>.",
                 images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25664.jpg"],
                 fullText:"<b>ایران تا برآورده‌شدن خواسته‌هایش، گفت‌وگو با واشنگتن را نمی‌پذیرد. </b> مقام‌های ایرانی به عاصم منیر، فرمانده ارتش پاکستان، گفتند که تهران تا زمانی که خواسته‌هایش برآورده نشود، گفت‌وگو با ایالات متحده را از سر نخواهد گرفت. این خواسته‌ها شامل برداشتن محدودیت‌ها بر صادرات نفت ایران، پایان دادن به محاصرهٔ بندرهای ایران و توقف درگیری‌ها در منطقه است. تاریخ: ۲۰ اکتبر ۲۰۲۶. سرچشمه: رویترز. پیوند: https://www.reuters.com/world/asia-pacific/irans-pezeshkian-discusses-mediation-efforts-meeting-with-pakistans-army-chief-2026-10-20/"
        
@@ -429,7 +429,7 @@ const pageDatabase = {
                 {
                 id: "article3",
                 title: "نبشتار سوم",
-                summary: "<b>فرمانده ارتش پاکستان برای کاهش تنش‌های منطقه‌ای به تهران می‌رود</b>",
+                summary: "<b>فرمانده ارتش پاکستان برای کاهش تنش‌های منطقه‌ای به تهران می‌رود.</b>",
                 images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675096/25652.jpg"],
                 fullText:"  <b>فرمانده ارتش پاکستان برای کاهش تنش‌های منطقه‌ای به تهران می‌رود.</b>عاصم منیر، فرمانده ارتش پاکستان، با رهبران ایران دیدار کرد؛ این دیدار در چارچوب کوشش‌های پاکستان برای میانجی‌گری میان ایران و ایالات متحده انجام شد. گفت‌وگوها دربارهٔ جنگ، کاهش تنش‌های منطقه‌ای و تنگهٔ هرمز بود؛ گذرگاهی راهبردی برای جابه‌جایی جهانی انرژی. تاریخ: ۱۹ تا ۲۰ اکتبر ۲۰۲۶. سرچشمه: رویترز. پیوند: https://www.reuters.com/world/asia-pacific/irans-pezeshkian-discusses-mediation-efforts-meeting-with-pakistans-army-chief-2026-10-20/"
 
@@ -437,7 +437,7 @@ const pageDatabase = {
                 {
                 id: "article4",
                 title: "نبشتار چهارم",
-                summary: "<b>مسعود پزشکیان، رئیس‌جمهور ایران، از روسیه برای پشتیبانی‌اش در دوران جنگ سپاسگزاری می‌کند</b>",
+                summary: "<b>مسعود پزشکیان، رئیس‌جمهور ایران، از روسیه برای پشتیبانی‌اش در دوران جنگ سپاسگزاری می‌کند.</b>",
                 images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25668.jpg"],
                 fullText:" <b>مسعود پزشکیان، رئیس‌جمهور ایران، از روسیه برای پشتیبانی‌اش در دوران جنگ سپاسگزاری می‌کند.</b> پزشکیان در دیدار با سرگئی لاوروف، وزیر امور خارجهٔ روسیه، در تهران از پشتیبانی روسیه سپاسگزاری کرد و خواهان همکاری نزدیک‌تر در زمینه‌های انرژی، ترابری، بازرگانی و دیپلماسی شد. لاوروف نیز بر پایبندی مسکو به همکاری با تهران تأکید کرد. تاریخ: ۲۰ اکتبر ۲۰۲۶. سرچشمه: خبرگزاری تسنیم. پیوند: https://www.tasnimnews.ir/en/news/2026/10/20/3727443/pezeshkian-calls-for-closer-iran-russia-cooperation"
 
@@ -446,14 +446,14 @@ const pageDatabase = {
                 id: "article5",
                 title: "نبشتار پنجم",
                 images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25654.jpg"],
-                summary: "<b>پیت هگست، وزیر جنگ ایالات متحده، با بنیامین نتانیاهو، نخست‌وزیر اسرائیل، دیدار می‌کند</b>",
+                summary: "<b>پیت هگست، وزیر جنگ ایالات متحده، با بنیامین نتانیاهو، نخست‌وزیر اسرائیل، دیدار می‌کند.</b>",
                 fullText: "<b>پیت هگست، وزیر جنگ ایالات متحده، با بنیامین نتانیاهو، نخست‌وزیر اسرائیل، دیدار می‌کند.</b> هگست در سفری اعلام‌نشده به اسرائیل رفت و در آنجا با نتانیاهو دربارهٔ تهدیدهای منطقه‌ای و همکاری میان ایالات متحده و اسرائیل گفت‌وگو کرد. این دیدار در شرایط افزایش تنش‌ها پیرامون ایران و اندکی پیش از انتخابات پارلمانی اسرائیل انجام شد. تاریخ: ۱۹ اکتبر ۲۰۲۶. سرچشمه: رویترز. پیوند: https://www.reuters.com/world/middle-east/hegseth-meets-netanyahu-unannounced-visit-israel-reports-axios-2026-10-19/"
 
                 },
                 {
                 id: "article6",
                 title: "نبشتار ششم",
-                summary: "دونالد ترامپ ادعا می‌کند که ایران دست‌کم ۷۵ هزار تن از معترضان را کشته است.",
+                summary: "<b>دونالد ترامپ ادعا می‌کند که ایران دست‌کم ۷۵ هزار تن از معترضان را کشته است.</b>",
                 images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675096/25660.jpg"],
                 fullText:"<b>دونالد ترامپ ادعا می‌کند که ایران دست‌کم ۷۵ هزار تن از معترضان را کشته است.</b> رئیس‌جمهور ایالات متحده در گردهمایی انتخاباتی خود در کانزاس ادعا کرد که مقام‌های ایرانی در مدت هشت ماه دست‌کم ۷۵ هزار معترض را کشته‌اند. این رقم به‌طور مستقل تأیید نشده است و باید آن را ادعای ترامپ دانست، نه آماری که شمار درست کشته‌شدگان را نشان می‌دهد. تاریخ: ۲۰ اکتبر ۲۰۲۶. سرچشمه: جی‌اِن‌اِس. پیوند: https://www.jns.org/news/u-s-news/trump-iran-killed-at-least-75-000-protesters-in-eight-months"
 
@@ -461,7 +461,7 @@ const pageDatabase = {
                 {
                 id: "article7",
                 title: "نبشتار هفتم",
-                summary: "مقام‌های ایرانی از بازداشت ۳۹ تن در پیوند با اعتراض‌های دی‌ماه خبر می‌دهند.",
+                summary: "<b>مقام‌های ایرانی از بازداشت ۳۹ تن در پیوند با اعتراض‌های دی‌ماه خبر می‌دهند.</b>",
                 images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25658.jpg"],
                 fullText:"<b>مقام‌های ایرانی از بازداشت ۳۹ تن در پیوند با اعتراض‌های دی‌ماه خبر می‌دهند.</b> ادارهٔ اطلاعات قزوین ادعا کرد که بازداشت‌شدگان در آتش‌سوزی‌ها و حمله‌های هنگام اعتراض‌ها دست داشته‌اند. مقام‌ها نام بازداشت‌شدگان را به‌طور عمومی اعلام نکردند و برای جدی‌ترین اتهام‌های خود نیز شواهدی ارائه ندادند. تاریخ: ۱۹ اکتبر ۲۰۲۶. سرچشمه: ایران‌وایر. پیوند: https://iranwire.com/en/news/159070-intelligence-department-announces-arrest-of-39-protesters-in-qazvin/"
 
@@ -469,7 +469,7 @@ const pageDatabase = {
                 {
                 id: "article8",
                 title: "نبشتار هشتم",
-                summary: "بهای نفت در میان تنش‌های مربوط به ایران و تهدیدهای کشتیرانی در خلیج فارس دگرگون می‌شود.",
+                summary: "<b>بهای نفت در میان تنش‌های مربوط به ایران و تهدیدهای کشتیرانی در خلیج فارس دگرگون می‌شود.</b>",
                 images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675096/25652.jpg"],
                 fullText:"<b>بهای نفت در میان تنش‌های مربوط به ایران و تهدیدهای کشتیرانی در خلیج فارس دگرگون می‌شود.</b> رویترز گزارش داد که بازارهای نفت به کوشش‌های دیپلماتیک میان ایران و ایالات متحده و نیز گزارش‌های مربوط به حمله به کشتی‌ها و زیرساخت‌های منطقه واکنش نشان می‌دهند. ادامهٔ اختلال در رفت‌وآمد کشتی‌ها در تنگهٔ هرمز همچنان نگرانی بزرگی برای تأمین جهانی انرژی است. تاریخ: ۲۰ اکتبر ۲۰۲۶. سرچشمه: رویترز. پیوند: https://www.reuters.com/business/energy/oil-eases-markets-assess-potential-waiver-russian-energy-middle-east-supply-2026-10-20/",
 
@@ -477,7 +477,7 @@ const pageDatabase = {
                 {
                 id: "article9",
                 title: "نبشتار نهم",
-                summary: "روسیه در حالی پشتیبانی سیاسی خود از ایران را دوباره اعلام می‌کند که پرسش‌ها دربارهٔ کمک‌های جنگی مسکو افزایش یافته‌اند.",
+                summary: "<b>روسیه در حالی پشتیبانی سیاسی خود از ایران را دوباره اعلام می‌کند که پرسش‌ها دربارهٔ کمک‌های جنگی مسکو افزایش یافته‌اند.</b>",
                 images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25656.jpg"],
                 fullText:"<b>روسیه در حالی پشتیبانی سیاسی خود از ایران را دوباره اعلام می‌کند که پرسش‌ها دربارهٔ کمک‌های جنگی مسکو افزایش یافته‌اند.</b> سرگئی لاوروف، وزیر امور خارجهٔ روسیه، در سفر خود به تهران آشکارا از ایران پشتیبانی کرد و موضع آن را برحق خواند. با این همه، میزان کمک نظامی و اطلاعاتی روسیه به ایران موضوع جداگانه‌ای است که برای اثبات آن، فراتر از گفته‌های علنی مقام‌ها، به شواهد نیاز است. تاریخ: ۱۹ اکتبر ۲۰۲۶. سرچشمه: رادیو اروپای آزاد/رادیو آزادی. پیوند: https://www.rferl.org/a/lavrov-in-tehran-amid-questions-over-whether-moscow-is-helping-iran-in-war-with-us/33879493/",
 
@@ -485,7 +485,7 @@ const pageDatabase = {
                 {
                 id: "article10",
                 title: "نبشتار دهم",
-                summary: "سازمان امنیت سوئد هشدار می‌دهد که ایران از شبکه‌های بزهکاری به‌عنوان نیروهای نیابتی بهره گرفته است.",
+                summary: "<b>سازمان امنیت سوئد هشدار می‌دهد که ایران از شبکه‌های بزهکاری به‌عنوان نیروهای نیابتی بهره گرفته است.</b>",
                 images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25662.jpg"],
                 fullText:"<b>سازمان امنیت سوئد هشدار می‌دهد که ایران از شبکه‌های بزهکاری به‌عنوان نیروهای نیابتی بهره گرفته است.</b> ساپو اعلام کرد که فعالیت‌های امنیتی وابسته به حکومت ایران در سوئد، شبکه‌های بزهکاری را برای انجام اقدامات خشونت‌آمیز علیه افراد و گروه‌هایی به کار گرفته‌اند که از دید حکومت ایران تهدید به‌شمار می‌روند. این گزارش مربوط به پیشینهٔ موضوع است و خبر تازه‌ای از هفتهٔ گذشته نیست. تاریخ: ۳۰ مه ۲۰۲۴. سرچشمه: سازمان امنیت سوئد (ساپو). پیوند: https://sakerhetspolisen.se/ovriga-sidor/other-languages/english-engelska/press-room/news/news/2024-05-30-iran-is-using-criminal-networks-in-sweden.html",
 
@@ -499,38 +499,6 @@ const pageDatabase = {
             text: ["<b>Welcome to the News page.</b>",
 
                   "",
-                  "",
-                  "<b>Iran prolongs negotiations with the United States amid political tensions.</b> Reuters reported on October 20, 2026, that senior Iranian officials said Tehran was deliberately prolonging the stalemate to increase political pressure on President Donald Trump before the November midterm elections. The report also described Iran's demands concerning the US maritime blockade, sanctions, and regional hostilities. Date: October 20, 2026. Source: Reuters. Link: https://www.reuters.com/world/us/iran-prolongs-talks-stalemate-influence-us-midterms-officials-say-2026-10-20/",
-
-                  "",
-                  "",
-                  "<b>Iran rejects negotiations with Washington until its demands are met.</b> Iranian officials told Pakistan's army chief, Field Marshal Asim Munir, that Tehran would not resume talks with the United States until its conditions were addressed. The demands include lifting restrictions on Iranian oil exports, ending the blockade of Iranian ports, and stopping hostilities in the region. Date: October 20, 2026. Source: Reuters. Link: https://www.reuters.com/world/asia-pacific/irans-pezeshkian-discusses-mediation-efforts-meeting-with-pakistans-army-chief-2026-10-20/",
-                  "",
-                  "",
-                    "<b>Pakistan's army chief visits Tehran in a diplomatic effort to reduce regional tensions.</b> Field Marshal Asim Munir met Iranian leaders as Pakistan continued its mediation efforts between Iran and the United States. Discussions concerned the conflict, regional de-escalation, and the Strait of Hormuz, a vital route for international energy shipments. Date: October 19–20, 2026. Source: Reuters. Link: https://www.reuters.com/world/asia-pacific/irans-pezeshkian-discusses-mediation-efforts-meeting-with-pakistans-army-chief-2026-10-20/",
-                    "",
-                  "",
-                    "<b>Iranian President Masoud Pezeshkian thanks Russia for its support during the war.</b> During a meeting in Tehran with Russian Foreign Minister Sergey Lavrov, Pezeshkian expressed gratitude for Russian support and called for closer cooperation in energy, transportation, trade, and diplomacy. Lavrov reaffirmed Moscow's commitment to cooperation with Tehran. Date: October 20, 2026. Source: Tasnim News Agency. Link: https://www.tasnimnews.ir/en/news/2026/10/20/3727443/pezeshkian-calls-for-closer-iran-russia-cooperation",
-                    "",
-                  "",
-                    "<b>US Defense Secretary Pete Hegseth meets Israeli Prime Minister Benjamin Netanyahu.</b> Hegseth made an unannounced visit to Israel, where the two officials discussed regional threats and US-Israeli cooperation. The meeting took place amid heightened tensions involving Iran and shortly before Israel's parliamentary election. Date: October 19, 2026. Source: Reuters. Link: https://www.reuters.com/world/middle-east/hegseth-meets-netanyahu-unannounced-visit-israel-reports-axios-2026-10-19/",
-"",
-                  "",
-                    "<b>Donald Trump claims Iran killed at least 75,000 protesters.</b> Speaking at a campaign rally in Kansas, the US president alleged that Iranian authorities had killed at least 75,000 protesters over eight months. The figure has not been independently verified and should be treated as Trump's claim rather than an established death toll. Date: October 20, 2026. Source: JNS. Link: https://www.jns.org/news/u-s-news/trump-iran-killed-at-least-75-000-protesters-in-eight-months",
-                    "",
-                  "",
-                     "<b>Iranian authorities announce the arrest of 39 people connected to the January protests.</b> The intelligence department in Qazvin alleged that the detainees were involved in arson and attacks during the demonstrations. The authorities did not publicly identify the detainees or provide evidence supporting their most serious allegations. Date: October 19, 2026. Source: IranWire. Link: https://iranwire.com/en/news/159070-intelligence-department-announces-arrest-of-39-protesters-in-qazvin/",
-                     "",
-                  "",
-                     "<b>Oil prices fluctuate amid tensions involving Iran and threats to Gulf shipping.</b> Reuters reported that oil markets were responding to diplomatic efforts between Iran and the United States, as well as reports of attacks on vessels and infrastructure in the region. Continued disruption around the Strait of Hormuz remains a major concern for international energy supplies. Date: October 20, 2026. Source: Reuters. Link: https://www.reuters.com/business/energy/oil-eases-markets-assess-potential-waiver-russian-energy-middle-east-supply-2026-10-20/",
-"",
-                  "",
-                    "<b>Russia reaffirms political support for Iran as questions grow over Moscow's wartime assistance.</b> During his visit to Tehran, Russian Foreign Minister Sergey Lavrov publicly backed Iran and described its cause as just. However, the extent of Russia's military and intelligence assistance to Iran remains a separate question that requires evidence beyond public statements. Date: October 19, 2026. Source: Radio Free Europe/Radio Liberty. Link: https://www.rferl.org/a/lavrov-in-tehran-amid-questions-over-whether-moscow-is-helping-iran-in-war-with-us/33879493/",
-                    "",
-                  "",
-                    "<b>Sweden's Security Service warns that Iran has used criminal networks as proxies.</b> Säpo stated that Iranian state-linked security activities have involved criminal networks in Sweden to carry out violent acts against people and groups considered threats by the Iranian regime. This is background reporting rather than a new announcement from the past week. Date: May 30, 2024. Source: Swedish Security Service (Säpo). Link: https://sakerhetspolisen.se/ovriga-sidor/other-languages/english-engelska/press-room/news/news/2024-05-30-iran-is-using-criminal-networks-in-sweden.html",
-
-
                    "",
                   "1. The Encroaching Earth-Fissures Surrounding Pasargadae and Persepolis",
                    "  * Date: September 13, 2026 (22 Shahrivar 1405)",
@@ -554,40 +522,85 @@ const pageDatabase = {
             articles:[
                 {
                 id: "article1",
-                title: "First article Title",
-                summary: "Short preview summary goes here",
-                fullText:"Full article text that appear after clicking apears here"
+                title: "First News Title",
+                summary: "<b>Iran prolongs negotiations with the United States amid political tensions.</b>",
+                images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25651.jpg"],
+                fullText:"<b>Iran prolongs negotiations with the United States amid political tensions.</b> Reuters reported on October 20, 2026, that senior Iranian officials said Tehran was deliberately prolonging the stalemate to increase political pressure on President Donald Trump before the November midterm elections. The report also described Iran's demands concerning the US maritime blockade, sanctions, and regional hostilities. Date: October 20, 2026. Source: Reuters. Link: https://www.reuters.com/world/us/iran-prolongs-talks-stalemate-influence-us-midterms-officials-say-2026-10-20/"
+
                 },
                 {
                 id: "article2",
                 title: "Second article Title",
-                summary: "Short preview summary goes here",
-                fullText:"Full article text that appear after clicking apears here"
+                summary: "<b>Iran rejects negotiations with Washington until its demands are met.</b>",
+                images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25664.jpg"],
+                fullText:"<b>Iran rejects negotiations with Washington until its demands are met.</b> Iranian officials told Pakistan's army chief, Field Marshal Asim Munir, that Tehran would not resume talks with the United States until its conditions were addressed. The demands include lifting restrictions on Iranian oil exports, ending the blockade of Iranian ports, and stopping hostilities in the region. Date: October 20, 2026. Source: Reuters. Link: https://www.reuters.com/world/asia-pacific/irans-pezeshkian-discusses-mediation-efforts-meeting-with-pakistans-army-chief-2026-10-20/"
+
                 },
                 {
                 id: "article3",
                 title: "Third article Title",
-                summary: "Short preview summary goes here",
-                fullText:"Full article text that appear after clicking apears here"
+                summary: "<b>Pakistan's army chief visits Tehran in a diplomatic effort to reduce regional tensions.</b>",
+                images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675096/25652.jpg"],
+                fullText: "<b>Pakistan's army chief visits Tehran in a diplomatic effort to reduce regional tensions.</b> Field Marshal Asim Munir met Iranian leaders as Pakistan continued its mediation efforts between Iran and the United States. Discussions concerned the conflict, regional de-escalation, and the Strait of Hormuz, a vital route for international energy shipments. Date: October 19–20, 2026. Source: Reuters. Link: https://www.reuters.com/world/asia-pacific/irans-pezeshkian-discusses-mediation-efforts-meeting-with-pakistans-army-chief-2026-10-20/"
+
                 },
                 {
                 id: "article4",
                 title: "Forth article Title",
-                summary: "Short preview summary goes here",
-                fullText:"Full article text that appear after clicking apears here"
+                summary: "<b>Iranian President Masoud Pezeshkian thanks Russia for its support during the war.</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25668.jpg"],
+                fullText:"<b>Iranian President Masoud Pezeshkian thanks Russia for its support during the war.</b> During a meeting in Tehran with Russian Foreign Minister Sergey Lavrov, Pezeshkian expressed gratitude for Russian support and called for closer cooperation in energy, transportation, trade, and diplomacy. Lavrov reaffirmed Moscow's commitment to cooperation with Tehran. Date: October 20, 2026. Source: Tasnim News Agency. Link: https://www.tasnimnews.ir/en/news/2026/10/20/3727443/pezeshkian-calls-for-closer-iran-russia-cooperation"
+
                 },
                 {
                 id: "article5",
                 title: "Fifth article Title",
-                summary: "Short preview summary goes here",
-                fullText:"Full article text that appear after clicking apears here"
+                summary: "<b>US Defense Secretary Pete Hegseth meets Israeli Prime Minister Benjamin Netanyahu.</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25654.jpg"],
+                fullText:"<b>US Defense Secretary Pete Hegseth meets Israeli Prime Minister Benjamin Netanyahu.</b> Hegseth made an unannounced visit to Israel, where the two officials discussed regional threats and US-Israeli cooperation. The meeting took place amid heightened tensions involving Iran and shortly before Israel's parliamentary election. Date: October 19, 2026. Source: Reuters. Link: https://www.reuters.com/world/middle-east/hegseth-meets-netanyahu-unannounced-visit-israel-reports-axios-2026-10-19/"
+
                 },
                 {
                 id: "article6",
                 title: "Sixth article Title",
-                summary: "Short preview summary goes here",
-                fullText:"Full article text that appear after clicking apears here"
+                summary: "<b>Donald Trump claims Iran killed at least 75,000 protesters.</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675096/25660.jpg"],
+                fullText:"<b>Donald Trump claims Iran killed at least 75,000 protesters.</b> Speaking at a campaign rally in Kansas, the US president alleged that Iranian authorities had killed at least 75,000 protesters over eight months. The figure has not been independently verified and should be treated as Trump's claim rather than an established death toll. Date: October 20, 2026. Source: JNS. Link: https://www.jns.org/news/u-s-news/trump-iran-killed-at-least-75-000-protesters-in-eight-months"
+
+                },
+                {
+                id: "article7",
+                title: "Sventh news Title",
+                summary: "<b>Iranian authorities announce the arrest of 39 people connected to the January protests.</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25658.jpg"],
+                fullText:"<b>Iranian authorities announce the arrest of 39 people connected to the January protests.</b> The intelligence department in Qazvin alleged that the detainees were involved in arson and attacks during the demonstrations. The authorities did not publicly identify the detainees or provide evidence supporting their most serious allegations. Date: October 19, 2026. Source: IranWire. Link: https://iranwire.com/en/news/159070-intelligence-department-announces-arrest-of-39-protesters-in-qazvin/"
+
+                },
+                {
+                id: "article8",
+                title: "Eightth news Title",
+                summary: "<b>Oil prices fluctuate amid tensions involving Iran and threats to Gulf shipping.</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675096/25652.jpg"],
+                fullText:"<b>Oil prices fluctuate amid tensions involving Iran and threats to Gulf shipping.</b> Reuters reported that oil markets were responding to diplomatic efforts between Iran and the United States, as well as reports of attacks on vessels and infrastructure in the region. Continued disruption around the Strait of Hormuz remains a major concern for international energy supplies. Date: October 20, 2026. Source: Reuters. Link: https://www.reuters.com/business/energy/oil-eases-markets-assess-potential-waiver-russian-energy-middle-east-supply-2026-10-20/"
+
+                },
+                {
+                id: "article9",
+                title: "Ninth news Title",
+                summary: "<b>Russia reaffirms political support for Iran as questions grow over Moscow's wartime assistance.</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25656.jpg"],
+                fullText:"<b>Russia reaffirms political support for Iran as questions grow over Moscow's wartime assistance.</b> During his visit to Tehran, Russian Foreign Minister Sergey Lavrov publicly backed Iran and described its cause as just. However, the extent of Russia's military and intelligence assistance to Iran remains a separate question that requires evidence beyond public statements. Date: October 19, 2026. Source: Radio Free Europe/Radio Liberty. Link: https://www.rferl.org/a/lavrov-in-tehran-amid-questions-over-whether-moscow-is-helping-iran-in-war-with-us/33879493/"
+
+                },
+                {
+                id: "article10",
+                title: "Tenth news Title",
+                summary: "<b>Sweden's Security Service warns that Iran has used criminal networks as proxies.</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25662.jpg"],
+                fullText:"<b>Sweden's Security Service warns that Iran has used criminal networks as proxies.</b> Säpo stated that Iranian state-linked security activities have involved criminal networks in Sweden to carry out violent acts against people and groups considered threats by the Iranian regime. This is background reporting rather than a new announcement from the past week. Date: May 30, 2024. Source: Swedish Security Service (Säpo). Link: https://sakerhetspolisen.se/ovriga-sidor/other-languages/english-engelska/press-room/news/news/2024-05-30-iran-is-using-criminal-networks-in-sweden.html",
+
                 }
+
             ],
             images: [],
             video: ""
