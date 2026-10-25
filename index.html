@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pasargad Generation Website</title>
+    <title>Multi-Language Website</title>
     <link rel="icon" type="image/x-icon" href="farva.jpeg">
     <style>
         body {
@@ -751,7 +751,38 @@ function closeArticle() {
     if (newsGrid) newsGrid.style.display = "flex";
 }
 
+// 1. Check the URL hash when the page first loads
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash) {
+        // Small timeout ensures your page database is fully loaded before opening
+        setTimeout(() => {
+            openArticle(hash);
+        }, 50);
+    }
+});
 
+// 2. Listen for hash changes (like when users use browser back/forward arrows)
+window.addEventListener('hashchange', () => {
+    const hash = window.location.hash.replace('#', '');
+    if (hash) {
+        openArticle(hash);
+    } else {
+        // If the hash is empty, close the article view and return to main grid
+        const articleView = document.getElementById('articleDetailView');
+        if (articleView && articleView.style.display === "block") {
+            // Call your closing logic without resetting the hash loop
+            const newsGrid = document.getElementById('newsGrid');
+            const textContainer = document.getElementById('contentText');
+            const imgContainer = document.getElementById('contentImageContainer');
+
+            if (articleView) articleView.style.display = "none";
+            if (textContainer) textContainer.style.display = "block";
+            if (imgContainer) imgContainer.style.display = "block";
+            if (newsGrid) newsGrid.style.display = "flex";
+        }
+    }
+});
 
             // --- Form Submission to Google Apps Script ---
             function submitToGoogleDrive(event) {
