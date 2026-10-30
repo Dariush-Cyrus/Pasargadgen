@@ -744,21 +744,32 @@ function handleHashNavigation() {
     let targetTab = params.get('tab');
     const targetArticle = params.get('article');
 
-    if (targetTab) {
-        // Convert to lowercase to prevent capitalization mismatches (e.g., "News" -> "news")
-        targetTab = targetTab.toLowerCase();
-
-        if (typeof switchTab === "function") {
-            switchTab(targetTab);
+    // Wait a brief moment for the page and database to fully initialize after a hard reload
+    setTimeout(() => {
+        if (targetTab) {
+            targetTab = targetTab.toLowerCase(); // Convert to lowercase (e.g., "News" -> "news")
+            if (typeof switchTab === "function") {
+                switchTab(targetTab);
+            }
         }
-    }
 
-    if (targetArticle) {
-        setTimeout(() => {
-            openArticle(targetArticle);
-        }, 100);
-    }
+        if (targetArticle) {
+            setTimeout(() => {
+                openArticle(targetArticle);
+            }, 150); // Additional small delay to ensure tab content is rendered before opening the article
+        }
+    }, 200);
 }
+
+// Run on page load
+window.addEventListener('DOMContentLoaded', () => {
+    handleHashNavigation();
+});
+
+// Run when hash changes (back/forward or direct link sharing)
+window.addEventListener('hashchange', () => {
+    handleHashNavigation();
+});
 // --- Close Article View ---
 function closeArticle() {
     window.location.hash = "";
