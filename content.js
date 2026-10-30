@@ -602,13 +602,90 @@ const pageDatabase = {
                 {
                 id: "article1",
                 title: "First News Title",
+                summary: "2026-10-25 | <b>Sri Lanka rescues and repatriates 40 Iranian sailors</b>",
+                images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793357676/26644.jpg"],
+                fullText:"2026-10-25 | <b>Sri Lanka rescues and repatriates 40 Iranian sailors</b>: Sri Lankan authorities rescued 40 Iranian sailors from commercial vessels in international waters after medical emergencies. The sailors received medical treatment in Sri Lanka before returning to Iran. The operation took place amid heightened tensions and restrictions affecting Iranian shipping. Reference: Reuters, 25 October 2026 — https://www.reuters.com/world/asia-pacific/sri-lanka-rescues-40-iranian-sailors-spokesman-says-2026-10-25/"
+                },
+                {
+                id: "article2",
+                title: "Second article Title",
+                summary: "2026-10-25 | <b>Iran's executions prompt protests in the United Kingdom</b>",
+                images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793357677/26660.jpg"],
+                fullText:"2026-10-25 | <b>Iran's executions prompt protests in the United Kingdom</b>: Activists in New Milton, Hampshire, organised a book table and photo exhibition to draw attention to executions and human rights violations in Iran. Participants called for an end to executions and rejected both monarchical and theocratic dictatorship. Reference: Iran Freedom, 25 October 2026 — https://iranfreedom.org/en/iranian-communities/2026/10/new-milton-uk-campaign-calls-for-end-to-executions-in-iran-and-rejects-all-forms-of-dictatorship/92188/"
+                },
+                {
+                id: "article3",
+                title: "Third article Title",
+                summary: "2026-10-27 | <b>Prisoners in 66 Iranian prisons go on hunger strike against executions</b>",
+                images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793357677/26664.jpg"],
+                fullText: "2026-10-27 | <b>Prisoners in 66 Iranian prisons go on hunger strike against executions</b>: The No to Execution Tuesdays campaign reported that prisoners in 66 facilities across Iran participated in a coordinated hunger strike. The campaign protested the growing number of executions and highlighted death sentences against political prisoners and other detainees. Reference: IranWire, 27 October 2026 — https://iranwire.com/en/news/159434-mass-hunger-strike-hits-66-iranian-prisons-over-executions/"
+                },
+                {
+                id: "article4",
+                title: "Forth article Title",
+                summary: "2026-10-27 | <b>Iranian prisoners report at least 87 executions in 20 days</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793357676/26667.jpg"],
+                fullText:"2026-10-27 | <b>Iranian prisoners report at least 87 executions in 20 days</b>: Participants in the No to Execution Tuesdays campaign reported that at least 87 prisoners had been executed during the preceding 20 days, including political prisoners and women. They called on human rights organisations and the international community to intervene to prevent further executions. Reference: IranWire, 27 October 2026 — https://iranwire.com/en/news/159434-mass-hunger-strike-hits-66-iranian-prisons-over-executions/"
+                },
+                {
+                id: "article5",
+                title: "Fifth article Title",
+                summary: "2026-10-27 | <b>Protest in Gothenburg supports Iranian prisoners opposing executions</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793357677/26645.jpg"],
+                fullText:"2026-10-27 | <b>Protest in Gothenburg supports Iranian prisoners opposing executions</b>: Supporters gathered in Gothenburg to express solidarity with the No to Execution Tuesdays campaign, which was then in its 144th week. Demonstrators called for an end to executions and the release of political prisoners in Iran. Reference: NCRI, report published 30 October 2026 — https://www.ncr-iran.org/en/news/iran-news-in-brief-october-30-2026/"
+                },
+                {
+                id: "article6",
+                title: "Sixth article Title",
+                summary: "2026-10-28 | <b>US reportedly warns Persian Gulf states about a possible renewed offensive against Iran</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793357677/26648.jpg"],
+                fullText:"2026-10-28 | <b>US reportedly warns Persian Gulf states about a possible renewed offensive against Iran</b>: A report attributed to The Wall Street Journal said Washington had warned regional states to prepare for the possibility of renewed US military action against Iran following the US midterm elections. The prospect raised concerns about a wider regional conflict and possible retaliation. Reference: The Times of Israel, 28 October 2026 — https://www.timesofisrael.com/us-warns-gulf-states-of-possible-renewed-iran-offensive-after-midterms-report/"
+                },
+                {
+                id: "article7",
+                title: "Sventh news Title",
+                summary: "2026-10-28 | <b>Exhibition in Germany explores alternative futures for Iran</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793357676/26657.jpg"],
+                fullText:"2026-10-28 | <b>Exhibition in Germany explores alternative futures for Iran</b>: An exhibition at the Paul-Clemen-Museum in Bonn presents digital artworks imagining a freer future for Iran. The works reinterpret Iranian cultural landmarks and public spaces, using speculative visual art to explore cultural heritage, political repression and the possibility of social change. Reference: University of Bonn — https://www.khi.uni-bonn.de/nachrichten/aktuelle-meldungen/exhibition-iranian-cultural-heritage-fantasies-and-speculative-digital-art-activism"
+                },
+                {
+                id: "article8",
+                title: "Eightth news Title",
+                summary: "2026-10-29 | <b>US military commander briefs Trump on the naval blockade of Iran</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793357676/26651.jpg"],
+                fullText:"2026-10-29 | <b>US military commander briefs Trump on the naval blockade of Iran</b>: US Central Command chief Admiral Brad Cooper reportedly briefed President Donald Trump on the effectiveness of the naval blockade against Iran. The discussions came as Washington pursued diplomatic efforts while considering the possibility of renewed major military operations. Reference: Axios, 29 October 2026 — https://www.axios.com/2026/10/29/brad-cooper-briefs-trump-iran-naval-blockade"
+                },
+                {
+                id: "article9",
+                title: "Ninth news Title",
+                summary: "2026-10-29 | <b>JD Vance reportedly sends a diplomatic letter to an Iranian security official</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793357676/26652.jpg"],
+                fullText:"2026-10-29 | <b>JD Vance reportedly sends a diplomatic letter to an Iranian security official</b>: A report described a letter from US Vice-President JD Vance to Iranian official Mohsen Rezaei that could offer a path towards renewed negotiations. The discussions reportedly involved Iran's enriched uranium, sanctions relief, the Strait of Hormuz and conditions for ending the conflict. Reference: The Guardian, 29 October 2026 — https://www.theguardian.com/world/2026/oct/29/jd-vance-letter-may-offer-last-chance-to-avert-fresh-conflict-between-us-and-iran"
+                },
+                {
+                id: "article10",
+                title: "Tenth news Title",
+                summary: "2026-10-29 | <b>Diplomatic efforts seek to prevent renewed US-Iran fighting</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793358609/kosemadare_khamenei.png"],
+                fullText:"2026-10-29 | <b>Diplomatic efforts seek to prevent renewed US-Iran fighting</b>: Regional mediators, including Qatar, reportedly worked to restart negotiations between Washington and Tehran. Iran's position included demands concerning the US naval blockade, frozen Iranian funds, oil exports and the conditions for nuclear negotiations. The diplomatic efforts came amid reports that the United States was preparing for the possibility of renewed military action. Reference: Axios, 29 October 2026 — https://www.axios.com/2026/10/29/brad-cooper-briefs-trump-iran-naval-blockade"
+                },
+                {
+                id: "article11",
+                title: "Last week's news | 2026-10-20 ",
+                summary: "<b>Sweden's Security Service warns that Iran has used criminal networks as proxies.</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25662.jpg"],
+                fullText:"<b>Sweden's Security Service warns that Iran has used criminal networks as proxies.</b> Säpo stated that Iranian state-linked security activities have involved criminal networks in Sweden to carry out violent acts against people and groups considered threats by the Iranian regime. This is background reporting rather than a new announcement from the past week. Date: May 30, 2024. Source: Swedish Security Service (Säpo). Link: https://sakerhetspolisen.se/ovriga-sidor/other-languages/english-engelska/press-room/news/news/2024-05-30-iran-is-using-criminal-networks-in-sweden.html",
+                articles:[
+                    {
+                id: "article11-1",
+                title: "First News Title",
                 summary: "<b>Iran prolongs negotiations with the United States amid political tensions.</b>",
                 images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25651.jpg"],
                 fullText:"<b>Iran prolongs negotiations with the United States amid political tensions.</b> Reuters reported on October 20, 2026, that senior Iranian officials said Tehran was deliberately prolonging the stalemate to increase political pressure on President Donald Trump before the November midterm elections. The report also described Iran's demands concerning the US maritime blockade, sanctions, and regional hostilities. Date: October 20, 2026. Source: Reuters. Link: https://www.reuters.com/world/us/iran-prolongs-talks-stalemate-influence-us-midterms-officials-say-2026-10-20/"
 
                 },
                 {
-                id: "article2",
+                id: "article11-2",
                 title: "Second article Title",
                 summary: "<b>Iran rejects negotiations with Washington until its demands are met.</b>",
                 images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25664.jpg"],
@@ -616,7 +693,7 @@ const pageDatabase = {
 
                 },
                 {
-                id: "article3",
+                id: "article11-3",
                 title: "Third article Title",
                 summary: "<b>Pakistan's army chief visits Tehran in a diplomatic effort to reduce regional tensions.</b>",
                 images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675096/25652.jpg"],
@@ -624,7 +701,7 @@ const pageDatabase = {
 
                 },
                 {
-                id: "article4",
+                id: "article11-4",
                 title: "Forth article Title",
                 summary: "<b>Iranian President Masoud Pezeshkian thanks Russia for its support during the war.</b>",
                 images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25668.jpg"],
@@ -632,7 +709,7 @@ const pageDatabase = {
 
                 },
                 {
-                id: "article5",
+                id: "article11-5",
                 title: "Fifth article Title",
                 summary: "<b>US Defense Secretary Pete Hegseth meets Israeli Prime Minister Benjamin Netanyahu.</b>",
                 images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25654.jpg"],
@@ -640,7 +717,7 @@ const pageDatabase = {
 
                 },
                 {
-                id: "article6",
+                id: "article11-6",
                 title: "Sixth article Title",
                 summary: "<b>Donald Trump claims Iran killed at least 75,000 protesters.</b>",
                 images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675096/25660.jpg"],
@@ -648,7 +725,7 @@ const pageDatabase = {
 
                 },
                 {
-                id: "article7",
+                id: "article11-7",
                 title: "Sventh news Title",
                 summary: "<b>Iranian authorities announce the arrest of 39 people connected to the January protests.</b>",
                 images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25658.jpg"],
@@ -656,7 +733,7 @@ const pageDatabase = {
 
                 },
                 {
-                id: "article8",
+                id: "article11-8",
                 title: "Eightth news Title",
                 summary: "<b>Oil prices fluctuate amid tensions involving Iran and threats to Gulf shipping.</b>",
                 images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675096/25652.jpg"],
@@ -664,7 +741,7 @@ const pageDatabase = {
 
                 },
                 {
-                id: "article9",
+                id: "article11-9",
                 title: "Ninth news Title",
                 summary: "<b>Russia reaffirms political support for Iran as questions grow over Moscow's wartime assistance.</b>",
                 images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25656.jpg"],
@@ -672,12 +749,14 @@ const pageDatabase = {
 
                 },
                 {
-                id: "article10",
+                id: "article11-10",
                 title: "Tenth news Title",
                 summary: "<b>Sweden's Security Service warns that Iran has used criminal networks as proxies.</b>",
                 images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25662.jpg"],
                 fullText:"<b>Sweden's Security Service warns that Iran has used criminal networks as proxies.</b> Säpo stated that Iranian state-linked security activities have involved criminal networks in Sweden to carry out violent acts against people and groups considered threats by the Iranian regime. This is background reporting rather than a new announcement from the past week. Date: May 30, 2024. Source: Swedish Security Service (Säpo). Link: https://sakerhetspolisen.se/ovriga-sidor/other-languages/english-engelska/press-room/news/news/2024-05-30-iran-is-using-criminal-networks-in-sweden.html",
 
+                }   
+                ]
                 }
 
             ],
