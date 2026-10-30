@@ -674,7 +674,8 @@ function openArticle(articleId) {
     const article = findArticleRecursive(pageData.articles, articleId);
 
     if (article) {
-        window.location.hash = `tab=${currentTab}&article=${articleId}`;
+        // Inside openArticle(articleId):
+        window.location.hash = `tab=${currentTab}&lang=${currentLang}&article=${articleId}`;
 
         const newsGrid = document.getElementById('newsGrid');
         const textContainer = document.getElementById('contentText');
@@ -735,24 +736,35 @@ function openArticle(articleId) {
         }
     }
 }
+
 function handleHashNavigation() {
     const hash = window.location.hash.replace('#', '');
     if (!hash) return;
 
     const params = new URLSearchParams(hash);
     let targetTab = params.get('tab');
+    let targetLang = params.get('lang');
     const targetArticle = params.get('article');
 
     setTimeout(() => {
+        // 1. Set the language first if present in the link
+        if (targetLang) {
+            if (typeof currentLang !== "undefined") {
+                currentLang = targetLang.toLowerCase();
+            }
+            // If you have a specific function that triggers language change visually, call it here, e.g.:
+            // if (typeof changeLanguage === "function") changeLanguage(targetLang);
+        }
+
+        // 2. Switch to the correct main tab
         if (targetTab) {
-            // Forcefully convert to lowercase to match your tab IDs (e.g. "news", "methods")
             targetTab = targetTab.toLowerCase();
-            
             if (typeof switchTab === "function") {
                 switchTab(targetTab);
             }
         }
 
+        // 3. Open the specific sub-article
         if (targetArticle) {
             setTimeout(() => {
                 openArticle(targetArticle);
@@ -761,6 +773,7 @@ function handleHashNavigation() {
     }, 200);
 }
 
+// Keep your event listeners
 window.addEventListener('DOMContentLoaded', handleHashNavigation);
 window.addEventListener('hashchange', handleHashNavigation);
 
