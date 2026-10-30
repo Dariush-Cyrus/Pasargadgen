@@ -776,7 +776,25 @@ function handleHashNavigation() {
 // Keep your event listeners
 window.addEventListener('DOMContentLoaded', handleHashNavigation);
 window.addEventListener('hashchange', handleHashNavigation);
+// Automatically update the URL hash when any main tab button is clicked
+document.addEventListener('DOMContentLoaded', () => {
+    // Select all your main tab navigation buttons (adjust selector if your buttons have a specific class or ID)
+    const tabButtons = document.querySelectorAll('header button, nav button, .tab-btn'); 
 
+    tabButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            // Try to extract the tab name from the button's text, id, or onclick attribute
+            let tabName = button.getAttribute('data-tab') || button.id || button.innerText.trim().toLowerCase();
+            
+            // Map Persian/English button text to your internal tab IDs if needed
+            if (tabName.includes('خبر') || tabName.includes('news')) tabName = 'news';
+            if (tabName.includes('برنامه') || tabName.includes('methods')) tabName = 'methods';
+
+            // Update the URL hash with the active tab and language
+            window.location.hash = `tab=${tabName}&lang=${currentLang}`;
+        });
+    });
+});
 
 // --- Close Article View ---
 function closeArticle() {
