@@ -674,7 +674,7 @@ function openArticle(articleId) {
     const article = findArticleRecursive(pageData.articles, articleId);
 
     if (article) {
-        window.location.hash = articleId;
+        window.location.hash = `tab=${currentTab}&article=${articleId}`;
 
         const newsGrid = document.getElementById('newsGrid');
         const textContainer = document.getElementById('contentText');
@@ -736,7 +736,37 @@ function openArticle(articleId) {
     }
 }
 
+// Function to handle loading based on hash parameters
+function handleHashNavigation() {
+    const hash = window.location.hash.replace('#', '');
+    if (!hash) return;
 
+    // Parse parameters like "tab=ayen&article=article2"
+    const params = new URLSearchParams(hash);
+    const targetTab = params.get('tab');
+    const targetArticle = params.get('article');
+
+    if (targetTab && typeof switchTab === "function") {
+        // Switch to the correct main tab first (e.g., 'آیین')
+        switchTab(targetTab);
+    }
+
+    if (targetArticle) {
+        setTimeout(() => {
+            openArticle(targetArticle);
+        }, 100); // Small delay to ensure the tab content is fully switched and rendered
+    }
+}
+
+// Run on page load
+window.addEventListener('DOMContentLoaded', () => {
+    handleHashNavigation();
+});
+
+// Run when hash changes (back/forward or direct link sharing)
+window.addEventListener('hashchange', () => {
+    handleHashNavigation();
+});
 // --- Close Article View ---
 function closeArticle() {
     window.location.hash = "";
