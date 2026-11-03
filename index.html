@@ -737,6 +737,7 @@ function openArticle(articleId) {
     }
 }
 
+// --- Unified Hash Navigation Handler ---
 function handleHashNavigation() {
     const hash = window.location.hash.replace('#', '');
     if (!hash) return;
@@ -747,58 +748,68 @@ function handleHashNavigation() {
     const targetArticle = params.get('article');
 
     setTimeout(() => {
-        // 1. Set the language first if present in the link
+        // 1. Set language if present
         if (targetLang) {
-            if (typeof currentLang !== "undefined") {
-                currentLang = targetLang.toLowerCase();
+            const cleanLang = targetLang.toLowerCase();
+            if (cleanLang === 'fa' || cleanLang === 'en') {
+                currentLang = cleanLang;
             }
-            // If you have a specific function that triggers language change visually, call it here, e.g.:
-            // if (typeof changeLanguage === "function") changeLanguage(targetLang);
         }
 
-        // 2. Switch to the correct main tab
+        // 2. Set active tab if present
         if (targetTab) {
-            targetTab = targetTab.toLowerCase();
-            if (typeof switchTab === "function") {
-                switchTab(targetTab);
+            const cleanTab = targetTab.toLowerCase();
+            // Find the matching navigation element based on data-target
+            let matchedNav = null;
+            navItems.forEach(item => {
+                const targetAttr = item.getAttribute('data-target');
+                if (targetAttr && targetAttr.toLowerCase() === cleanTab) {
+                    matchedNav = item;
+                }
+            });
+
+            if (matchedNav) {
+                navItems.forEach(i => i.classList.remove('active'));
+                matchedNav.classList.add('active');
+                currentTab = matchedNav.getAttribute('data-target');
+            } else {
+                currentTab = targetTab; // Fallback assignment
             }
         }
 
-        // 3. Open the specific sub-article
+        // Refresh the UI layout with the correct tab and language
+        updateLanguageUI();
+
+        // 3. Open the specific sub-article if present
         if (targetArticle) {
             setTimeout(() => {
                 openArticle(targetArticle);
-            }, 150);
+            }, 250); // Delay ensures the page content grid is fully rendered first
         }
-    }, 200);
+    }, 150);
 }
 
-// Keep your event listeners
+// --- Event Listeners for Loading and Hash Changes ---
 window.addEventListener('DOMContentLoaded', handleHashNavigation);
 window.addEventListener('hashchange', handleHashNavigation);
-// Automatically update the URL hash when any main tab button is clicked
+
+// --- Automatic Tab Click Hash Updater ---
 document.addEventListener('DOMContentLoaded', () => {
-    // Select all your main tab navigation buttons (adjust selector if your buttons have a specific class or ID)
-    const tabButtons = document.querySelectorAll('header button, nav button, .tab-btn'); 
-
-    tabButtons.forEach(button => {
-        button.addEventListener('click', (e) => {
-            // Try to extract the tab name from the button's text, id, or onclick attribute
-            let tabName = button.getAttribute('data-tab') || button.id || button.innerText.trim().toLowerCase();
-            
-            // Map Persian/English button text to your internal tab IDs if needed
-            if (tabName.includes('خبر') || tabName.includes('news')) tabName = 'news';
-            if (tabName.includes('برنامه') || tabName.includes('methods')) tabName = 'methods';
-
-            // Update the URL hash with the active tab and language
-            window.location.hash = `tab=${tabName}&lang=${currentLang}`;
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const tabTarget = item.getAttribute('data-target');
+            if (tabTarget) {
+                window.location.hash = `tab=${tabTarget}&lang=${currentLang}`;
+            }
         });
     });
 });
 
 // --- Close Article View ---
 function closeArticle() {
-    window.location.hash = "";
+    // Return hash to just the current tab and language instead of wiping it completely
+    window.location.hash = `tab=${currentTab}&lang=${currentLang}`;
+    
     const newsGrid = document.getElementById('newsGrid');
     const textContainer = document.getElementById('contentText');
     const imgContainer = document.getElementById('contentImageContainer');
@@ -809,7 +820,6 @@ function closeArticle() {
     if (imgContainer) imgContainer.style.display = "block";
     if (newsGrid) newsGrid.style.display = "flex";
 }
-
 // 1. Check the URL hash when the page first loads
 window.addEventListener('DOMContentLoaded', () => {
     const hash = window.location.hash.replace('#', '');
