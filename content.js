@@ -758,7 +758,216 @@ const pageDatabase = {
 
                   ],
             articles:[
+
                 {
+                id: "article1",
+                title: "First News Title",
+                summary: "October 31, 2026 | <b>Mojtaba Khamenei threatens an unrestricted Iranian response to renewed attacks</b>",
+                images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793967997/gooztaba.jpg"],
+                fullText: "<b>Mojtaba Khamenei threatens an unrestricted Iranian response to renewed attacks</b>. Iran's Supreme Leader Mojtaba Khamenei warned that if the United States or Israel launch another military or terrorist attack against Iran, the Iranian armed forces will determine the timing and conditions of the response. He stated that Iran's retaliation would not be restricted by geographical boundaries, suggesting that American and Israeli interests throughout the region could become potential targets. Khamenei also instructed military commanders to update their target lists and ensure that American and Israeli assets were within the operational reach of Iranian forces. The statement came amid continuing diplomatic negotiations and concerns that the ceasefire could collapse. It reflects Tehran's attempt to establish military deterrence by warning that another attack could produce a much wider regional conflict.-  — Anadolu Agency and Iranian state media"
+                },
+                {
+                id: "article2",
+                title: "Second article Title",
+                summary: "October 31, 2026 | <b>Iran refuses negotiations and reopening the Strait of Hormuz without seven conditions being met</b>",
+                images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793968383/goozattack.webp"],
+                fullText:"<b>Iran refuses negotiations and reopening the Strait of Hormuz without seven conditions being met </b>. Mohsen Rezaei, Iran's senior security official, announced that Tehran would not participate in negotiations with Washington or reopen the Strait of Hormuz until the United States fulfilled seven Iranian conditions. Rezaei said that diplomatic messages had been exchanged for more than a month and that Washington had presented several proposals, but Iran was still waiting for an acceptable response. The conditions concern the removal of American restrictions, security guarantees and changes in Washington's approach towards Iran. Control and navigation through the Strait of Hormuz remain central issues because the waterway is one of the world's most important routes for international oil and gas transportation. Iran's position demonstrates that it is attempting to use its strategic geographical position as leverage in negotiations with the United States.  — Iran International"
+                    },
+                {
+                id: "article3",
+                title: "Third article Title",
+                summary: "October 31, 2026 | <b> Iran says Washington has changed its diplomatic approach but its demands remain unacceptable</b>",
+                images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793968560/Donald-Trump.jpg"],
+                fullText: "<b> Iran says Washington has changed its diplomatic approach but its demands remain unacceptable</b>. Iranian security official Mohsen Rezaei said that the United States had changed its approach towards Tehran following weeks of diplomatic exchanges, but that the differences between the two countries remained substantial. According to Rezaei, Washington had presented three proposals through diplomatic channels, while Iran had communicated its own conditions for ending the conflict. Tehran insisted that it would not reopen the Strait of Hormuz or begin substantive negotiations until the United States accepted its demands. The statements suggest that indirect negotiations are continuing despite the absence of a formal agreement. The main obstacles include the American naval blockade, economic sanctions, frozen Iranian assets, the future of the nuclear programme and the security arrangements that would follow the conflict.-— Iran International"
+                },
+                {
+                id: "article4",
+                title: "Fourth article Title",
+                summary: "November 2, 2026 | <b>Iran presents a shortened timetable for a possible agreement with the United States</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793969586/iran_US.jpg"],
+                fullText:"<b>Iran presents a shortened timetable for a possible agreement with the United States</b>. Iran outlined a proposed two-day timetable for implementing a possible agreement with the United States, based on an earlier seven-step diplomatic proposal. Under the Iranian proposal, Washington would first have to end its naval blockade of Iranian ports, remove newly imposed sanctions and provide arrangements allowing Iran to resume oil exports. In return, Tehran would agree to reopen the Strait of Hormuz, while negotiations over other issues, including the nuclear programme, would take place at a later stage. Iranian Foreign Minister Abbas Araghchi said that the outcome depended on Washington's political willingness to accept Iran's conditions. Qatar continued its mediation efforts and reportedly sent representatives to Tehran to discuss the proposal. However, the two sides had not reached an agreement, and the main disagreement concerned which issues should be addressed first.-  — Reuters reporting and The Nation Thailand"
+                 },
+                {
+                id: "article5",
+                title: "Fifth article Title",
+                summary: "November 3, 2026 | <b>Reports emerge that the United States carried out secret strikes on Iran's Qeshm Island</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793969767/qeshm.jpg"],
+                fullText: "<b>Reports emerge that the United States carried out secret strikes on Iran's Qeshm Island</b>. Reports published by The Wall Street Journal claimed that the United States had carried out previously undisclosed military strikes on Qeshm Island, Iran, on Monday. Qeshm is strategically important because of its position near the Strait of Hormuz and its proximity to major Iranian maritime and military infrastructure. The reported operation raises questions about the extent of American military activity around the Persian Gulf and whether Washington is attempting to weaken Iran's ability to monitor or control maritime traffic through the strait. The report also comes amid continuing tensions over Iranian military installations, missile capabilities and the security of international shipping. The precise targets, damage and operational details were not independently established in the reporting.- The Wall Street Journal, reported by Iran International"
+                },
+                {
+                id: "article6",
+                title: "Sixth article Title",
+                summary: "November 3, 2026 | <b>IRGC claims it captured two American reconnaissance drones near Qeshm Island</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793970068/pahbad.jpg"],
+                fullText:"<b>IRGC claims it captured two American reconnaissance drones near Qeshm Island</b>. Iran's Islamic Revolutionary Guard Corps announced that its electronic-warfare forces had brought down two American MQM-170 reconnaissance drones south of Qeshm Island, near the Strait of Hormuz. According to the IRGC, the drones were forced to land through electronic interference rather than being destroyed by conventional air-defence missiles. The organization also claimed that its air-defence systems had intercepted and destroyed an American MQ-9 Reaper drone over the eastern part of the Strait of Hormuz. Iranian state media described the incidents as evidence of improved electronic-warfare and air-defence capabilities. If the reconnaissance drones were recovered intact, Iranian engineers could potentially examine their navigation, communications and surveillance systems. However, these claims originated from Iranian military sources and were not independently verified.- — Tasnim News Agency and Anadolu Agency"
+                },
+                {
+                id: "article7",
+                title: "Sventh news Title",
+                summary: "November 3, 2026 | <b>Internet disruptions affect Iran amid concerns about renewed American military strikes</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793970180/webiran.jpg"],
+                fullText: "Internet disruptions were reported in Iran as tensions with the United States increased and concerns grew over the possibility of renewed military operations. The disruptions raised questions about whether the authorities were deliberately restricting communications or whether the problems were related to technical failures, cyberattacks or the broader security situation. Internet access is particularly important during periods of military escalation because it affects communication between citizens, businesses, journalists and international organizations. Restrictions can also make it more difficult to verify reports of military incidents and document events inside the country. The situation developed while diplomatic efforts continued through Qatar and other regional mediators, but uncertainty remained over whether the ceasefire would hold. — Iran International"      
+                },
+                {
+                id: "article8",
+                title: "Eightth news Title",
+                summary: "November 4, 2026 | <b>IRGC claims four oil tankers were destroyed after striking naval mines in the Strait of Hormuz</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793970356/oilcareer.jpg"],
+                fullText: "<b>IRGC claims four oil tankers were destroyed after striking naval mines in the Strait of Hormuz</b>. Iran's Islamic Revolutionary Guard Corps claimed that four oil tankers had been destroyed after striking naval mines while attempting to pass through a restricted southern passage of the Strait of Hormuz. The IRGC also stated that two additional vessels had been stopped and that an American MQ-9 reconnaissance and attack drone had been shot down over the strait. The announcement raised serious concerns about the safety of international commercial shipping and the possibility that naval mines were being used to restrict maritime traffic. The Strait of Hormuz is particularly important because approximately one-fifth of global oil consumption normally passes through this waterway. If the incidents are confirmed, they could increase insurance costs, discourage shipping companies from entering the region and place additional pressure on international energy markets. The Iranian military claims had not been independently verified. — Iran International, reporting Iranian state media" 
+                },
+                {
+                id: "article9",
+                title: "Ninth news Title",
+                summary: "November 4, 2026 | <b>Iranian political prisoner Amirhossein Mousavi sentenced to death</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793970724/amir.jpg"],
+                fullText:"<b>Iranian political prisoner Amirhossein Mousavi sentenced to death</b>. Amirhossein Mousavi, a 42-year-old Iranian political prisoner held in Evin Prison, was sentenced to death by Branch 15 of Tehran's Revolutionary Court on charges of corruption on Earth, known in Persian as Efsad fel-Arz. He also received an additional five-year prison sentence on a charge of insulting religious sanctities. Mousavi was a social media activist who operated the X account James Bedin. His lawyer, Reza Shafakhah, confirmed the sentences after they were formally communicated to Mousavi in prison. Human-rights organizations reported that his case involved allegations of torture, psychological pressure and forced confessions that were subsequently broadcast on Iranian state television. Mousavi has disputed the accusations and described the televised statements as fabricated and obtained under coercion. The case has raised renewed concerns about the use of capital punishment against political prisoners and online activists in Iran. — Hengaw Organization for Human Rights and Iran Human Rights"               
+                },
+                {
+                id: "article10",
+                title: "Tenth news Title",
+                summary: "November 4–5, 2026 | <b>United States imposes new sanctions on Iranian oil and aviation networks operating through India and Turkey</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793970810/trafiking.jpg"],
+                fullText: "<b>United States imposes new sanctions on Iranian oil and aviation networks operating through India and Turkey</b>. The United States imposed sanctions on individuals and companies in India and Turkey accused of helping Iran circumvent American economic restrictions. The US Treasury targeted an Indian businessman, Suniel Kumar Sharma, his wife, Jaspreet Preeti Shahid, and several associated companies. Washington accused the network of establishing fraudulent maritime registration organizations and issuing false ship flags and certifications to tankers transporting Iranian oil. The alleged scheme enabled vessels belonging to Iran's shadow fleet to continue operating despite international sanctions. The Treasury also sanctioned the Turkish company Fugo Ground Services, accusing it of providing ground-handling and other services to Iranian airlines, including Iran Air Tour and Saha Airlines. The measures are intended to restrict Iran's ability to export petroleum, generate foreign currency and maintain international aviation connections. The sanctions also demonstrate that Washington is increasingly targeting foreign intermediaries rather than concentrating exclusively on Iranian companies and individuals.— US Department of the Treasury, Reuters and Al Jazeera"      
+                },
+                {
+                id: "article11",
+                title: "Eleventh news Title",
+                summary: "November 5, 2026 | <b>South Korea plans to expand its naval presence near the Strait of Hormuz</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793970993/SKNAVY.jpg"],
+                fullText: "<b>South Korea plans to expand its naval presence near the Strait of Hormuz</b>. South Korea announced plans to expand the operational area of its Cheonghae anti-piracy naval unit towards waters near the Strait of Hormuz. The proposed mission includes maritime patrol aircraft, an explosive-ordnance disposal team and additional personnel capable of supporting mine-detection and clearance operations. Seoul explained that the objective is to protect commercial shipping and maintain the safety of international maritime transportation, particularly because South Korea depends heavily on oil imports passing through the Persian Gulf. The decision comes amid pressure from the United States for its allies to contribute more actively to maritime security. However, the South Korean government emphasized that it did not intend to participate directly in military operations against Iran. The deployment therefore represents an attempt to protect South Korean economic interests while avoiding a direct confrontation with Tehran.-  — Reuters, Channel News Asia and The Korea Times"     
+                },
+                {
+                id: "article12",
+                title: "Twelfth news Title",
+                summary: "November 5, 2026 | <b>Vladimir Putin meets Iranian security official Mohsen Rezaei in Moscow</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793971140/PUTIN_REZAI.jpg"],
+                fullText: "<b>Vladimir Putin meets Iranian security official Mohsen Rezaei in Moscow</b>. Russian President Vladimir Putin met Iran's senior security official Mohsen Rezaei in Moscow to discuss regional security, bilateral relations and possible arrangements following the war involving Iran, the United States and Israel. Rezaei reportedly delivered a message from Iran's Supreme Leader Mojtaba Khamenei to the Russian president. According to Iranian statements, the discussions covered the future security structure of the Persian Gulf, diplomatic efforts to end the conflict and the possibility of strengthening cooperation between Tehran and Moscow. Rezaei also explained Iran's position concerning negotiations with Washington and the reopening of the Strait of Hormuz. The meeting is significant because Russia has maintained strategic relations with Iran despite Western sanctions and international pressure. However, the Kremlin had not published a detailed account of the discussions, and the precise content of the message from Khamenei remained undisclosed. — Reuters and Al Jazeera"  
+                },
+                {
+                id: "article13",
+                title: "Thirteenth news Title",
+                summary: "November 5–6, 2026 | <b>Russia and Iran discuss a proposed natural-gas pipeline and expanded energy cooperation</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793971245/LOOLEH.jpg"],
+                fullText:"Iran and Russia discussed plans to strengthen their energy relationship through the possible construction of natural-gas pipelines connecting Russian supplies with Iranian infrastructure. According to Mohsen Rezaei, the project could allow Russia to transport natural gas to Iran, helping Tehran address domestic shortages and potentially enabling Russian gas to reach neighbouring countries through Iranian territory. The proposal could create a new economic relationship between the two heavily sanctioned countries while giving Russia additional access to regional energy markets. For Iran, the project could improve energy security, increase transit revenues and strengthen its position as an important regional energy corridor. However, important questions remain concerning financing, pipeline construction, technical feasibility, international sanctions and the commercial arrangements between the two countries. The meeting produced discussion of the project, but a fully implemented construction agreement had not been established.  — Reuters and Al Jazeera" 
+                },
+                {
+                id: "article14",
+                title: "Fourteenth news Title",
+                summary: "November 5, 2026 | <b>Reports indicate expanded Russian military cooperation and potential weapons supplies to Iran </b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793971441/missle.jpg"],
+                fullText: "Reports concerning Russian-Iranian military cooperation indicated that a Russian defence company had agreed to manufacture approximately 90 advanced guided-missile launchers for Iran under agreements reportedly signed in 2024 and 2025. The development suggests that military cooperation between Moscow and Tehran may involve more than diplomatic support and could include the transfer or production of advanced weapons systems. Such cooperation would potentially strengthen Iran's missile capabilities and improve its ability to defend military installations and strategic infrastructure. It could also complicate relations between Russia and Western countries, which have imposed extensive restrictions on Iranian and Russian military industries. However, the available reporting did not establish that all the launchers had been manufactured or delivered to Iran. The distinction between a signed procurement agreement and an actual weapons transfer is particularly important when evaluating the military significance of the story.— Financial Times reporting and international coverage"
+                },
+               {
+                id: "article15",
+                title: "fifteenth news Title",
+                summary: "November 6, 2026 | <b>Oil pollution returns to the coastlines of Qeshm and Hormuz islands</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793971524/oil_polution.jpg"],
+                fullText: "<b>Oil pollution returns to the coastlines of Qeshm and Hormuz islands</b>. Oil pollution has returned to sections of the coastlines of Qeshm and Hormuz islands in the Persian Gulf despite several previous cleanup operations. Iranian environmental officials reported that oil residues had reappeared along parts of Qeshm's southern coastline, particularly in the Torgan area, while sticky, tar-like oil deposits were also observed on parts of Hormuz Island. Officials explained that maritime pollution-response operations have been affected by wartime restrictions, making it more difficult to collect oil directly from the sea before it reaches the coast. One possible source is leakage from ships damaged during the conflict, although the authorities have not established the precise origin of the contamination. Ocean currents may also be carrying oil residues back towards the islands after earlier cleanup efforts. The incident raises environmental concerns because the surrounding waters contain vulnerable coastal habitats, including the Hara mangrove ecosystem. Environmental officials emphasized that cleaning beaches alone will not solve the problem if oil continues to circulate in nearby waters. — IranWire, citing Rouydad24 and Iranian environmental officials"                
+                  },
+                {
+                id: "article16",
+                title: "Sixtenth news Title",
+                summary: "November 6, 2026 | <b>Iran sends a new nuclear proposal to the United States through Qatar </b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793971524/oil_polution.jpg"],
+                fullText: "<b>Iran sends a new nuclear proposal to the United States through Qatar </b>. Iran has sent a new proposal concerning its nuclear programme to the United States through Qatari diplomatic intermediaries, according to a senior Iranian official speaking to Reuters. The proposal forms part of continuing efforts to negotiate an end to the conflict and establish a framework for future relations between Tehran and Washington. However, Iran has maintained that substantive negotiations will only take place after the United States addresses its seven conditions, which include lifting sanctions, releasing frozen Iranian assets and providing compensation for wartime damage. Washington, meanwhile, insists that Iran's nuclear programme must be included in the initial negotiations rather than postponed until a later stage. This disagreement represents one of the most important obstacles to a diplomatic settlement. The proposal is particularly significant because it suggests that Tehran is still pursuing a diplomatic route despite its military warnings and continued confrontation over the Strait of Hormuz. The United States was reviewing the proposal, but its detailed contents and the prospects of an agreement had not yet been established. — Reuters"  
+                 },               
+                {
+                id: "article17",
+                title: "Last week's news | 2026-10-20 ",
+                summary: "<b>Sweden's Security Service warns that Iran has used criminal networks as proxies.</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25662.jpg"],
+                fullText:"<b>Sweden's Security Service warns that Iran has used criminal networks as proxies.</b> Säpo stated that Iranian state-linked security activities have involved criminal networks in Sweden to carry out violent acts against people and groups considered threats by the Iranian regime. This is background reporting rather than a new announcement from the past week. Date: May 30, 2024. Source: Swedish Security Service (Säpo). Link: https://sakerhetspolisen.se/ovriga-sidor/other-languages/english-engelska/press-room/news/news/2024-05-30-iran-is-using-criminal-networks-in-sweden.html",
+                articles:[
+                    {
+                id: "article17-1",
+                title: "First News Title",
+                summary: "<b>Iran prolongs negotiations with the United States amid political tensions.</b>",
+                images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25651.jpg"],
+                fullText:"<b>Iran prolongs negotiations with the United States amid political tensions.</b> Reuters reported on October 20, 2026, that senior Iranian officials said Tehran was deliberately prolonging the stalemate to increase political pressure on President Donald Trump before the November midterm elections. The report also described Iran's demands concerning the US maritime blockade, sanctions, and regional hostilities. Date: October 20, 2026. Source: Reuters. Link: https://www.reuters.com/world/us/iran-prolongs-talks-stalemate-influence-us-midterms-officials-say-2026-10-20/"
+
+                },
+                {
+                id: "article17-2",
+                title: "Second article Title",
+                summary: "<b>Iran rejects negotiations with Washington until its demands are met.</b>",
+                images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25664.jpg"],
+                fullText:"<b>Iran rejects negotiations with Washington until its demands are met.</b> Iranian officials told Pakistan's army chief, Field Marshal Asim Munir, that Tehran would not resume talks with the United States until its conditions were addressed. The demands include lifting restrictions on Iranian oil exports, ending the blockade of Iranian ports, and stopping hostilities in the region. Date: October 20, 2026. Source: Reuters. Link: https://www.reuters.com/world/asia-pacific/irans-pezeshkian-discusses-mediation-efforts-meeting-with-pakistans-army-chief-2026-10-20/"
+
+                },
+                {
+                id: "article17-3",
+                title: "Third article Title",
+                summary: "<b>Pakistan's army chief visits Tehran in a diplomatic effort to reduce regional tensions.</b>",
+                images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675096/25652.jpg"],
+                fullText: "<b>Pakistan's army chief visits Tehran in a diplomatic effort to reduce regional tensions.</b> Field Marshal Asim Munir met Iranian leaders as Pakistan continued its mediation efforts between Iran and the United States. Discussions concerned the conflict, regional de-escalation, and the Strait of Hormuz, a vital route for international energy shipments. Date: October 19–20, 2026. Source: Reuters. Link: https://www.reuters.com/world/asia-pacific/irans-pezeshkian-discusses-mediation-efforts-meeting-with-pakistans-army-chief-2026-10-20/"
+
+                },
+                {
+                id: "article17-4",
+                title: "Forth article Title",
+                summary: "<b>Iranian President Masoud Pezeshkian thanks Russia for its support during the war.</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25668.jpg"],
+                fullText:"<b>Iranian President Masoud Pezeshkian thanks Russia for its support during the war.</b> During a meeting in Tehran with Russian Foreign Minister Sergey Lavrov, Pezeshkian expressed gratitude for Russian support and called for closer cooperation in energy, transportation, trade, and diplomacy. Lavrov reaffirmed Moscow's commitment to cooperation with Tehran. Date: October 20, 2026. Source: Tasnim News Agency. Link: https://www.tasnimnews.ir/en/news/2026/10/20/3727443/pezeshkian-calls-for-closer-iran-russia-cooperation"
+
+                },
+                {
+                id: "article17-5",
+                title: "Fifth article Title",
+                summary: "<b>US Defense Secretary Pete Hegseth meets Israeli Prime Minister Benjamin Netanyahu.</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25654.jpg"],
+                fullText:"<b>US Defense Secretary Pete Hegseth meets Israeli Prime Minister Benjamin Netanyahu.</b> Hegseth made an unannounced visit to Israel, where the two officials discussed regional threats and US-Israeli cooperation. The meeting took place amid heightened tensions involving Iran and shortly before Israel's parliamentary election. Date: October 19, 2026. Source: Reuters. Link: https://www.reuters.com/world/middle-east/hegseth-meets-netanyahu-unannounced-visit-israel-reports-axios-2026-10-19/"
+
+                },
+                {
+                id: "article17-6",
+                title: "Sixth article Title",
+                summary: "<b>Donald Trump claims Iran killed at least 75,000 protesters.</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675096/25660.jpg"],
+                fullText:"<b>Donald Trump claims Iran killed at least 75,000 protesters.</b> Speaking at a campaign rally in Kansas, the US president alleged that Iranian authorities had killed at least 75,000 protesters over eight months. The figure has not been independently verified and should be treated as Trump's claim rather than an established death toll. Date: October 20, 2026. Source: JNS. Link: https://www.jns.org/news/u-s-news/trump-iran-killed-at-least-75-000-protesters-in-eight-months"
+
+                },
+                {
+                id: "article17-7",
+                title: "Sventh news Title",
+                summary: "<b>Iranian authorities announce the arrest of 39 people connected to the January protests.</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25658.jpg"],
+                fullText:"<b>Iranian authorities announce the arrest of 39 people connected to the January protests.</b> The intelligence department in Qazvin alleged that the detainees were involved in arson and attacks during the demonstrations. The authorities did not publicly identify the detainees or provide evidence supporting their most serious allegations. Date: October 19, 2026. Source: IranWire. Link: https://iranwire.com/en/news/159070-intelligence-department-announces-arrest-of-39-protesters-in-qazvin/"
+
+                },
+                {
+                id: "article17-8",
+                title: "Eightth news Title",
+                summary: "<b>Oil prices fluctuate amid tensions involving Iran and threats to Gulf shipping.</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675096/25652.jpg"],
+                fullText:"<b>Oil prices fluctuate amid tensions involving Iran and threats to Gulf shipping.</b> Reuters reported that oil markets were responding to diplomatic efforts between Iran and the United States, as well as reports of attacks on vessels and infrastructure in the region. Continued disruption around the Strait of Hormuz remains a major concern for international energy supplies. Date: October 20, 2026. Source: Reuters. Link: https://www.reuters.com/business/energy/oil-eases-markets-assess-potential-waiver-russian-energy-middle-east-supply-2026-10-20/"
+
+                },
+                {
+                id: "article17-9",
+                title: "Ninth news Title",
+                summary: "<b>Russia reaffirms political support for Iran as questions grow over Moscow's wartime assistance.</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25656.jpg"],
+                fullText:"<b>Russia reaffirms political support for Iran as questions grow over Moscow's wartime assistance.</b> During his visit to Tehran, Russian Foreign Minister Sergey Lavrov publicly backed Iran and described its cause as just. However, the extent of Russia's military and intelligence assistance to Iran remains a separate question that requires evidence beyond public statements. Date: October 19, 2026. Source: Radio Free Europe/Radio Liberty. Link: https://www.rferl.org/a/lavrov-in-tehran-amid-questions-over-whether-moscow-is-helping-iran-in-war-with-us/33879493/"
+
+                },
+                {
+                id: "article17-10",
+                title: "Tenth news Title",
+                summary: "<b>Sweden's Security Service warns that Iran has used criminal networks as proxies.</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25662.jpg"],
+                fullText:"<b>Sweden's Security Service warns that Iran has used criminal networks as proxies.</b> Säpo stated that Iranian state-linked security activities have involved criminal networks in Sweden to carry out violent acts against people and groups considered threats by the Iranian regime. This is background reporting rather than a new announcement from the past week. Date: May 30, 2024. Source: Swedish Security Service (Säpo). Link: https://sakerhetspolisen.se/ovriga-sidor/other-languages/english-engelska/press-room/news/news/2024-05-30-iran-is-using-criminal-networks-in-sweden.html",
+
+                }   
+                ]
+                },
+                {
+                id: "article18",
+                title: "Eighteenth news Title",
+                summary: "<b>Sweden's Security Service warns that Iran has used criminal networks as proxies.</b>",
+                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25662.jpg"],
+                fullText:"<b>Sweden's Security Service warns that Iran has used criminal networks as proxies.</b> Säpo stated that Iranian state-linked security activities have involved criminal networks in Sweden to carry out violent acts against people and groups considered threats by the Iranian regime. This is background reporting rather than a new announcement from the past week. Date: May 30, 2024. Source: Swedish Security Service (Säpo). Link: https://sakerhetspolisen.se/ovriga-sidor/other-languages/english-engelska/press-room/news/news/2024-05-30-iran-is-using-criminal-networks-in-sweden.html",
+                articles:[
+                    {
                 id: "article1",
                 title: "First News Title",
                 summary: "2026-10-25 | <b>Sri Lanka rescues and repatriates 40 Iranian sailors</b>",
@@ -827,96 +1036,10 @@ const pageDatabase = {
                 summary: "2026-10-29 | <b>Diplomatic efforts seek to prevent renewed US-Iran fighting</b>",
                 images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1793358609/kosemadare_khamenei.png"],
                 fullText:"2026-10-29 | <b>Diplomatic efforts seek to prevent renewed US-Iran fighting</b>: Regional mediators, including Qatar, reportedly worked to restart negotiations between Washington and Tehran. Iran's position included demands concerning the US naval blockade, frozen Iranian funds, oil exports and the conditions for nuclear negotiations. The diplomatic efforts came amid reports that the United States was preparing for the possibility of renewed military action. Reference: Axios, 29 October 2026 — https://www.axios.com/2026/10/29/brad-cooper-briefs-trump-iran-naval-blockade"
-                },
-                {
-                id: "article11",
-                title: "Last week's news | 2026-10-20 ",
-                summary: "<b>Sweden's Security Service warns that Iran has used criminal networks as proxies.</b>",
-                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25662.jpg"],
-                fullText:"<b>Sweden's Security Service warns that Iran has used criminal networks as proxies.</b> Säpo stated that Iranian state-linked security activities have involved criminal networks in Sweden to carry out violent acts against people and groups considered threats by the Iranian regime. This is background reporting rather than a new announcement from the past week. Date: May 30, 2024. Source: Swedish Security Service (Säpo). Link: https://sakerhetspolisen.se/ovriga-sidor/other-languages/english-engelska/press-room/news/news/2024-05-30-iran-is-using-criminal-networks-in-sweden.html",
-                articles:[
-                    {
-                id: "article11-1",
-                title: "First News Title",
-                summary: "<b>Iran prolongs negotiations with the United States amid political tensions.</b>",
-                images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25651.jpg"],
-                fullText:"<b>Iran prolongs negotiations with the United States amid political tensions.</b> Reuters reported on October 20, 2026, that senior Iranian officials said Tehran was deliberately prolonging the stalemate to increase political pressure on President Donald Trump before the November midterm elections. The report also described Iran's demands concerning the US maritime blockade, sanctions, and regional hostilities. Date: October 20, 2026. Source: Reuters. Link: https://www.reuters.com/world/us/iran-prolongs-talks-stalemate-influence-us-midterms-officials-say-2026-10-20/"
-
-                },
-                {
-                id: "article11-2",
-                title: "Second article Title",
-                summary: "<b>Iran rejects negotiations with Washington until its demands are met.</b>",
-                images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25664.jpg"],
-                fullText:"<b>Iran rejects negotiations with Washington until its demands are met.</b> Iranian officials told Pakistan's army chief, Field Marshal Asim Munir, that Tehran would not resume talks with the United States until its conditions were addressed. The demands include lifting restrictions on Iranian oil exports, ending the blockade of Iranian ports, and stopping hostilities in the region. Date: October 20, 2026. Source: Reuters. Link: https://www.reuters.com/world/asia-pacific/irans-pezeshkian-discusses-mediation-efforts-meeting-with-pakistans-army-chief-2026-10-20/"
-
-                },
-                {
-                id: "article11-3",
-                title: "Third article Title",
-                summary: "<b>Pakistan's army chief visits Tehran in a diplomatic effort to reduce regional tensions.</b>",
-                images:  ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675096/25652.jpg"],
-                fullText: "<b>Pakistan's army chief visits Tehran in a diplomatic effort to reduce regional tensions.</b> Field Marshal Asim Munir met Iranian leaders as Pakistan continued its mediation efforts between Iran and the United States. Discussions concerned the conflict, regional de-escalation, and the Strait of Hormuz, a vital route for international energy shipments. Date: October 19–20, 2026. Source: Reuters. Link: https://www.reuters.com/world/asia-pacific/irans-pezeshkian-discusses-mediation-efforts-meeting-with-pakistans-army-chief-2026-10-20/"
-
-                },
-                {
-                id: "article11-4",
-                title: "Forth article Title",
-                summary: "<b>Iranian President Masoud Pezeshkian thanks Russia for its support during the war.</b>",
-                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25668.jpg"],
-                fullText:"<b>Iranian President Masoud Pezeshkian thanks Russia for its support during the war.</b> During a meeting in Tehran with Russian Foreign Minister Sergey Lavrov, Pezeshkian expressed gratitude for Russian support and called for closer cooperation in energy, transportation, trade, and diplomacy. Lavrov reaffirmed Moscow's commitment to cooperation with Tehran. Date: October 20, 2026. Source: Tasnim News Agency. Link: https://www.tasnimnews.ir/en/news/2026/10/20/3727443/pezeshkian-calls-for-closer-iran-russia-cooperation"
-
-                },
-                {
-                id: "article11-5",
-                title: "Fifth article Title",
-                summary: "<b>US Defense Secretary Pete Hegseth meets Israeli Prime Minister Benjamin Netanyahu.</b>",
-                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25654.jpg"],
-                fullText:"<b>US Defense Secretary Pete Hegseth meets Israeli Prime Minister Benjamin Netanyahu.</b> Hegseth made an unannounced visit to Israel, where the two officials discussed regional threats and US-Israeli cooperation. The meeting took place amid heightened tensions involving Iran and shortly before Israel's parliamentary election. Date: October 19, 2026. Source: Reuters. Link: https://www.reuters.com/world/middle-east/hegseth-meets-netanyahu-unannounced-visit-israel-reports-axios-2026-10-19/"
-
-                },
-                {
-                id: "article11-6",
-                title: "Sixth article Title",
-                summary: "<b>Donald Trump claims Iran killed at least 75,000 protesters.</b>",
-                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675096/25660.jpg"],
-                fullText:"<b>Donald Trump claims Iran killed at least 75,000 protesters.</b> Speaking at a campaign rally in Kansas, the US president alleged that Iranian authorities had killed at least 75,000 protesters over eight months. The figure has not been independently verified and should be treated as Trump's claim rather than an established death toll. Date: October 20, 2026. Source: JNS. Link: https://www.jns.org/news/u-s-news/trump-iran-killed-at-least-75-000-protesters-in-eight-months"
-
-                },
-                {
-                id: "article11-7",
-                title: "Sventh news Title",
-                summary: "<b>Iranian authorities announce the arrest of 39 people connected to the January protests.</b>",
-                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25658.jpg"],
-                fullText:"<b>Iranian authorities announce the arrest of 39 people connected to the January protests.</b> The intelligence department in Qazvin alleged that the detainees were involved in arson and attacks during the demonstrations. The authorities did not publicly identify the detainees or provide evidence supporting their most serious allegations. Date: October 19, 2026. Source: IranWire. Link: https://iranwire.com/en/news/159070-intelligence-department-announces-arrest-of-39-protesters-in-qazvin/"
-
-                },
-                {
-                id: "article11-8",
-                title: "Eightth news Title",
-                summary: "<b>Oil prices fluctuate amid tensions involving Iran and threats to Gulf shipping.</b>",
-                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675096/25652.jpg"],
-                fullText:"<b>Oil prices fluctuate amid tensions involving Iran and threats to Gulf shipping.</b> Reuters reported that oil markets were responding to diplomatic efforts between Iran and the United States, as well as reports of attacks on vessels and infrastructure in the region. Continued disruption around the Strait of Hormuz remains a major concern for international energy supplies. Date: October 20, 2026. Source: Reuters. Link: https://www.reuters.com/business/energy/oil-eases-markets-assess-potential-waiver-russian-energy-middle-east-supply-2026-10-20/"
-
-                },
-                {
-                id: "article11-9",
-                title: "Ninth news Title",
-                summary: "<b>Russia reaffirms political support for Iran as questions grow over Moscow's wartime assistance.</b>",
-                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25656.jpg"],
-                fullText:"<b>Russia reaffirms political support for Iran as questions grow over Moscow's wartime assistance.</b> During his visit to Tehran, Russian Foreign Minister Sergey Lavrov publicly backed Iran and described its cause as just. However, the extent of Russia's military and intelligence assistance to Iran remains a separate question that requires evidence beyond public statements. Date: October 19, 2026. Source: Radio Free Europe/Radio Liberty. Link: https://www.rferl.org/a/lavrov-in-tehran-amid-questions-over-whether-moscow-is-helping-iran-in-war-with-us/33879493/"
-
-                },
-                {
-                id: "article11-10",
-                title: "Tenth news Title",
-                summary: "<b>Sweden's Security Service warns that Iran has used criminal networks as proxies.</b>",
-                images: ["https://res.cloudinary.com/i9nc6ofl/image/upload/v1792675095/25662.jpg"],
-                fullText:"<b>Sweden's Security Service warns that Iran has used criminal networks as proxies.</b> Säpo stated that Iranian state-linked security activities have involved criminal networks in Sweden to carry out violent acts against people and groups considered threats by the Iranian regime. This is background reporting rather than a new announcement from the past week. Date: May 30, 2024. Source: Swedish Security Service (Säpo). Link: https://sakerhetspolisen.se/ovriga-sidor/other-languages/english-engelska/press-room/news/news/2024-05-30-iran-is-using-criminal-networks-in-sweden.html",
-
-                }   
-                ]
                 }
+
+                ]
+                } 
 
             ],
             images: [],
