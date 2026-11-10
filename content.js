@@ -417,7 +417,7 @@ const pageDatabase = {
                 },
                 {
                 id: "article4",
-                title: "Forth article Title",
+                title: "Royal institution",
                 summary: "<b>The necessity of preserving the institution of monarchy </b>",
                 fullText:[
                 "The support and safeguarding of the institution of kingship in Iran is not a partisan defense or a selection based upon emotions, but rather a strategic, historical, and lawful necessity to bridge fractures and secure a stable future.",
