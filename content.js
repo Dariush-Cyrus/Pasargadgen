@@ -206,9 +206,18 @@ const pageDatabase = {
                 },
                 {
                 id: "article4",
-                title: "نبشتار چهارم",
-                summary: "خلاصه کوتاه خبر اینجا قرار میگیرد...",
-                fullText:"اینجا قرار میگیرد متن کامل مقاله ",
+                title: "نهاد پادشاهی",
+                summary: "«بایستگی پاسداری از جایگاه شهریاری به پارسی پاک»",
+                fullText:[
+                "پشتیبانی و پاسداری از نهادِ شهریاری در ایران، نه هواداری از یک تن یا گزینشی بر پایه دل‌یافت‌ها، بلکه یک بایستگیِ راهبردی، سرگذشتی و دادین برای گذر از گسست‌ها و استوارسازیِ آینده‌ای پایدار است.",
+                "در ادامه، پایه‌های بنیادینِ بایستگیِ پاسداری از نهادِ شهریاری در ایرانِ نوین آورده شده است:",
+                "مدارِ همبستگیِ میهنی و رنگارنگیِ تباری: ایران کشوری است با گوناگونیِ چشمگیر از تبارها، فرهنگ‌ها، گویش‌ها و باورهای گوناگون. در درازای روزگار، نهادِ شهریاری نقشِ «نقطه پرگار» و مدارِ پیونددهنده‌ی همه‌ی این بخش‌ها را بر دوش داشته است. شهریار، رها از وابستگی‌های هم‌گروهی، تباری یا دسته‌بندی‌های هموندوار، نمادِ انسجامِ میهنی و پیوستگیِ سرزمینِ ایران است؛ نمادی که هیچ هم‌گروه یا سامانه‌ی کشورداریِ دگرشونده‌ای نمی‌تواند جایگزین آن باشد.",
+                "پدافندِ بازدارنده در برابرِ خودکامگی و انباشتِ نیروی سالاری: در الگوهای نوین، نهادِ شهریاریِ نمادین با زدایشِ تمامِ توان‌های اجراییِ شاه، نیروی راستین را به انجمنِ گزینش‌شده، دولتِ پاسخگو و دادگستریِ خودسالار می‌سپارد. بودِ این نهاد به سانِ نمادِ بزرگِ کشور، راه را بر هرگونه فزون‌خواهیِ هموندوار، کودتا یا دردست‌گرفتنِ یک‌سره‌ی نیرو به دستِ یک تن یا هم‌گروهیِ ویژه می‌بندد و همسنگی و پایداریِ سامان را زنهار می‌دهد.",
+                "پیوستگیِ سرگذشتی و نامه‌ستانِ کهن‌دیار: میهنِ ما از انگشت‌شمار تمدن‌های جهان است که کیستیِ آن با نمادِ شهریاری و ریشه‌های کهنِ خود گره خورده است. پاسداری از این نهاد، در راستای پاسداشتِ شناسنامه‌ی چند هزارساله‌ی ایران، فرّ کیانی و دستاوردهای شهریِ نیاکان در ریختی نوین و امروزی است.",
+                "نهادی فرامیهنی و غیرهم‌گروهی برای مهارِ هنگامه و تنگناها: دولت‌ها و انجمن‌ها برآمده از هماوردی‌های هم‌گروهی و زودگذرند و به‌راستی نمایندگانِ بخشیِ از مردم به شمار می‌روند. هم نهادِ شهریاری به دلیلِ بی‌طرفیِ بیکرانِ کشورداری، در روزهای سخت و آشوب‌های میهنی، پناه‌گاه و پناهِ تمامیِ مردم با هر نگرش و باوری است؛ جایگاهی امن که می‌تواند همبستگیِ میهنی را در برابر هراس‌افکنی‌های بیرونی و فروپاشی‌های درونی نگاه دارد.",
+                "چکیده: پاسداری از نهادِ شهریاریِ پیمان‌بنیاد در ایران، استوارکننده‌ی استقلال، تمامیتِ سرزمینی، همزیستیِ مسالمت‌آمیزِ تبارها و پاسبانی از مردم‌سالاریِ ناب است تا ایران بتواند بدونِ خطرِ فروپاشی یا استبدادِ تازه، به سوی شکوفایی، آزاداندیشی و بهزیستیِ همگانی گام بردارد."
+                
+                ],
                 image: "gard.jpg"
                 },
                 {
@@ -409,8 +418,17 @@ const pageDatabase = {
                 {
                 id: "article4",
                 title: "Forth article Title",
-                summary: "Short preview summary goes here",
-                fullText:"Full article text that appear after clicking apears here",
+                summary: "<b>The necessity of preserving the institution of monarchy </b>",
+                fullText:[
+                "The support and safeguarding of the institution of kingship in Iran is not a partisan defense or a selection based upon emotions, but rather a strategic, historical, and lawful necessity to bridge fractures and secure a stable future.",
+                "In what follows, the foundational pillars of the necessity of safeguarding the institution of kingship in modern Iran are set forth:",
+               "The Orbit of National Solidarity and Tribal Diversity: Iran is a country distinguished by a striking variety of tribes, cultures, dialects, and beliefs. Throughout the passage of time, the institution of kingship has borne the role of the 'polestar' and the unifying orbit for all these segments. The monarch, detached from factional, tribal, or uniform political categorizations, stands as the symbol of national cohesion and the continuity of Iran's land; a symbol which no single faction or mutable system of governance can ever replace.",
+               "A Deterrent Shield Against Tyranny and the Accumulation of State Power: Within modern frameworks, the symbolic institution of kingship—by stripping away all executive authorities from the monarch—entrusts genuine power unto the elected assembly, the accountable government, and the independent judiciary. The presence of this institution, acting as the supreme symbol of the country, bars any path to political overreach, coups, or the absolute monopoly of power by any single individual or special faction, thereby ensuring the balance and stability of the system.",
+               "Historical Continuity and the Chronicle of the Ancient Land: Our homeland stands among the rare civilizations of the world whose identity is entwined with the institution of kingship and its ancient roots. The safeguarding of this institution aligns directly with honoring Iran's multi-millennial identity, royal glory, and the civic achievements of our ancestors in a modern and contemporary form.",
+               "A Trans-National and Non-Factional Institution to Contain Crises and Hardships: Governments and assemblies arise from transient factional rivalries and truthfully represent only a fraction of the people. Yet the institution of kingship, owing to its infinite neutrality in governance, serves during harsh days and national upheavals as a sanctuary and shelter for all people across every outlook and belief; a secure position capable of preserving national solidarity against external terrors and internal collapses.",
+                "Conclusion: The safeguarding of the covenant-bound institution of kingship in Iran is the consolidator of independence, territorial integrity, the peaceful coexistence of tribes, and the stewardship of pure democracy, enabling Iran to march toward flourishing, free-thought, and universal well-being unthreatened by collapse or fresh tyranny."
+                
+                ],
                 image: "gard.jpg"
                 },
                 {
